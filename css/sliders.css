@@ -1,0 +1,193 @@
+
+
+/* Hierarchie :
+	
+	#Tableau
+		.param
+			input[type="Range"]
+			.valeur
+			.nom
+		.espace
+
+
+*/
+
+#Tableau {
+	width: 225px;
+}
+
+#Tableau .param {
+	width: 225px;
+	height: 60px;
+	margin: 10px 0;
+	position: relative; /* pour le span en absolu */
+
+	background-image: url(../Images/SliderFond.png);
+	-webkit-filter: drop-shadow(-1px 6px rgba(0,0,0,0.07));
+	filter: drop-shadow(-1px 6px rgba(0,0,0,0.07));
+}
+
+#Tableau .espace {
+	height: 20px;
+}
+
+#Tableau .label {
+	width: 100%;
+	height: 20px;
+
+	font-family: monospace;
+	font-size: 18px;
+	text-indent: 2px;
+	color: #b56c18;
+}
+
+
+
+
+
+/*  reset style des inputRange */
+
+	/* pour le block */
+		#Tableau input[type="range"] {
+			-webkit-appearance: none;
+			width: 100%; /* Specific width is required for Firefox. */
+			background: transparent; /* Otherwise white in Chrome */
+			margin: 0;
+		}
+	/* pour la poignee */
+		#Tableau input[type=range]::-webkit-slider-thumb {
+			-webkit-appearance: none;
+		}
+		#Tableau input[type=range]::-moz-range-thumb {
+			border: none;
+			background: transparent;
+		}
+		input[type=range]::-ms-thumb {
+			/* celui la je le fais au pif */
+			border: none;
+			background: transparent;
+		}
+	/* pour la ligne */
+		#Tableau input[type=range]::-moz-range-track {
+			background: transparent;
+		}
+		#Tableau input[type=range]::-ms-track {
+			width: 100%;
+			cursor: pointer;
+
+			/* Hides the slider so custom styles can be added */
+			background: transparent; 
+			border-color: transparent;
+			color: transparent;
+		}
+	/* pour le block en focus */
+		#Tableau input[type=range]:focus {
+			outline: none;
+		}
+		#Tableau input[type=range]::-moz-focus-outer {
+			border: 0;
+		}
+		#Tableau input[type=range]:focus::-ms-thumb {
+			/* celui la aussi je le fais au pif */
+			border: none;
+			background: transparent;
+		}
+
+
+
+
+/* Custom styling des inputRange */
+
+	/* pour le block */
+		#Tableau input[type="range"] {
+			position: relative; /* pour le before en absolu */
+			width: 195px;
+			height: 15px;
+			padding: 4px;
+			/* haut | cotés | bas */
+			margin: 31px 11px 6px;
+			cursor: pointer;
+		}
+
+	/* pour la poignee */
+		#Tableau input[type=range]::-webkit-slider-thumb {
+			width: 14px;
+			height: 13px;
+			background-image: url(../Images/SliderThumb.png);
+			margin-top: -4px;
+		}
+		#Tableau input[type=range]::-moz-range-thumb {
+			width: 14px;
+			height: 13px;
+			background-image: url(../Images/SliderThumb.png);
+			margin-top: -4px;
+		}
+		#Tableau input[type=range]::-ms-thumb {
+			/* encore au pif */
+			width: 14px;
+			height: 13px;
+			background-image: url(../Images/SliderThumb.png);
+			margin-top: -4px;
+		}
+
+	/* pour la ligne */
+		#Tableau input[type=range]::-webkit-slider-runnable-track {
+			height: 6px;
+			background: #462c22;
+			border-radius: 2px;
+		}
+		#Tableau input[type=range]::-moz-range-track {
+			height: 6px;
+			background: #462c22;
+			border-radius: 2px;
+		}
+		#Tableau input[type=range]::-ms-track {
+			/* tu sais ce que je vais dire */
+			height: 6px;
+			background: #462c22;
+			border-radius: 2px;
+		}
+		#Tableau input[type=range]::-ms-fill-lower {
+			height: 6px;
+			background: #462c22;
+			border-radius: 2px;
+		}
+		input[type=range]::-ms-fill-upper {
+			height: 6px;
+			background: #462c22;
+			border-radius: 2px;
+		}
+
+	/* pour le block en focus */
+		#Tableau input[type=range]:hover::-webkit-slider-thumb {
+			background-image: url(../Images/SliderThumbHover.png);
+		}
+		#Tableau input[type=range]:hover::-moz-range-thumb {
+			background-image: url(../Images/SliderThumbHover.png);
+		}
+		#Tableau input[type=range]:hover::-ms-thumb {
+			/* ahum */
+			background-image: url(../Images/SliderThumbHover.png);
+		}
+
+
+
+
+/* styling des infos */
+
+	#Tableau .param .nom, #Tableau .param .valeur {
+		position: absolute;
+		top: 11px;
+		font-size: 14px;
+		color: #b56c18;
+		font-family: monospace;
+	}
+	#Tableau .param .nom {
+		left: 15px;
+	}
+	#Tableau .param .valeur {
+		right: 15px;
+		text-align: right;
+	}
+
+

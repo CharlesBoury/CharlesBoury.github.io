@@ -1,0 +1,117 @@
+
+
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="../Images/favicon.png"/>
+<title>Charles Boury | PinUps</title>
+
+<link rel="stylesheet" href="../css/base.css"/>
+<link rel="stylesheet" href="../css/legende.css"/>
+<link rel="stylesheet" href="../css/fleches.css"/>
+<link rel="stylesheet" href="../css/retour.css"/>
+
+<script src="../scripts/scaleToFit.js"></script>
+<script src="../scripts/jquery.js"></script>
+<script src="../scripts/diaporama.js"></script>
+
+
+
+<style type="text/css">
+
+	#Legende {
+		width: 200px;
+		left: 1090px;
+	}
+
+	#Legende h1 {
+		color: #b7344a;
+	}
+	#Legende p {
+		color: #b7344a;
+	}
+	.precedent {
+		left: 210px;
+	}
+	.suivant {
+		right: 210px;
+	}
+
+	.compteur {
+		font-family: sans-serif;
+		font-size: 12px;
+		font-weight: lighter;
+
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 20px;
+
+	}
+
+</style>
+
+
+
+
+<!-- ontouchstart : les onclick deviennent des ontouch sur mobile -->
+<body onload="scaleToFit()" onresize="scaleToFit()" ontouchstart>
+
+	<div id="Diaporama">
+
+		<div class="diapo">
+			<img src="Images/Zundapp.jpg" style="
+				top: 50px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Bicyclette.jpg" style="
+				top: 50px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Bonnasse.jpg" style="
+				top: 50px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Mokka.jpg" style="
+				top: 50px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Stockings.jpg" style="
+				top: 50px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Tresse.jpg" style="
+				top: 50px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Sauvage.jpg" style="
+				top: 90px;">
+		</div>
+
+		<p class="compteur" style="color:#d8c6bf;"></p>
+
+
+
+		<div id="Legende">
+			<h1>PinUps</h1>
+			<p>L’érotisme de la femme forte<br>
+			et celui de la femme faible.</p>
+		</div>
+
+		<div class="bouton suivant"></div>
+
+
+	</div>
+
+	<a id="Retour" href="../index.html"></a>
+
+
+
+
+

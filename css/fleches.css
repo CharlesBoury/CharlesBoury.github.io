@@ -1,0 +1,32 @@
+
+
+
+.bouton {
+	cursor: pointer; cursor: hand;
+
+	width:  50px;
+	height: 80px;
+	position: absolute;
+	top: calc(50% - 80px / 2);
+
+	background-image: url("../Images/Fleche.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.bouton:hover {
+	/* l'image de fleche a une marge alpha donc c'est bon */
+	background-size: 110% auto;
+}
+
+.bouton:active {
+	background-size: 90% auto;
+}
+
+.precedent {
+	transform: scaleX(-1);
+	left: 0;
+}
+.suivant {
+	right: 0;
+}

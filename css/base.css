@@ -1,0 +1,54 @@
+
+
+
+html, body {
+	background-color: #F3F3EF;
+	height: 100%;
+	margin: 0;
+	overflow: hidden; /* ne marche que pour desktop */
+}
+
+#Diaporama {
+	/* taille absolue du diaporama */
+	width: 1350px;
+	height: 900px;
+
+	/* Positionnement au centre du viewport.
+	Un script le redimensionne ensuite,
+	avec comme pivot le centre de l'écran */
+	position: absolute;
+	left: 50%;
+	top:  50%;
+	margin-left: -675px;
+	margin-top:  -450px;
+	transform-origin: center;
+}
+
+
+
+.diapo {
+	/* chaque diapo fait 100% du diaporama */
+	width: 100%;
+	height: 100%;
+
+	/* position absolue pour overlap pendant
+	la transition entre deux diapos */
+	position: absolute;
+
+	/* Rappel :
+	au début toutes les diapos sont cachées
+	sauf la première. */
+}
+
+
+
+
+.diapo > * {
+	/* les enfants directs sont
+	centrés horizontalement
+	les un sous les autres */
+	display: block;
+	margin: auto;
+	/* Et sont deplacables avec top & left */
+	position: relative;
+}

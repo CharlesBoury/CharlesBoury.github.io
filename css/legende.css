@@ -1,0 +1,30 @@
+
+
+
+#Legende {
+	width: 370px;
+	position: absolute;
+	/* position ancrée en haut à gauche */
+	top: 690px;
+	left: 950px;
+	
+}
+
+#Legende h1 {
+	font-family: 'Avenir Next Condensed', "Arial Narrow", sans-serif;
+	font-size: 25px;
+	margin: 0;
+}
+
+#Legende p {
+	font-family: sans-serif;
+	font-size: 14px;
+	font-weight: lighter;
+	margin-top: 0px;
+	margin-bottom: 4px;
+}
+
+#Legende sup {
+	font-size: 70%;
+	margin-left: 1px;
+}

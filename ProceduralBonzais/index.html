@@ -1,0 +1,124 @@
+
+
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="../Images/favicon.png"/>
+<title>Charles Boury | Procedural Bonzais</title>
+
+<link rel="stylesheet" href="../css/base.css"/>
+<link rel="stylesheet" href="../css/legende.css"/>
+<link rel="stylesheet" href="../css/fleches.css"/>
+<link rel="stylesheet" href="../css/retour.css"/>
+
+<script src="../scripts/scaleToFit.js"></script>
+<script src="../scripts/jquery.js"></script>
+<script src="../scripts/diaporama.js"></script>
+
+
+
+<style type="text/css">
+
+	html,body {
+		background-color: #5d3f2d;
+	}
+
+	#Legende h1 {
+		color: #dbb87e;
+	}
+	#Legende p {
+		color: #917156;
+	}
+
+	.bouton {
+		background-image: url("Images/Fleche.png");
+		top: 480px;
+	}
+	.precedent {
+		left: 320px;
+	}
+	.suivant {
+		right: 320px;
+	}
+
+	.diapo img {
+		left:14px;
+		top: 171px;
+	}
+
+	#Lumiere {
+		position: absolute;
+		top: -340px;
+		left: 360px;
+	}
+
+	#Graines {
+		position: absolute;
+		bottom: 105px;
+		left: 485px;
+	}
+
+
+</style>
+
+
+
+
+<!-- ontouchstart : les onclick deviennent des ontouch sur mobile -->
+<body onload="scaleToFit()" onresize="scaleToFit()" ontouchstart>
+
+	<div id="Diaporama">
+
+		<img id="Lumiere" src="Images/Lumiere.png">
+
+		<div class="diapo">
+			<img src="Images/Sapin.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Or.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Bleu.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Violet.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Vert.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Foret.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Pousse.png">
+		</div>
+
+
+
+		<img id="Graines" src="Images/Graines.png">	
+
+
+		<div id="Legende">
+			<h1>Procedural Bonzais</h1>
+			<p>Dessins préparatoires pour plantes en pots<br>
+			générées aléatoirement.</p>
+		</div>
+
+		<div class="bouton precedent"></div>
+		<div class="bouton suivant"></div>
+
+
+	</div>
+
+	<a id="Retour" href="../index.html"></a>
+
+
+
+
+

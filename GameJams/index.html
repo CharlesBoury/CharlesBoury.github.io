@@ -1,0 +1,112 @@
+
+
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="../Images/favicon.png"/>
+<title>Charles Boury | GameJams</title>
+
+<link rel="stylesheet" href="../css/base.css"/>
+<link rel="stylesheet" href="../css/legende.css"/>
+<link rel="stylesheet" href="../css/fleches.css"/>
+<link rel="stylesheet" href="../css/retour.css"/>
+
+<script src="../scripts/scaleToFit.js"></script>
+<script src="../scripts/jquery.js"></script>
+<script src="../scripts/diaporama.js"></script>
+
+
+
+<style type="text/css">
+
+	#Legende h1 {
+		color: #654633;
+	}
+	#Legende p {
+		color: #ac6d54;
+	}
+	#HyperbolicPlay {
+		/* taille précise pour le <a>, ainsi */
+		/* les marges 'auto' ne sont pas cliquables */
+		width: 233px;
+		height: 88px;
+		padding: 4px;
+		transition: transform 0.1s;
+	}
+	#HyperbolicPlay:hover {
+		transform: scale(1.1) rotate(-4deg);
+	}
+
+	#NdcPlay {
+		width:  93px;
+		height: 53px;
+		padding: 4px;
+	}
+
+</style>
+
+
+
+
+<!-- ontouchstart : les onclick deviennent des ontouch sur mobile -->
+<body onload="scaleToFit()" onresize="scaleToFit()" ontouchstart>
+
+	<div id="Diaporama">
+
+		<div class="diapo">
+			<img src="Images/Hyperbolic.png" style="
+				/* margin-top plutot que top */
+				/* pour que ca se propage en dessous */
+				margin-top: 100px;
+				left: 15px;">
+			<a
+				id="HyperbolicPlay"
+				href="https://charlesboury.itch.io/hyperbolicsnakecat"
+				target="_blank"
+				style="top: -10px;">
+				<img src="Images/HyperbolicPlay.png">
+			</a>
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Tina.png" style="
+				top: 140px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Ndc.png" style="
+				margin-top: 120px;">
+			<a
+				id="NdcPlay"
+				href="https://charlesboury.fr/PowerGirl/"
+				target="_blank">
+				<img src="Images/NdcPlay.png">
+			</a>
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Sauvageries.png" style="
+				top: 95px;">
+		</div>
+
+
+
+
+		<div id="Legende">
+			<h1>Game Jams</h1>
+			<p>48<sup>h</sup> pour faire un jeu, avec des copains.<br>
+			Et à chaque fois c’est trop bien !</p>
+			<p class="compteur" style="color:#d8c6bf;"></p>
+		</div>
+
+		<div class="bouton precedent"></div>
+		<div class="bouton suivant"></div>
+
+	</div>
+
+	<a id="Retour" href="../index.html"></a>
+
+
+
+
+

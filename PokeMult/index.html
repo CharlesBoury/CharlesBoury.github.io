@@ -1,0 +1,147 @@
+
+
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="../Images/favicon.png"/>
+<title>Charles Boury | PokéMult</title>
+
+<link rel="stylesheet" href="../css/base.css"/>
+<link rel="stylesheet" href="../css/legende.css"/>
+<link rel="stylesheet" href="../css/fleches.css"/>
+<link rel="stylesheet" href="../css/retour.css"/>
+
+<script src="../scripts/scaleToFit.js"></script>
+<script src="../scripts/jquery.js"></script>
+<script src="../scripts/diaporama.js"></script>
+
+
+
+<style type="text/css">
+
+	html,body {
+		background-color: #2e1c17;
+	}
+
+	#Legende h1 {
+		color: #e89d70;
+	}
+	#Legende p {
+		color: #885b4f;
+	}
+
+	.bouton {
+		top: 43%;
+		background-image: url("Images/Fleche.png");
+
+	}
+	.precedent {
+		left: 210px;
+	}
+	.suivant {
+		right: 380px;
+	}
+
+	#Elements {
+		position: absolute;
+		left: 905px;
+		top: 605px;
+	}
+
+	.diapo img {
+		left:-100px;
+		top:  165px;
+	}
+
+
+</style>
+
+
+
+
+<!-- ontouchstart : les onclick deviennent des ontouch sur mobile -->
+<body onload="scaleToFit()" onresize="scaleToFit()" ontouchstart>
+
+	<div id="Diaporama">
+
+		<div class="diapo">
+			<img src="Images/Poke63Soantroi.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Poke28Tehoui.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Poke12Douz.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Poke24Tekat.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Poke45Krancink.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Poke20Vain.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Poke48Qrantoui.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Poke49Kaneuf.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Poke6Sissi.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Poke64Santka.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Poke81Kavinhin.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Poke25Vinsin.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Poke72Tedouze.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Poke36Transsi.png">
+		</div>
+
+
+
+
+
+		<img id="Elements" src="Images/Elements.png">
+
+		<div id="Legende">
+			<h1>PokéMult</h1>
+			<p>Bestiaire de créatures adorables et<br>
+			farouches. Série de 35 associations<br>
+			uniques entre 2 éléments.</p>
+		</div>
+
+		<div class="bouton precedent"></div>
+		<div class="bouton suivant"></div>
+
+
+	</div>
+
+	<a id="Retour" href="../index.html"></a>
+
+
+
+
+

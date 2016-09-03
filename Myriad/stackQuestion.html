@@ -1,0 +1,68 @@
+<!-- Page de test
+A quelle fréquence mousemove est appelé ?
+A 60fps sur mon ordi, c'est MOINS que 60fps.
+
+Je me retrouve donc avec des update() qui considèrent
+la souris comme immobile, alors qu'elle bouge bien
+ -->
+
+
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<script src="scripts/fpsmeter.js"></script>
+<style type="text/css">
+	body {
+		margin-top: 50px;
+		background-color: #38231b;
+		color: white;
+		letter-spacing: -1px;
+		font-family: Inconsolata
+	}
+</style>
+
+<body>
+	Events: <div id="stream"></div>
+	| est l'event update()<br>
+	. est l'event mousemove
+	(cliquer pour arreter/reprendre l'enregistrement)
+</body>
+
+<script type="text/javascript">
+
+	var meter = new FPSMeter()
+	var stream = document.getElementById("stream")
+	var record = []
+	var rec = true
+	var fps = 60
+	setInterval(update,1000/fps)
+
+
+	function update() {
+		if (rec) {
+			recordEvent('|')
+			stream.textContent = record.join("")
+		}
+		meter.tick() // FPSmeter
+	}
+
+	document.onmousemove = function(){
+		if (rec) {recordEvent('.')}
+	}
+
+	function recordEvent(type){
+		record.push(type)
+			if(record.length > 120){
+				record.shift()
+			}
+	}
+
+
+	document.onmousedown = function(){
+		// arreter ou reprendre l'enregistrement
+		rec = !rec
+	}
+
+
+</script>

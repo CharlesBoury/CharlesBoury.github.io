@@ -1,0 +1,151 @@
+
+
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="Images/favicon.png"/>
+<title>Charles Boury</title>
+
+<link rel="stylesheet" href="css/base.css"/>
+
+<script src="scripts/scaleToFit.js"></script>
+
+
+
+<style type="text/css">
+
+
+	#Diaporama {
+		width: 1000px;
+		height: 900px;
+		margin-left: -500px;
+	}
+	#Diaporama > * {
+		/* les enfants directs sont */		
+		/* centrés horizontalement */
+		/* les un sous les autres */
+		display: block;
+		margin: auto;
+		/* Et sont deplacables avec top & left */
+		position: relative;	
+	}
+
+	#Contact {
+		width: 220px;
+		padding: 10px;
+		padding-top: 13px;
+		padding-bottom: 4px;
+		margin-top: 30px;
+
+		text-align: center;
+		font-family: sans-serif;
+		font-weight: lighter;
+		text-decoration: none;
+		color: #d3c5b6;
+	}
+
+	#Contact p {
+		margin: 0;
+	}
+	#Contact:hover p {
+		text-decoration: underline;
+	}
+
+	#Icones {
+		width: 875px;
+		height: 525px;
+		margin-top: 80px;
+	}
+
+	#Icones > .icone {
+		position: relative;
+		width: 175px;
+		height: 175px;
+		float: left;
+		overflow: visible;
+	}
+
+	.icone:hover {
+		/* devant les autres icones */
+		z-index: 100;
+	}
+
+	.icone img {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform-origin: center;
+		transform: translate(-50%, -50%);
+		transition: transform 0.1s;
+	}
+
+	.icone:nth-child(odd):not(.desactive) a:hover img {
+		/* je ne sais pas pourquoi je dois remettre le translate */
+		transform: translate(-50%, -50%) scale(1.15) rotate(-4deg);
+	}
+	.icone:nth-child(even):not(.desactive) a:hover img {
+		/* meme chose mais rotate inversé */
+		transform: translate(-50%, -50%) scale(1.15) rotate(4deg);
+	}
+
+	.desactive img {
+		cursor: default;
+		opacity: 0.2;	
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
+	}
+
+	.desactive:hover::after {
+		position: absolute;
+		left: 45px;
+		top: 70px;
+		font-family: sans-serif;
+		font-weight: lighter;
+		font-size: 20px;
+
+		background-color: rgba(255,255,255,0.7);
+		color: #838383;
+		padding: 8px 10px;
+		border-radius: 5px;
+
+		content: "Bientôt"
+	}
+
+</style>
+
+
+
+
+<!-- ontouchstart : les onclick deviennent des ontouch sur mobile -->
+<body onload="scaleToFit()" onresize="scaleToFit()" ontouchstart>
+
+	<div id="Diaporama">
+		<img src="Images/Nom.png" style="
+			margin-top:55px;
+			left:12px;">
+
+		<div id="Icones">
+			<div class="icone"><a href="DragonBox/index.html"><img src="Images/Icones/DragonBox.png"></a></div>
+			<div class="icone"><a href="GameJams/index.html"><img src="Images/Icones/GameJams.png"></a></div>
+			<div class="icone"><a href="Gourmandiz/index.html"><img src="Images/Icones/Gourmandiz.png"></a></div>
+			<div class="icone"><a href="Hologramme/index.html"><img src="Images/Icones/Hologramme.png"></a></div>
+			<div class="icone"><a href="PokeMult/index.html"><img src="Images/Icones/PokeMult.png"></a></div>
+			<div class="icone"><a href="ProceduralBonzais/index.html"><img src="Images/Icones/ProceduralBonzais.png"></a></div>
+			<div class="icone desactive"><a href=""><img src="Images/Icones/NightTunes.png"></a></div>
+			<div class="icone desactive"><a href=""><img src="Images/Icones/Maths.png"></a></div>
+			<div class="icone"><a href="Myriad/index.html"><img src="Images/Icones/Myriad.png"></a></div>
+			<div class="icone"><a href="PinUps/index.html"><img src="Images/Icones/PinUps.png"></a></div>
+			<div class="icone"><a href="http://charlesboury.tumblr.com"><img src="Images/Icones/Tumblr.png"></a></div>
+			<div class="icone"><a href="CV/index.html"><img src="Images/Icones/CV.png"></a></div>
+			
+		</div>
+
+
+		<a id="Contact" href="mailto:boury.charles@gmail.com">
+			<img src="Images/Contact.png">
+			<p>Contact !</p>
+		</a>
+	</div>
+
+
+

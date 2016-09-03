@@ -1,0 +1,71 @@
+
+
+/* body et canvas */
+html, body {
+	overflow: hidden;
+	height: 100%;
+	margin: 0;
+	font-family: monospace;
+	color: #325664;
+}
+canvas {
+	position: absolute;
+	margin: 0;
+	display: block;
+
+	background: url(Images/Fond.png) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* Tableau de parametres */
+#Tableau {
+	position: absolute;
+	margin-left: 30px;
+	margin-top: 80px;
+	z-index: 10;
+}
+#Options {
+	position: absolute;
+	padding: 6px;
+	margin: 50px 0 0px 25px;
+	width: 100px; /* pour reduire la zone de clic */
+	z-index: 10;
+}
+#Options:hover {
+	color: #42828D;
+}
+
+/* Bouton de son */
+#BoutonSon {
+	position: absolute;
+	width: 35px;
+	top: 12px;
+	right: 12px;
+	transition: all 0.1s
+}
+#BoutonSon:hover {
+	width: 40px;
+	top: 11px;
+	right: 11px;
+}
+
+/* Autres */
+#Compteur {
+	position: absolute;
+	right : 10px;
+	bottom: 10px;
+}
+#Assets {
+	display: none;
+}
+#Retour {
+	background-image: url("Images/Retour.png");
+}
+.unselectable {
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */    
+}
+

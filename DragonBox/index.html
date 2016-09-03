@@ -1,0 +1,136 @@
+
+
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="../Images/favicon.png"/>
+<title>Charles Boury | DragonBox</title>
+
+<link rel="stylesheet" href="../css/base.css"/>
+<link rel="stylesheet" href="../css/legende.css"/>
+<link rel="stylesheet" href="../css/fleches.css"/>
+<link rel="stylesheet" href="../css/retour.css"/>
+
+<script src="../scripts/scaleToFit.js"></script>
+<script src="../scripts/jquery.js"></script>
+<script src="../scripts/diaporama.js"></script>
+
+
+
+<style type="text/css">
+
+	#Legende h1 {
+		color: #713135;
+	}
+	#Legende p {
+		color: #a28377;
+	}
+
+	.bouton {
+		background-image: url("Images/Fleche.png");
+		top: calc(93% - 80px / 2);
+	}
+
+	/* en 16/9 ou plus, les fleches sont decalées un peu */
+	/* se declenche un peu avant le 16/9 (16/9 = 64/36)  */
+	@media screen and (min-aspect-ratio: 63/36) {
+		.precedent {
+			left: -110px;
+		}
+		.suivant {
+			right: -110px;
+		}
+	}
+
+</style>
+
+
+
+
+<!-- ontouchstart : les onclick deviennent des ontouch sur mobile -->
+<body onload="scaleToFit()" onresize="scaleToFit()" ontouchstart>
+
+	<div id="Diaporama">
+
+		<div class="diapo">
+			<img src="Images/Logo.png" style="
+				top:55px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Cartes.png" style="
+				top: 35px;
+				left: 5px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/But.png" style="
+				top: 25px;
+				left: -40px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Mobile1.png" style="
+				top: 60px;
+				left: 150px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Mobile2.png" style="
+				top: 60px;
+				left: 150px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Dragon1.png" style="
+				top: 255px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Dragon2.png" style="
+				top: 190px;
+				left: -20px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Dragon9.png" style="
+				top: 270px;
+				left: 10px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Chapter.png" style="
+				top: 25px;
+				left: 20px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Poster.png" style="
+				top: 30px;
+				left: -40px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Diplome.png" style="
+				top: -5px;
+				left: -60px;">
+		</div>
+
+
+
+
+		<div id="Legende">
+			<h1>DragonBox</h1>
+			<p>Un jeu mobile qui apprend les équations mathématiques <br>
+			aux enfants de 8 ans, sans qu’ils s’en rendent compte.</p>
+			<p style="color:#c7bcb1;">image <span class="compteur"></span></p>
+		</div>
+
+		<div class="bouton precedent"></div>
+		<div class="bouton suivant"></div>
+
+	</div>
+
+	<a id="Retour" href="../index.html"></a>
+
+

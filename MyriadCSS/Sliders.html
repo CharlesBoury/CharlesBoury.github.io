@@ -1,0 +1,89 @@
+
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="../css/sliders.css"/>
+<script src="scripts/Sliders.js"></script>
+<script src="scripts/Vecteur.js"></script>
+
+
+<style type="text/css">
+html, body {
+	margin: 0;
+	background-color: #38231b;
+}
+div {
+	/*background-color: rgba(255,255,255,0.2);*/
+}
+
+#Tableau {
+	background-color: transparent;
+	/*border: 2px solid black;*/
+	position: relative;
+	left: 40px;
+	top: 40px;
+}
+</style>
+
+<body onload="initSliders()">
+
+	<div id="Tableau">
+		<!-- /////////////////// -->
+			<div class="label">Particules</div>
+		<!-- /////////////////// -->
+			<div class="param">
+				<input id="nombre" type="range"
+					value="20"
+					min="0" max="60"
+					step="1">
+				<span class="nom">nom</span>
+				<span class="valeur"></span>
+			</div>
+		<!-- /////////////////// -->
+			<div class="param">
+				<input id="vitesse" type="range"
+					value="0.75"
+					min="0" max="1"
+					step="0.01">
+				<span class="nom">nom</span>
+				<span class="valeur"></span>
+			</div>
+		<!-- /////////////////// -->
+			<div class="param">
+				<input id="distanceEntreElles" type="range"
+					value="20"
+					min="0" max="60"
+					step="1">
+				<span class="nom">nom</span>
+				<span class="valeur"></span>
+			</div>
+		<!-- /////////////////// -->
+			<div class="espace"></div>
+			<div class="label">Souris</div>
+		<!-- /////////////////// -->
+			<div class="param">
+				<input id="tailleSouris" type="range"
+					value="200"
+					min="0" max="400"
+					step="1">
+				<span class="nom">nom</span>
+				<span class="valeur"></span>
+			</div>
+		<!-- /////////////////// -->
+			<div class="param">
+				<input id="forceDeRepulsion" type="range"
+					value="0.8"
+					min="0" max="1"
+					step="0.01">
+				<span class="nom">nom</span>
+				<span class="valeur"></span>
+			</div>
+		<!-- /////////////////// -->
+
+	</div>
+
+
+
+
+
