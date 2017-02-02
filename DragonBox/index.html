@@ -11,9 +11,12 @@
 <link rel="stylesheet" href="../css/fleches.css"/>
 <link rel="stylesheet" href="../css/retour.css"/>
 
+
 <script src="../scripts/scaleToFit.js"></script>
 <script src="../scripts/jquery.js"></script>
 <script src="../scripts/diaporama.js"></script>
+
+<link rel="stylesheet" href="animsDeJeu.css"/>
 
 
 
@@ -60,18 +63,9 @@
 		<div class="diapo">
 			<img src="Images/Logo.png" style="
 				top:55px;">
-		</div>
-
-		<div class="diapo">
-			<img src="Images/Cartes.png" style="
-				top: 35px;
-				left: 5px;">
-		</div>
-
-		<div class="diapo">
-			<img src="Images/But.png" style="
-				top: 25px;
-				left: -40px;">
+			<div id="sanstitre_hype_container" style="margin:auto;position:relative;width:300px;height:300px;overflow:hidden;top:10px;" aria-live="polite">
+				<script type="text/javascript" charset="utf-8" src="iconeCliquable.hyperesources/sanstitre_hype_generated_script.js?9965"></script>
+			</div>
 		</div>
 
 		<div class="diapo">
@@ -87,40 +81,33 @@
 		</div>
 
 		<div class="diapo">
-			<img src="Images/Dragon1.png" style="
-				top: 255px;">
-		</div>
+			<div id="videosAnimsDeJeu">
+				<video src="Videos/simplifierAdd.mp4" loop="true"></video>
+				<video src="Videos/simplifierDiv.mp4" loop="true"></video>
+				<video src="Videos/developMult.mp4"   loop="true"></video>
+				<video src="Videos/factoMult.mp4"     loop="true"></video>
+				<video src="Videos/developDiv.mp4"    loop="true"></video>
+				<video src="Videos/factoDiv.mp4"      loop="true"></video>
+			</div>
 
-		<div class="diapo">
-			<img src="Images/Dragon2.png" style="
-				top: 190px;
-				left: -20px;">
-		</div>
+			<ul id="menuAnims">
+				<li>A+(-A) = 0</li>
+				<li>A/A = 1</li><br>
+				<li>A&times;(B+C) = AB + AC</li>
+				<li>AB + AC = A&times;(B+C)</li><br>
+				<li>(A+B)/C = A/C + B/C</li>
+				<li>A/C + B/C = (A+B)/C</li>
+			</ul>
 
-		<div class="diapo">
-			<img src="Images/Dragon9.png" style="
-				top: 270px;
-				left: 10px;">
+			<img id="TitreAnimationsDeJeu" src="Images/AnimationsDeJeu.png">
+			<script src="animsDeJeu.js"></script>
 		</div>
 
 		<div class="diapo">
 			<img src="Images/Chapter.png" style="
-				top: 25px;
-				left: 20px;">
+				top: 50px;
+				left: 0px;">
 		</div>
-
-		<div class="diapo">
-			<img src="Images/Poster.png" style="
-				top: 30px;
-				left: -40px;">
-		</div>
-
-		<div class="diapo">
-			<img src="Images/Diplome.png" style="
-				top: -5px;
-				left: -60px;">
-		</div>
-
 
 
 
