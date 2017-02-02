@@ -1,7 +1,6 @@
 
 
 
-
 $(document).ready(function(){
 	
 
@@ -23,23 +22,26 @@ $(document).ready(function(){
 	// quand on clique sur un bouton d'un diaporama
 	$('#Diaporama').on('click', '.bouton', function(event){ 
 
-		// pointeur vers les diapos
-		var diapos = $("#Diaporama").find('.diapo');
-
-		// Récupère compteur de l'instance courante
-		var current = parseInt($("#Diaporama").data('current'), 10);
-
-		// nombre de diapos du diaporama
-		var max = diapos.length;
-
 		// si c'est un bouton suivant, aller à l'image suivante
 		if ($(this).hasClass('suivant')) {
-			current++;
+			changerDiapo(1)
 		}
 		// si c'est un bouton precedent, aller à l'image précédente
 		else if ($(this).hasClass('precedent')) {
-			current--;
+			changerDiapo(-1)
 		}
+	});
+
+	function changerDiapo(val) {
+
+		// pointeur vers les diapos
+		var diapos = $("#Diaporama").find('.diapo');
+		// Récupère compteur de l'instance courante
+		var current = parseInt($("#Diaporama").data('current'), 10);
+		// nombre de diapos du diaporama
+		var max = diapos.length;
+
+		current+= val // val est soit 1 soit -1
 
 		// si on fait suivant à partir de la dernière image, on revient au début
 		if (current > max) {
@@ -56,8 +58,28 @@ $(document).ready(function(){
 		
 		// mise à jour du compteur
 		$("#Diaporama").find('.compteur').text(current+' / '+max);
-
 		// Met à jour le compteur de l'instance courante
 		$("#Diaporama").data('current', current);
-	});
+	}
+
+	function listen() {document.addEventListener("keydown", k)}
+	function forget() {document.removeEventListener("keydown", k)}
+	listen()
+	document.addEventListener("keyup", listen)
+
+	function k(event) {
+		// si c'est une fleche de direction
+		if (event.keyCode >= 37 && event.keyCode <= 40) {
+			event.preventDefault()
+			// sinon les fleches permettent de pan les grandes images
+			// mais ca ne marche pas très bien (Parce qu'on forget())
+		}
+		if (event.key === "ArrowLeft") {
+			changerDiapo(-1)
+		}
+		if (event.key === "ArrowRight") {
+			changerDiapo(1)
+		}
+		forget()
+	}
 });
