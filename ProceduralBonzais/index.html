@@ -13,7 +13,7 @@
 
 <script src="../scripts/scaleToFit.js"></script>
 <script src="../scripts/jquery.js"></script>
-<script src="../scripts/diaporama.js"></script>
+<script src="../scripts/diaporama2.js"></script>
 
 
 
@@ -29,6 +29,35 @@
 	#Legende p {
 		color: #917156;
 	}
+
+
+	#vignettes {
+		position: absolute;
+		left: 50%;
+		bottom: 105px;
+		transform: translateX(-50%);
+	}
+	#vignettes li {
+		width: 56px;
+		height: 71px;
+		/*background-color: rgba(0,0,0,0.1);*/
+	}
+	#vignettes li:hover img {
+		margin-top: 3px;
+		filter: drop-shadow(0px 4px 0px rgba(0,0,0,0.3));
+	}
+	#vignettes li img, #vignettes li.selected img {
+		transition: all 0.12s;
+		margin: 0 3px;
+		filter: drop-shadow(0px 7px 0px rgba(0,0,0,0.15));
+	}
+	#vignettes li.selected::after {
+		content: url("Images/Graines/Bullet.png");
+		position: relative;
+		top: -5px;
+		left: 18px;
+	}
+
 
 	.bouton {
 		background-image: url("Images/Fleche.png");
@@ -50,12 +79,6 @@
 		position: absolute;
 		top: -340px;
 		left: 360px;
-	}
-
-	#Graines {
-		position: absolute;
-		bottom: 105px;
-		left: 485px;
 	}
 
 
@@ -101,14 +124,21 @@
 
 
 
-		<img id="Graines" src="Images/Graines.png">	
-
-
 		<div id="Legende">
 			<h1>Procedural Bonzais</h1>
 			<p>Dessins préparatoires pour plantes en pots<br>
 			générées aléatoirement.</p>
 		</div>
+
+		<ol id="vignettes"
+			><li><img src="Images/Graines/Sapin.png"></li
+			><li><img src="Images/Graines/Or.png"></li
+			><li><img src="Images/Graines/Bleu.png"></li
+			><li><img src="Images/Graines/Violet.png"></li
+			><li><img src="Images/Graines/Vert.png"></li
+			><li><img src="Images/Graines/Foret.png"></li
+			><li><img src="Images/Graines/Pousse.png"></li
+		></ol>
 
 		<div class="bouton precedent"></div>
 		<div class="bouton suivant"></div>

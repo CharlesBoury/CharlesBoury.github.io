@@ -13,7 +13,7 @@
 
 <script src="../scripts/scaleToFit.js"></script>
 <script src="../scripts/jquery.js"></script>
-<script src="../scripts/diaporama.js"></script>
+<script src="../scripts/diaporama2.js"></script>
 
 
 
@@ -30,6 +30,19 @@
 	#Legende p {
 		color: #b7344a;
 	}
+
+
+	#vignettes li .boulette {
+		background-color: #E9D3D3;
+	}
+	#vignettes li:hover .boulette {
+		background-color: #CB7381;
+	}
+	#vignettes li.selected .boulette {
+		background-color: #b7344a;
+	}
+
+
 	.precedent {
 		left: 210px;
 	}
@@ -101,9 +114,19 @@
 		<div id="Legende">
 			<h1>PinUps</h1>
 			<p>L’érotisme de la femme forte<br>
-			et celui de la femme faible.</p>
+			et celui de la femme faible.<p>
+			<ol id="vignettes"
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+			></ol>
 		</div>
 
+		<div class="bouton precedent"></div>
 		<div class="bouton suivant"></div>
 
 

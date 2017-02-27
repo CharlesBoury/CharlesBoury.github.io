@@ -13,7 +13,7 @@
 
 <script src="../scripts/scaleToFit.js"></script>
 <script src="../scripts/jquery.js"></script>
-<script src="../scripts/diaporama.js"></script>
+<script src="../scripts/diaporama2.js"></script>
 
 
 
@@ -30,10 +30,19 @@
 		color: #885b4f;
 	}
 
+	#vignettes li .boulette {
+		background-color: #5B3B33;
+	}
+	#vignettes li:hover .boulette {
+		background-color: #e89d70;
+	}
+	#vignettes li.selected .boulette {
+		background-color: #e89d70;
+	}
+
 	.bouton {
 		top: 43%;
 		background-image: url("Images/Fleche.png");
-
 	}
 	.precedent {
 		left: 210px;
@@ -131,6 +140,22 @@
 			<p>Bestiaire de créatures adorables et<br>
 			farouches. Série de 35 associations<br>
 			uniques entre 2 éléments.</p>
+			<ol id="vignettes"
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+			></ol>
 		</div>
 
 		<div class="bouton precedent"></div>
