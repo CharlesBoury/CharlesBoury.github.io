@@ -5,7 +5,7 @@
 	/* redimensionné par scaleToFit */
 	transform-origin: top left;
 
-	position: absolute;
+	position: fixed;
 	width:  88px;
 	height: 33px;
 	top:  0px;
