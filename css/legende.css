@@ -28,3 +28,57 @@
 	font-size: 70%;
 	margin-left: 1px;
 }
+
+#Legende .compteur {
+	font-size: 12px;
+}
+
+
+
+/* vignettes de pagination */
+
+
+#vignettes,
+#vignettes li,
+#vignettes .compteur {
+	margin: 0;
+	padding: 0;
+
+	display: inline-block;
+	vertical-align: top;
+}
+#vignettes {
+	margin-left: -5px;
+}
+#vignettes li {
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+}
+#vignettes li .boulette {
+	transition: all 0.15s;
+	width: 50%;
+	height: 50%;
+	margin: 25% 25%;
+	border-radius: 100%;
+
+	background-color: lightgrey;
+}
+#vignettes li:hover .boulette {
+	background-color: grey;
+}
+#vignettes li.selected {
+	cursor: initial;
+}
+#vignettes li.selected .boulette {
+	width: 70%;
+	height: 70%;
+	margin: 15% 15%;
+	background-color: black;
+}
+
+#vignettes .compteur {
+	height: 20px;
+	line-height: 20px;
+	margin-left: 4px;
+}
