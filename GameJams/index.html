@@ -13,18 +13,12 @@
 
 <script src="../scripts/scaleToFit.js"></script>
 <script src="../scripts/jquery.js"></script>
-<script src="../scripts/diaporama.js"></script>
+<script src="../scripts/diaporama2.js"></script>
 
 
 
 <style type="text/css">
 
-	#Legende h1 {
-		color: #654633;
-	}
-	#Legende p {
-		color: #ac6d54;
-	}
 	#HyperbolicPlay {
 		/* taille précise pour le <a>, ainsi */
 		/* les marges 'auto' ne sont pas cliquables */
@@ -93,14 +87,19 @@
 		</div>
 
 
-
-
 		<div id="Legende">
 			<h1>Game Jams</h1>
 			<p>48<sup>h</sup> pour faire un jeu, avec des copains.<br>
 			Et à chaque fois c’est trop bien !</p>
-			<p class="compteur" style="color:#d8c6bf;"></p>
+			<ol id="vignettes"
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+			></ol>
+			
 		</div>
+
 
 		<div class="bouton precedent"></div>
 		<div class="bouton suivant"></div>
@@ -108,7 +107,6 @@
 	</div>
 
 	<a id="Retour" href="../index.html"></a>
-
 
 
 
