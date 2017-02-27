@@ -20,11 +20,15 @@ function scaleToFit() {
 
 	if (scaling < 1) { // on ne scale que pour diminuer
 		diaporama.style.transform = "scale("+scaling+")";
+	} else {
+		diaporama.style.transform = "scale(1)";
 	}
 
 	var retour = document.getElementById("Retour");
 	if (retour && scaling < 1) {
 		// test pour ne pas avoir d'erreur sur une page sans retour
 		retour.style.transform = "scale("+scaling+")";
+	} else if (retour) {
+		retour.style.transform = "scale(1)";
 	}
 }
