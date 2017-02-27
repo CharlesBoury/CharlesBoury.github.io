@@ -39,6 +39,16 @@
 		text-decoration: none;
 	}
 
+
+	/* fx hover sur l'icone du jeu */
+	.iconebloup {
+		transition: transform 0.17s;
+		transform: scale(1) rotate(-2deg);
+	}
+	.iconebloup:hover {
+		transform: scale(1.09) rotate(2deg);
+	}
+
 	/* en 16/9 ou plus, les fleches sont decalées un peu */
 	/* se declenche un peu avant le 16/9 (16/9 = 64/36)  */
 	@media screen and (min-aspect-ratio: 63/36) {
@@ -61,11 +71,8 @@
 	<div id="Diaporama">
 
 		<div class="diapo">
-			<img src="Images/Logo.png" style="
-				top:55px;">
-			<div id="sanstitre_hype_container" style="margin:auto;position:relative;width:300px;height:300px;overflow:hidden;top:10px;" aria-live="polite">
-				<script type="text/javascript" charset="utf-8" src="iconeCliquable.hyperesources/sanstitre_hype_generated_script.js?9965"></script>
-			</div>
+			<img src="Images/Logo.png" style="margin-top:55px;">
+			<img class= "iconebloup" src="Images/icone.png">
 		</div>
 
 		<div class="diapo">
