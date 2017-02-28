@@ -16,10 +16,22 @@
 <link rel="stylesheet" href="css/base.css"/>
 
 <script src="scripts/scaleToFit.js"></script>
+<script src="scripts/jquery.js"></script>
+<script src="scripts/tag.js"></script>
 
 
 
 <style type="text/css">
+
+	body {
+		text-align: center;
+		font-family: sans-serif;
+		color: #c3b09e;
+	}
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
 
 
 	#Diaporama {
@@ -38,31 +50,70 @@
 		position: relative;	
 	}
 
+
+
+	/* -------------- About -------------- */
+	#About {
+		width: 560px;
+		font-size: 18px;
+		line-height: 140%;
+	}
+	#About .tag {
+		cursor: pointer;
+		color: #e24934;
+		font-weight: bold;
+		transition: 0.1s;
+	}
+	#About .tag:hover {
+		color: #ff7d0a;
+	}
+	#Resume {
+		font-size: 14px;
+		width: 560px;
+		margin-top: 8px;
+	}
+	#Resume:hover {
+		color: #ff7d0a;
+	}
+
+
+
+
+
+	/* -------------- Contact -------------- */
 	#Contact {
-		width: 220px;
-		padding: 10px;
-		padding-top: 13px;
-		padding-bottom: 4px;
-		margin-top: 30px;
-
-		text-align: center;
-		font-family: sans-serif;
+		width: 219px;
+	}
+	#Mail {
+		height: 40px;
+		line-height: 40px;
 		font-weight: lighter;
-		text-decoration: none;
-		color: #d3c5b6;
+		font-size: 15px;
+	}
+	#Mail:hover {
+		color: inherit;
+	}
+	.SocialBtn {
+		width: 58px;
+		height: 58px;
+		display: inline-block;
+		text-align: center;
+	}
+	.SocialBtn, #Mail {
+		transition: 0.08s;
+	}
+	.SocialBtn:hover, #Mail:hover {
+		transform: scale(1.1);
 	}
 
-	#Contact p {
-		margin: 0;
-	}
-	#Contact:hover p {
-		text-decoration: underline;
-	}
 
+
+
+
+	/* -------------- Icones de projets -------------- */
 	#Icones {
 		width: 875px;
 		height: 425px;
-		margin-top: 80px;
 	}
 
 	#Icones > .icone {
@@ -71,6 +122,11 @@
 		height: 175px;
 		float: left;
 		overflow: visible;
+		transition: opacity 0.2s; /* pour l'effet dim */
+	}
+	.icone.dim {
+		/* classe ajoutée si la souris passe sur les tags de catégorie du About */
+		opacity: 0.1;
 	}
 
 	.icone:hover {
@@ -78,45 +134,40 @@
 		z-index: 100;
 	}
 
-	.icone img {
+
+	.icone img, .icone p {
 		position: absolute;
 		left: 50%;
 		top: 50%;
 		transform-origin: center;
 		transform: translate(-50%, -50%);
-		transition: transform 0.1s;
+		transition: transform 0.1s, opacity 0.1s;
 	}
 
-	.icone:nth-child(odd):not(.desactive) a:hover img {
+	.icone p {
+		font-size: 22px;
+		line-height: 30px;
+		margin: 0;
+		color: #7f584e;
+		font-weight: bold;
+		opacity: 0;
+	}
+
+	.icone:hover img {
+		opacity: 0.2;
+	}
+	.icone:hover p {
+		opacity: 1;
+	}
+
+	/* zoom et rotate les icones de projets quand hover */
+	.icone:nth-child(odd):hover img {
 		/* je ne sais pas pourquoi je dois remettre le translate */
 		transform: translate(-50%, -50%) scale(1.15) rotate(-4deg);
 	}
-	.icone:nth-child(even):not(.desactive) a:hover img {
+	.icone:nth-child(even):hover img {
 		/* meme chose mais rotate inversé */
 		transform: translate(-50%, -50%) scale(1.15) rotate(4deg);
-	}
-
-	.desactive img {
-		cursor: default;
-		opacity: 0.2;	
-		-webkit-filter: grayscale(100%);
-		filter: grayscale(100%);
-	}
-
-	.desactive:hover::after {
-		position: absolute;
-		left: 45px;
-		top: 70px;
-		font-family: sans-serif;
-		font-weight: lighter;
-		font-size: 20px;
-
-		background-color: rgba(255,255,255,0.7);
-		color: #838383;
-		padding: 8px 10px;
-		border-radius: 5px;
-
-		content: "Bientôt"
 	}
 
 </style>
@@ -129,29 +180,34 @@
 
 	<div id="Diaporama">
 		<img src="Images/Nom.png" style="
-			margin-top:55px;
-			left:12px;">
+			margin-top:40px;
+			margin-bottom: 35px;">
+		<p class="centeredText" id="About">I'm a 2D Game Artist living in Paris. I see <span class="tag" id="Videogames">videogames</span> as<br>
+		a nice way for children and adults to explore complex systems.<br>
+		Sometimes I dive into programming and make <span class="tag" id="Toys">toys</span>. Otherwise<br>
+		I just make <span class="tag" id="Illustrations">illustrations</span>. Also, I like mathematics.</p>
+		<p class="centeredText" id="Resume"><a href="CV/index.html">See my resume</a></p>
 
-		<div id="Icones">
-			<div class="icone"><a href="DragonBox/index.html"><img src="Images/Icones/DragonBox.png"></a></div>
-			<div class="icone"><a href="GameJams/index.html"><img src="Images/Icones/GameJams.png"></a></div>
-			<div class="icone"><a href="Gourmandiz/index.html"><img src="Images/Icones/Gourmandiz.png"></a></div>
-			<div class="icone"><a href="Hologramme/index.html"><img src="Images/Icones/Hologramme.png"></a></div>
-			<div class="icone"><a href="PokeMult/index.html"><img src="Images/Icones/PokeMult.png"></a></div>
-			<div class="icone"><a href="ProceduralBonzais/index.html"><img src="Images/Icones/ProceduralBonzais.png"></a></div>
-			<!-- <div class="icone desactive"><a href=""><img src="Images/Icones/NightTunes.png"></a></div> -->
-			<!-- <div class="icone desactive"><a href=""><img src="Images/Icones/Maths.png"></a></div> -->
-			<div class="icone"><a href="Myriad/index.html"><img src="Images/Icones/Myriad.png"></a></div>
-			<div class="icone"><a href="PinUps/index.html"><img src="Images/Icones/PinUps.png"></a></div>
-			<div class="icone"><a href="http://charlesboury.tumblr.com"><img src="Images/Icones/Tumblr.png"></a></div>
-			<div class="icone"><a href="CV/index.html"><img src="Images/Icones/CV.png"></a></div>
+		<div id="Icones" style="
+			margin-top: 55px;">
+			<div class="icone videogame DragonBox"><a href="DragonBox/index.html"><img src="Images/Icones/DragonBox.png"><p>a Teaching Game</p></a></div>
+			<div class="icone videogame GameJams"><a href="GameJams/index.html"><img src="Images/Icones/GameJams.png"><p>Mini Games in 48h</p></a></div>
+			<div class="icone videogame Gourmandiz"><a href="Gourmandiz/index.html"><img src="Images/Icones/Gourmandiz.png"><p>a Multiplayer Browser Game</p></a></div>
+			<div class="icone toy Hologramme"><a href="Hologramme/index.html"><img src="Images/Icones/Hologramme.png"><p>a Sexy Hologram</p></a></div>
+			<div class="icone illu PokeMult"><a href="PokeMult/index.html"><img src="Images/Icones/PokeMult.png"><p>Alternative Pokémons</p></a></div>
+			<div class="icone toy ProceduralBonzais"><a href="ProceduralBonzais/index.html"><img src="Images/Icones/ProceduralBonzais.png"><p>Procedural Trees</p></a></div>
+			<div class="icone toy Myriad"><a href="Myriad/index.html"><img src="Images/Icones/Myriad.png"><p>Fun With Particles</p></a></div>
+			<div class="icone illu PinUps"><a href="PinUps/index.html"><img src="Images/Icones/PinUps.png"><p>PinUp Drawings</p></a></div>
+			<div class="icone Tumblr"><a href="http://charlesboury.tumblr.com"><img src="Images/Icones/Tumblr.png"><p>More</p></a></div>
 			
 		</div>
 
-
-		<a id="Contact" href="mailto:boury.charles@gmail.com">
-			<img src="Images/Contact.png">
-			<p>Contact !</p>
+		<div id="Contact">
+			<a href="mailto:boury.charles@gmail.com"><div class="centeredText" id="Mail">boury.charles <img src="Images/ContactMail.png" style="position: relative; top: 8px;"> gmail.com</div></a>
+			<a href="https://twitter.com/CharlesBoury" target="blank"><div class="SocialBtn" id="Twitter"><img src="Images/ContactTwitter.png"></div></a>
+			<a href="https://github.com/CharlesBoury" target="blank"><div class="SocialBtn" id="GitHub"><img src="Images/ContactGithub.png"></div></a>
+			<a href="https://www.instagram.com/charlesboury/" target="blank"><div class="SocialBtn" id="Instagram"><img src="Images/ContactInstagram.png"></div></a>
+		</div>
 		</a>
 	</div>
 
