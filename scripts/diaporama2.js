@@ -15,9 +15,9 @@ $(document).ready(function(){
 			<p class="compteur"><span class="current"></span> / <span class="total"></span></p>
 	*/
 
-	let vignettes   = $("#vignettes").find('li')
-	let diapos      = $("#Diaporama").find('.diapo')
-	let globalIndex = 0
+	var vignettes   = $("#vignettes").find('li')
+	var diapos      = $("#Diaporama").find('.diapo')
+	var globalIndex = 0
 
 
 
@@ -43,7 +43,7 @@ $(document).ready(function(){
 	$('#vignettes').on('click', 'li', function(event){
 		// and not already selected
 		if (!$(this).hasClass('selected')) {
-			let li = $(this)
+			var li = $(this)
 			globalIndex = vignettes.index(li)
 
 			fadeToDiapo(globalIndex)
@@ -62,7 +62,7 @@ $(document).ready(function(){
 		if ($(this).hasClass('precedent')) globalIndex -= 1
 
 		// cap it between 0 and max
-		let indexMax = diapos.length-1
+		var indexMax = diapos.length-1
 		if (globalIndex > indexMax) globalIndex = 0
 		if (globalIndex < 0       ) globalIndex = indexMax
 
@@ -74,7 +74,7 @@ $(document).ready(function(){
 	// ---------------------------------------------
 	// if a keyboard left/right arrow is used
 
-	let down = {} // to prevent keydown event repetition, we'll register all active keys
+	var down = {} // to prevent keydown event repetition, we'll register all active keys
 	$(document).keydown(function( event ) {
 		// if leftArrow is keydown AND not registered
 		if ( event.which == 37 && down['37'] == null) {
@@ -106,8 +106,8 @@ $(document).ready(function(){
 
 
 	function fadeToDiapo(index) {
-		let diapo    = diapos.eq(index)
-		let vignette = vignettes.eq(index)
+		var diapo    = diapos.eq(index)
+		var vignette = vignettes.eq(index)
 
 		// change selected class to this li
 		vignettes.removeClass("selected")

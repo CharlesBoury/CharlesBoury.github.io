@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-	let tag = $(".tag")
-	let projets = $(".icone")
+	var tag = $(".tag")
+	var projets = $(".icone")
 
 	tag.mouseenter(function(){
 		// highlight Videogames
