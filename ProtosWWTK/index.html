@@ -1,0 +1,99 @@
+
+
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="../Images/favicon.png"/>
+<title>Charles Boury | Game Prototypes</title>
+
+<link rel="stylesheet" href="../css/base.css"/>
+<link rel="stylesheet" href="../css/legende.css"/>
+<link rel="stylesheet" href="../css/fleches.css"/>
+<link rel="stylesheet" href="../css/retour.css"/>
+
+<script src="../scripts/scaleToFit.js"></script>
+<script src="../scripts/jquery.js"></script>
+<script src="../scripts/diaporama2.js"></script>
+
+
+
+<style type="text/css">
+
+	html,body {
+		background-color: #f3f3ef;
+	}
+
+	#Legende h1 {
+		color: #f34533;
+	}
+	#Legende p {
+		color: #a28377;
+	}
+
+	#vignettes li .boulette {
+		background-color: #5B3B33;
+	}
+	#vignettes li:hover .boulette {
+		background-color: #e89d70;
+	}
+	#vignettes li.selected .boulette {
+		background-color: #e89d70;
+	}
+
+	.bouton {
+		background-image: url("Images/Fleche.png");
+		top: calc(93% - 80px / 2);
+	}
+	.precedent {
+		left: 30px;
+	}
+	.suivant {
+		right: 30px;
+	}
+
+
+</style>
+
+
+
+
+<!-- ontouchstart : les onclick deviennent des ontouch sur mobile -->
+<body onload="scaleToFit()" onresize="scaleToFit()" ontouchstart>
+
+	<div id="Diaporama">
+
+		<div class="diapo">
+			<img src="Images/Danse.jpg" style="margin-top:120px;">
+		</div>
+		<div class="diapo">
+			<img src="Images/Dragon.jpg" style="margin-top:140px; margin-left: 70px;">
+		</div>
+		<div class="diapo">
+			<img src="Images/Pacpix.jpg">
+		</div>
+
+
+		<div id="Legende">
+			<h1>Game Prototypes</h1>
+			<p>Together with a developer, we made<br>
+			10 game prototypes over a period of<br>
+			2 months. Here's a few.</p>
+			<ol id="vignettes"
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+			></ol>
+		</div>
+
+		<div class="bouton precedent"></div>
+		<div class="bouton suivant"></div>
+
+
+	</div>
+
+	<a id="Retour" href="../index.html"></a>
+
+
+
+
+
