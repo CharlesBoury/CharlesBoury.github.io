@@ -1,7 +1,3 @@
-// fps meter
-// var meter = new FPSMeter()
-// meter.set('theme', 'transparent');
-// meter.set('graph', '1');
 
 // canvas & context
 var canvas    = document.getElementById('canvas1')
@@ -12,14 +8,94 @@ ctx.mozImageSmoothingEnabled = false;
 
 // slider
 initSliders()
-var nombre             = getSliderValue('nombre')
-var vitesse            = getSliderValue('vitesse')
-var vitesseMax         = getSliderValue('vitesseMax')
-var distanceEntreElles = getSliderValue('distanceEntreElles')
-var tailleSouris       = getSliderValue('tailleSouris')
-var forceDeRepulsion   = getSliderValue('forceDeRepulsion')
-var tailleNid          = getSliderValue('tailleNid')
-var forceDattraction   = getSliderValue('forceDattraction')
+showNest = false
+setCheckBoxValue('showNest', showNest)
+showMouse = false
+setCheckBoxValue('showMouse', showMouse)
+
+var params = {
+	default : {
+		howMany: 25,
+		speed: 0.97,
+		maxSpeed: 10,
+		minGap: 13,
+		sizeNest: 28,
+		attractionForce: 0.001,
+		mouseSize: 240,
+		repulsionForce: 0.008
+	},
+	pool : {
+		howMany: 20,
+		speed: 0.97,
+		maxSpeed: 40,
+		minGap: 21,
+		sizeNest: document.body.clientHeight/2,
+		attractionForce: 0.024,
+		mouseSize: 70,
+		repulsionForce: 1
+	},
+	electrons : {
+		howMany: 5,
+		speed: 1,
+		maxSpeed: 40,
+		minGap: 28,
+		sizeNest: 44,
+		attractionForce: 0.02,
+		mouseSize: 160,
+		repulsionForce: 0.116
+	},
+	essaim : {
+		howMany: 25,
+		speed: 0.97,
+		maxSpeed: 40,
+		minGap: 13,
+		sizeNest: 28,
+		attractionForce: 0.03,
+		mouseSize: 240,
+		repulsionForce: 0.05
+	},
+	fluide: {
+		howMany: 80,
+		speed: 1,
+		maxSpeed: 11,
+		minGap: 1,
+		sizeNest: 50,
+		attractionForce: 0.01,
+		mouseSize: 220,
+		repulsionForce: 0.072
+	},
+	groupe: {
+		howMany: 20,
+		speed: 0.9,
+		maxSpeed: 40,
+		minGap: 2,
+		sizeNest: 100,
+		attractionForce: 0.017,
+		mouseSize: 376,
+		repulsionForce: 0.012
+	},
+	phlegmatic : {
+		howMany: 50,
+		speed: 0.71,
+		maxSpeed: 40,
+		minGap: 28,
+		sizeNest: 555,
+		attractionForce: 0.006,
+		mouseSize: 180,
+		repulsionForce: 0.05
+	},
+	sardine : {
+		howMany: 70,
+		speed: 0.93,
+		maxSpeed: 7,
+		minGap: 15,
+		sizeNest: 55,
+		attractionForce: 0.014,
+		mouseSize: 290,
+		repulsionForce: 0.028
+	},
+}
+setParams(params.default)
 
 // points remarquables
 window.souris           = new Point (0, 0)
@@ -30,18 +106,17 @@ var nid                 = divPar(fenetre, 2)
 
 // Images
 var ImageParticule = document.getElementById('ImageParticule');
-var ImagePloup = document.getElementById('ImagePloup');
-var Cercle = document.getElementById('Cercle');
-// bruitages
-var bruitagePassage=document.getElementById("Passage");
-var velMax = 0
+var ImagePloup     = document.getElementById('ImagePloup');
+var Cercle         = document.getElementById('Cercle');
+
+// options
+var tableau = document.getElementById('Tableau')
+var maxAttration = document.getElementById("attractionForce").max
 
 // ploups
 var ploups = []
 
-// autres variable
-var compteur = 0;
-var aCreer = 0;
+
 
 
 
@@ -60,44 +135,40 @@ var aCreer = 0;
 //////////////////////////////////////////////////
 function update() {
 	// sliders
-	nombre             = getSliderValue('nombre')
-	vitesse            = getSliderValue('vitesse')
-	vitesseMax         = getSliderValue('vitesseMax')
-	distanceEntreElles = getSliderValue('distanceEntreElles')
-	tailleSouris       = getSliderValue('tailleSouris')
-	forceDeRepulsion   = getSliderValue('forceDeRepulsion')
-	tailleNid          = getSliderValue('tailleNid')
-	forceDattraction   = getSliderValue('forceDattraction')
+	howMany         = getSliderValue('howMany')
+	speed           = getSliderValue('speed')
+	maxSpeed        = getSliderValue('maxSpeed')
+	minGap          = getSliderValue('minGap')
+	mouseSize       = getSliderValue('mouseSize')
+	repulsionForce  = getSliderValue('repulsionForce')
+	sizeNest        = getSliderValue('sizeNest')
+	attractionForce = getSliderValue('attractionForce')
+
+	// checkbox
+	showMouse = getCheckBoxValue('showMouse')
+	showNest  = getCheckBoxValue('showNest')
+
 
 	// souris
 	window.sourisVel = trajet(window.sourisPrecedente, window.souris)
 	window.sourisPrecedente = clone(window.souris)
 
 	// ploups
-	dif = (nombre - ploups.length)
+	dif = (howMany - ploups.length)
 	if (dif != 0) {
-		if (dif > 0) { creerPloups(dif) }
-		else         { supprimerPloups(-dif) }
+		if (dif > 0) creerPloups(dif)
+		else supprimerPloups(-dif)
 	}
 
 	ploups.map(x => x.move())
 
-
-	// audio
-	velSomme = ploups.map(p => mag(p.vel)).reduce((a, b) => a+b, 0)
-	velSomme /= ploups.length
-	bruitagePassage.volume = Math.max(Math.min(1,velSomme*2/vitesseMax),0)
-
 	// compteur de particules emises par les ploups
-	if (document
-			.getElementById("Compteur")) {
-		compteur = ploups.map(
+	if (document.getElementById("Compteur")) {
+		document.getElementById("Compteur")
+			.getElementsByTagName('span')[0]
+			.innerHTML = ploups.map(
 			p => p.particuleSystem.particules.length)
 			.reduce((a, b) => a + b, 0)
-		document
-			.getElementById("Compteur")
-			.getElementsByTagName('span')[0]
-			.innerHTML = compteur
 	}
 
 	draw()
@@ -110,19 +181,12 @@ function update() {
 function draw() {
 	ctx.clearRect(0,0,canvas.width,canvas.height)
 
-	// afficherNid(tailleNid)
-	// afficherCercle(window.souris,tailleSouris)
+	if (tableau.style.display == "block") {
+		if (showNest) afficherCercle(nid, sizeNest, attractionForce * (15 / maxAttration))
+		if (showMouse) afficherCercle(window.souris, mouseSize, repulsionForce * 15, "#325664")
+	}
 	ploups.map(x => x.particuleSystem.afficher())
 	ploups.map(x => x.afficher())
-	/*
-	// velocite souris
-	ctx.strokeStyle = "orange"
-	ctx.lineWidth=4
-	afficherSegment(
-		sub(window.souris, window.sourisVel), // depart
-		window.souris) // arrivee
-	*/
-	// meter.tick()
 }
 
 
@@ -153,20 +217,20 @@ function Ploup(pos) {
 		// force qu'exerce la souris
 		forceSouris.devient(0,0);
 		// si on est dans la zone de la souris
-		if (distanceCarre(this.pos, window.souris) < tailleSouris*tailleSouris) {
+		if (distanceCarre(this.pos, window.souris) < mouseSize*mouseSize) {
 			var trajetVersSouris = trajet(this.pos, window.souris)
 			// force necessaire pour sortir le plus vite possible du cercle de peur
-			forceSouris = invert( setMag(trajetVersSouris, tailleSouris - mag(trajetVersSouris)) )
-			// reduite par le facteur 'forceDeRepulsion'
-			forceSouris = multPar(forceSouris, forceDeRepulsion)
+			forceSouris = invert( setMag(trajetVersSouris, mouseSize - mag(trajetVersSouris)) )
+			// reduite par le facteur 'repulsionForce'
+			forceSouris = multPar(forceSouris, repulsionForce)
 		}
 
 		// force qu'exerce la Nid
 		forceNid.devient(0,0);
-		if (distanceCarre(this.pos, nid) > tailleNid*tailleNid) {
+		if (distanceCarre(this.pos, nid) > sizeNest*sizeNest) {
 			// si on est à l'exterieur du nid
 			forceNid = trajet(this.pos, nid)
-			forceNid = multPar(forceNid,forceDattraction)
+			forceNid = multPar(forceNid,attractionForce)
 		}
 
 
@@ -174,19 +238,19 @@ function Ploup(pos) {
 		this.vel = add(this.vel, forceNid)
 		this.vel = add(this.vel, forceSouris)
 		// ralentissement par frottement
-		this.vel = multPar(this.vel,vitesse)
+		this.vel = multPar(this.vel,speed)
 		// clamp vel
-		if (magCarre(this.vel)> vitesseMax*vitesseMax) {
-			this.vel = setMag(this.vel, vitesseMax)
+		if (magCarre(this.vel)> maxSpeed*maxSpeed) {
+			this.vel = setMag(this.vel, maxSpeed)
 		}
 		var newPos = add(this.pos, this.vel)
 		
 		// test de collision (tres gourmand)
 		for (var i = 0; i < ploups.length; i++) {
 			var posDeLautre = ploups[i].pos
-			if (distanceCarre(newPos, posDeLautre) < distanceEntreElles*distanceEntreElles) {
+			if (distanceCarre(newPos, posDeLautre) < minGap*minGap) {
 				ploups[i].pos = 
-					add(newPos, setMag(trajet(newPos, posDeLautre),distanceEntreElles))
+					add(newPos, setMag(trajet(newPos, posDeLautre),minGap))
 			}
 		}
 
@@ -199,7 +263,7 @@ function Ploup(pos) {
 	this.afficher = function afficher(){
 		afficherImgPloup(
 			this.pos,
-			mag(this.vel)/(vitesseMax*2),
+			mag(this.vel)/(maxSpeed*2),
 			angle(this.vel))
 	}
 }
@@ -335,18 +399,21 @@ function afficherImgPloup(pos, scaleFactor, angle) {
 	ctx.drawImage(ImagePloup, -12,-11)
 	ctx.resetTransform()
 }
-function afficherCercle(pos, rayon) {
-	ctx.translate(pos.x,pos.y)
-	// l'image fait 300px, d'où les 150
-	ctx.scale(rayon/150,rayon/150)
-	ctx.drawImage(Cercle, -150,-150)
-	ctx.resetTransform()
-}
-function afficherNid(rayon) {
-	ctx.fillStyle = "#4D220F";
+function afficherCercle(centre, rayon, epaisseur, couleur) {
+	if (epaisseur != 0) epaisseur = Math.max(epaisseur, 1) // pas moins de 1, ou zero
+	couleur = couleur || "#ea463f"
+
 	ctx.beginPath()
-	ctx.arc(nid.x, nid.y, rayon, 0, Math.PI*2, true)
-	ctx.fill()
+	if (rayon == 0) {
+		ctx.arc(centre.x, centre.y, 3, 0, Math.PI*2, true)
+		ctx.fillStyle = couleur;
+		ctx.fill()
+	} else {
+		ctx.arc(centre.x, centre.y, rayon, 0, Math.PI*2, true)
+		ctx.strokeStyle = couleur;
+		ctx.lineWidth = epaisseur;
+	    ctx.stroke();
+    }
 }
 function afficherSegment(depart, arrivee) {
 	ctx.beginPath()
@@ -360,7 +427,7 @@ function afficherSegment(depart, arrivee) {
 function creerPloups(nombre) {
 	for (var i = 0; i < nombre; i++) {
 		ploups.push(
-			new Ploup( add(multPar(vecteurAleatoire(), getRandom(0,tailleNid)),nid) )
+			new Ploup( add(multPar(vecteurAleatoire(), getRandom(0,sizeNest)),nid) )
 		)
 	}
 }
@@ -372,6 +439,28 @@ function supprimerPloups(nombre) {
 
 //////////////////////////////////////////////////
 
+function setParams(options) {
+	options = options || params.default
+	if (options.howMany        ) setSliderValue('howMany',         options.howMany)
+	if (options.speed          ) setSliderValue('speed',           options.speed)
+	if (options.maxSpeed       ) setSliderValue('maxSpeed',        options.maxSpeed)
+	if (options.minGap         ) setSliderValue('minGap',          options.minGap)
+	if (options.mouseSize      ) setSliderValue('mouseSize',       options.mouseSize)
+	if (options.repulsionForce ) setSliderValue('repulsionForce',  options.repulsionForce)
+	if (options.sizeNest       ) setSliderValue('sizeNest',        options.sizeNest)
+	if (options.attractionForce) setSliderValue('attractionForce', options.attractionForce)
+}
+
+
+//////////////////////////////////////////////////
+
+
+document.getElementById('Presets').onclick = function(){
+	var preset = document.getElementById('Presets').value
+	setParams(params[preset])
+}
+
+document.getElementById('Options').onclick = function(){toggleTableau()}
 
 // mémorise la position de la souris dans une globale
 document.addEventListener('mousemove', onMouseUpdate, false)
@@ -383,8 +472,7 @@ function onMouseUpdate(e) {
 
 
 function toggleTableau() {
-	console.log('toggle')
-	var tableau = document.getElementById('Tableau')
+	// console.log('toggle')
 	if (tableau.style.display == "none") {
 		tableau.style.display = "block";
 	} else {

@@ -13,14 +13,24 @@ function initSliders() {
 	var params = document.getElementsByClassName("param");
 	for(var i = 0; i < params.length; i++) {
 
-		// afficher la valeur actuelle
-		updateDisplay(params[i].getElementsByTagName('input')[0].id)
+		// les sliders
+		if (params[i].querySelector('input[type="range"]')) {
+			// afficher la valeur actuelle
+			updateDisplay(params[i].getElementsByTagName('input')[0].id)
 
-		// ajouter un ecouteur (oninput)
-		// qui mettra à jour l'affichage
-		params[i].addEventListener('input', function(e) {
-			updateDisplay(this.getElementsByTagName('input')[0].id)
-		});	
+			// ajouter un ecouteur (oninput)
+			// qui mettra à jour l'affichage
+			params[i].addEventListener('input', function(e) {
+				updateDisplay(this.getElementsByTagName('input')[0].id)
+			});	
+		}
+
+		// les checkbox
+		if (params[i].querySelector('input[type="checkbox"]')) {
+			// mettre l'id en nom
+			params[i].getElementsByClassName('nom')[0].innerHTML = params[i].getElementsByTagName('input')[0].id
+		}
+
 	}
 }
 
@@ -44,4 +54,12 @@ function getSliderValue(id) {
 function setSliderValue(id, newValue) {
 	document.getElementById(id).value = newValue
 	updateDisplay(id)
+}
+
+function getCheckBoxValue(id) {
+	return document.getElementById(id).checked
+}
+
+function setCheckBoxValue(id, newValue) {
+	document.getElementById(id).checked = newValue
 }

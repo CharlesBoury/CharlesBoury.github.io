@@ -3,32 +3,80 @@
 /* Hierarchie :
 	
 	#Tableau
+		.label
 		.param
 			input[type="Range"]
 			.valeur
 			.nom
+
 		.espace
 
+		.param
+			checkbox
+			.nom
 
+		.espace
+		
+		select
 */
+
+:root {
+	--bg-color: rgba(0,0,0,0.5);
+	--bg-color-bright: #1e363f;
+	--color-dim: #325664;
+	--color: #42828D;
+	--color-bright: #85b8cc;
+	--color-label: white;
+}
 
 #Tableau {
 	width: 225px;
 }
 
-#Tableau .param {
-	width: 225px;
-	height: 60px;
-	margin: 10px 0;
+#Tableau .param,
+#Tableau select {
+	width: 100%;
+	margin: 5px 0;
 	position: relative; /* pour le span en absolu */
 
-	background-image: url(../Images/SliderFond.png);
-	-webkit-filter: drop-shadow(-1px 6px rgba(0,0,0,0.07));
-	filter: drop-shadow(-1px 6px rgba(0,0,0,0.07));
+	background-color: var(--bg-color);
+	border-radius: 5px;
+}
+
+#Tableau select {
+	background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='15px' height='10px'><text x='0' y='10' fill='%23325664'>&%239662;</text></svg>");
+	background-repeat: no-repeat;
+	background-size: 1.5EM 1EM;
+	background-position: right center;
+	background-clip: border-box;
+}
+
+#Tableau select:hover {
+	/* le meme mais avec une couleur differente*/
+	background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='15px' height='10px'><text x='0' y='10' fill='%2385b8cc'>&%239662;</text></svg>");
+	color: var(--color-bright);
+}
+
+#Tableau select:focus {
+	outline: none;
+}
+
+#Tableau .param {
+	min-height: 40px;
+}
+
+#Tableau select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	font-size: 14px;
+	border: none;
+	color: var(--color);
+	padding: 7px;
 }
 
 #Tableau .espace {
-	height: 20px;
+	height: 10px;
 }
 
 #Tableau .label {
@@ -38,7 +86,8 @@
 	font-family: monospace;
 	font-size: 18px;
 	text-indent: 2px;
-	color: #b56c18;
+	margin: 10px 0;
+	color: var(--color-label);
 }
 
 
@@ -112,64 +161,76 @@
 	/* pour la poignee */
 		#Tableau input[type=range]::-webkit-slider-thumb {
 			width: 14px;
-			height: 13px;
-			background-image: url(../Images/SliderThumb.png);
+			height: 14px;
+			background-color: var(--color-dim);
+			border-radius: 7px;
 			margin-top: -4px;
 		}
 		#Tableau input[type=range]::-moz-range-thumb {
 			width: 14px;
-			height: 13px;
-			background-image: url(../Images/SliderThumb.png);
+			height: 14px;
+			background-color: var(--color-dim);
+			border-radius: 7px;
 			margin-top: -4px;
 		}
 		#Tableau input[type=range]::-ms-thumb {
 			/* encore au pif */
 			width: 14px;
-			height: 13px;
-			background-image: url(../Images/SliderThumb.png);
+			height: 14px;
+			background-color: var(--color-dim);
+			border-radius: 7px;
 			margin-top: -4px;
 		}
 
 	/* pour la ligne */
 		#Tableau input[type=range]::-webkit-slider-runnable-track {
 			height: 6px;
-			background: #462c22;
+			background: var(--bg-color-bright);
 			border-radius: 2px;
 		}
 		#Tableau input[type=range]::-moz-range-track {
 			height: 6px;
-			background: #462c22;
+			background: var(--bg-color-bright);
 			border-radius: 2px;
 		}
 		#Tableau input[type=range]::-ms-track {
 			/* tu sais ce que je vais dire */
 			height: 6px;
-			background: #462c22;
+			background: var(--bg-color-bright);
 			border-radius: 2px;
 		}
 		#Tableau input[type=range]::-ms-fill-lower {
 			height: 6px;
-			background: #462c22;
+			background: var(--bg-color-bright);
 			border-radius: 2px;
 		}
 		input[type=range]::-ms-fill-upper {
 			height: 6px;
-			background: #462c22;
+			background: var(--bg-color-bright);
 			border-radius: 2px;
 		}
 
 	/* pour le block en focus */
 		#Tableau input[type=range]:hover::-webkit-slider-thumb {
-			background-image: url(../Images/SliderThumbHover.png);
+			/*background-image: url(../Images/SliderThumbHover.png);*/
+			background-color: var(--color-bright);
 		}
 		#Tableau input[type=range]:hover::-moz-range-thumb {
-			background-image: url(../Images/SliderThumbHover.png);
+			/*background-image: url(../Images/SliderThumbHover.png);*/
+			background-color: var(--color-bright);
 		}
 		#Tableau input[type=range]:hover::-ms-thumb {
 			/* ahum */
-			background-image: url(../Images/SliderThumbHover.png);
+			/*background-image: url(../Images/SliderThumbHover.png);*/
+			background-color: var(--color-bright);
 		}
 
+/* Custom styling des checkbox */
+	#Tableau input[type="checkbox"] {
+		position: absolute;
+		right: 15px;
+		top: 11px;
+	}
 
 
 
@@ -179,13 +240,14 @@
 		position: absolute;
 		top: 11px;
 		font-size: 14px;
-		color: #b56c18;
 		font-family: monospace;
 	}
 	#Tableau .param .nom {
+		color: var(--color);
 		left: 15px;
 	}
 	#Tableau .param .valeur {
+		color: var(--color);
 		right: 15px;
 		text-align: right;
 	}

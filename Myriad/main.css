@@ -5,8 +5,19 @@ html, body {
 	overflow: hidden;
 	height: 100%;
 	margin: 0;
+	padding: 0;
 	font-family: monospace;
-	color: #325664;
+	color: var(--color);
+}
+a {
+	color: inherit;
+}
+a:hover {
+	color: var(--color-bright);
+}
+p {
+	position: absolute;
+	margin: 10px;
 }
 canvas {
 	position: absolute;
@@ -23,46 +34,43 @@ canvas {
 #Tableau {
 	position: absolute;
 	margin-left: 30px;
-	margin-top: 80px;
+	margin-top: 30px;
 	z-index: 10;
+	max-height: calc(100% - 80px);
+	overflow: scroll;
 }
 #Options {
 	position: absolute;
 	padding: 6px;
-	margin: 50px 0 0px 25px;
+	margin: 4px;
 	width: 100px; /* pour reduire la zone de clic */
 	z-index: 10;
+	cursor: pointer;
 }
 #Options:hover {
 	color: #42828D;
 }
 
-/* Bouton de son */
-#BoutonSon {
-	position: absolute;
-	width: 35px;
-	top: 12px;
-	right: 12px;
-	transition: all 0.1s
-}
-#BoutonSon:hover {
-	width: 40px;
-	top: 11px;
-	right: 11px;
-}
-
 /* Autres */
 #Compteur {
-	position: absolute;
-	right : 10px;
-	bottom: 10px;
+	bottom: 0; right : 0;
 }
+#Source {
+	top: 0; right: 0;
+}
+#Tuto {
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
 #Assets {
 	display: none;
 }
-#Retour {
+/*#Retour {
 	background-image: url("Images/Retour.png");
 }
+*/
 .unselectable {
 	-webkit-user-select: none;  /* Chrome all / Safari all */
 	-moz-user-select: none;     /* Firefox all */
