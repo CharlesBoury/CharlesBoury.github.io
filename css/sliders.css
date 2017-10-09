@@ -112,9 +112,6 @@
 			background: transparent;
 		}
 		input[type=range]::-ms-thumb {
-			/* celui la je le fais au pif */
-			border: none;
-			background: transparent;
 		}
 	/* pour la ligne */
 		#Tableau input[type=range]::-moz-range-track {
@@ -123,11 +120,7 @@
 		#Tableau input[type=range]::-ms-track {
 			width: 100%;
 			cursor: pointer;
-
-			/* Hides the slider so custom styles can be added */
-			background: transparent; 
-			border-color: transparent;
-			color: transparent;
+			border: none;
 		}
 	/* pour le block en focus */
 		#Tableau input[type=range]:focus {
@@ -137,9 +130,6 @@
 			border: 0;
 		}
 		#Tableau input[type=range]:focus::-ms-thumb {
-			/* celui la aussi je le fais au pif */
-			border: none;
-			background: transparent;
 		}
 
 
@@ -174,12 +164,11 @@
 			margin-top: -4px;
 		}
 		#Tableau input[type=range]::-ms-thumb {
-			/* encore au pif */
 			width: 14px;
 			height: 14px;
 			background-color: #325664;
 			border-radius: 7px;
-			margin-top: -4px;
+			margin-top: -2px;
 		}
 
 	/* pour la ligne */
@@ -194,19 +183,18 @@
 			border-radius: 2px;
 		}
 		#Tableau input[type=range]::-ms-track {
-			/* tu sais ce que je vais dire */
 			height: 6px;
 			background: #1e363f;
 			border-radius: 2px;
 		}
 		#Tableau input[type=range]::-ms-fill-lower {
 			height: 6px;
-			background: #1e363f;
+			background: #325664;
 			border-radius: 2px;
 		}
 		input[type=range]::-ms-fill-upper {
 			height: 6px;
-			background: #1e363f;
+			background: transparent;
 			border-radius: 2px;
 		}
 
