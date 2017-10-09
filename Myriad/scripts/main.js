@@ -4,7 +4,7 @@ var canvas    = document.getElementById('canvas1')
 canvas.width  = document.body.clientWidth
 canvas.height = document.body.clientHeight
 var ctx       = canvas.getContext('2d')
-ctx.mozImageSmoothingEnabled = false;
+// ctx.mozImageSmoothingEnabled = false;
 
 // slider
 initSliders()
