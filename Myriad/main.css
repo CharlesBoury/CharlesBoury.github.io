@@ -37,7 +37,7 @@ canvas {
 	margin-top: 30px;
 	z-index: 10;
 	max-height: calc(100% - 80px);
-	overflow: scroll;
+	overflow: auto;
 }
 #Options {
 	position: absolute;

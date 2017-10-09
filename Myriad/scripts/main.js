@@ -390,14 +390,14 @@ function afficherImgParticule(pos, scaleX, scaleY, angle) {
 	ctx.rotate(-angle) // sens trigonometrique bordel
 	ctx.scale(scaleX,scaleY)
 	ctx.drawImage(ImageParticule, -15,-9)
-	ctx.resetTransform()
+	ctx.setTransform(1, 0, 0, 1, 0, 0) // reset transform matrix
 }
 function afficherImgPloup(pos, scaleFactor, angle) {
 	ctx.translate(pos.x,pos.y)
 	ctx.rotate(-angle) // sens trigonometrique bordel
 	ctx.scale(1+scaleFactor,1-scaleFactor/2)
 	ctx.drawImage(ImagePloup, -12,-11)
-	ctx.resetTransform()
+	ctx.setTransform(1, 0, 0, 1, 0, 0) // reset transform matrix
 }
 function afficherCercle(centre, rayon, epaisseur, couleur) {
 	if (epaisseur != 0) epaisseur = Math.max(epaisseur, 1) // pas moins de 1, ou zero
