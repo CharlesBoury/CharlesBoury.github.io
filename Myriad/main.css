@@ -41,7 +41,7 @@ canvas {
 /* Tableau de parametres */
 #Tableau {
 	position: absolute;
-	margin-left: 30px;
+	margin-left: 20px;
 	margin-top: 30px;
 	z-index: 10;
 	max-height: calc(100% - 80px);
