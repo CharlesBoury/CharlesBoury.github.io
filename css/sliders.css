@@ -200,16 +200,12 @@
 
 	/* pour le block en focus */
 		#Tableau input[type=range]:hover::-webkit-slider-thumb {
-			/*background-image: url(../Images/SliderThumbHover.png);*/
 			background-color: #85b8cc;
 		}
 		#Tableau input[type=range]:hover::-moz-range-thumb {
-			/*background-image: url(../Images/SliderThumbHover.png);*/
 			background-color: #85b8cc;
 		}
 		#Tableau input[type=range]:hover::-ms-thumb {
-			/* ahum */
-			/*background-image: url(../Images/SliderThumbHover.png);*/
 			background-color: #85b8cc;
 		}
 
