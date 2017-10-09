@@ -85,14 +85,14 @@ var params = {
 		repulsionForce: 0.05
 	},
 	sardine : {
-		howMany: 70,
-		speed: 0.93,
+		howMany: 60,
+		speed: 0.96,
 		maxSpeed: 7,
 		minGap: 15,
 		sizeNest: 55,
 		attractionForce: 0.014,
-		mouseSize: 290,
-		repulsionForce: 0.028
+		mouseSize: 365,
+		repulsionForce: 0.006
 	},
 }
 setParams(params.default)
