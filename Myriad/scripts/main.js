@@ -455,7 +455,7 @@ function setParams(options) {
 //////////////////////////////////////////////////
 
 
-document.getElementById('Presets').onclick = function(){
+document.getElementById('Presets').onchange = function(){
 	var preset = document.getElementById('Presets').value
 	setParams(params[preset])
 }
