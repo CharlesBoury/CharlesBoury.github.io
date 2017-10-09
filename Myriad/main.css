@@ -7,13 +7,13 @@ html, body {
 	margin: 0;
 	padding: 0;
 	font-family: monospace;
-	color: var(--color);
+	color: #42828D;
 }
 a {
 	color: inherit;
 }
 a:hover {
-	color: var(--color-bright);
+	color: #85b8cc;
 }
 p {
 	position: absolute;
@@ -48,7 +48,7 @@ canvas {
 	cursor: pointer;
 }
 #Options:hover {
-	color: #42828D;
+	color: #85b8cc;
 }
 
 /* Autres */
