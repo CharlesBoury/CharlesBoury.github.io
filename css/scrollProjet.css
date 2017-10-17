@@ -54,6 +54,7 @@ h1 {
 
 h1 .description {
 	display: block;
+	font-weight: normal;
 	font-size: 0.8em;
 	color: #c3b09e;
 }
@@ -78,8 +79,9 @@ h1 .description {
 /* ------------------------------------------ */
 
 p {
-	color: black;
+	color: #634b3f;
 	max-width: 36em;
+	line-height: 1.4em;
 }
 
 p a {
