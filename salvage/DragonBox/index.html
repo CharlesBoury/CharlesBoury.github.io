@@ -1,0 +1,137 @@
+
+
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Charles Boury | DragonBox</title>
+
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/legende.css"/>
+<link rel="stylesheet" href="../../css/fleches.css"/>
+
+
+<script src="../../scripts/scaleToFit.js"></script>
+<script src="../../scripts/jquery.js"></script>
+<script src="../../scripts/diaporama.js"></script>
+
+<link rel="stylesheet" href="animsDeJeu.css"/>
+
+
+
+<style type="text/css">
+
+	#vignettes li .boulette.starlette {
+		background-color: #FF8B00;
+	}
+	#vignettes li:hover .boulette.starlette {
+		background-color: #FA5208;
+	}
+	#vignettes li.selected .boulette.starlette {
+		background-color: #FC7203;
+	}
+
+	.bouton {
+		transition: all 0.4s;
+		background-image: url("Images/Fleche.png");
+		top: calc(93% - 80px / 2);
+	}
+
+
+	/* fx hover sur l'icone du jeu */
+	.iconebloup {
+		transition: transform 0.17s;
+		transform: scale(1) rotate(-2deg);
+	}
+	.iconebloup:hover {
+		transform: scale(1.09) rotate(2deg);
+	}
+
+	/* en 16/9 ou plus, les fleches sont decalées un peu */
+	/* se declenche un peu avant le 16/9 (16/9 = 64/36)  */
+	@media screen and (min-aspect-ratio: 63/36) {
+		.precedent {
+			left: -110px;
+		}
+		.suivant {
+			right: -110px;
+		}
+	}
+
+</style>
+
+
+
+
+<!-- ontouchstart : les onclick deviennent des ontouch sur mobile -->
+<body onload="scaleToFit()" onresize="scaleToFit()" ontouchstart>
+
+	<div id="Diaporama">
+
+		<div class="diapo">
+			<img src="Images/Logo.png" style="margin-top:55px;">
+			<img class= "iconebloup" src="Images/icone.png">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Mobile1.png" style="
+				top: 60px;
+				left: 150px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Mobile2.png" style="
+				top: 60px;
+				left: 150px;">
+		</div>
+
+		<div class="diapo">
+			<div id="videosAnimsDeJeu">
+				<video src="Videos/SimplifierAdd.mp4" loop="true"></video>
+				<video src="Videos/SimplifierDiv.mp4" loop="true"></video>
+				<video src="Videos/DevelopMult.mp4"   loop="true"></video>
+				<video src="Videos/FactoMult.mp4"     loop="true"></video>
+				<video src="Videos/DevelopDiv.mp4"    loop="true"></video>
+				<video src="Videos/FactoDiv.mp4"      loop="true"></video>
+			</div>
+
+			<ul id="menuAnims">
+				<li>A+(-A) = 0</li>
+				<li>A/A = 1</li><br>
+				<li>A&times;(B+C) = AB + AC</li>
+				<li>AB + AC = A&times;(B+C)</li><br>
+				<li>(A+B)/C = A/C + B/C</li>
+				<li>A/C + B/C = (A+B)/C</li>
+			</ul>
+
+			<img id="TitreAnimationsDeJeu" src="Images/AnimationsDeJeu.png">
+			<script src="animsDeJeu.js"></script>
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Chapter.png" style="
+				top: 50px;
+				left: 0px;">
+		</div>
+
+
+
+		<div id="Legende">
+			<h1>DragonBox</h1>
+			<p>A mobile game teaching maths equations<br>
+			to 8 year olds, without them knowing it.</p>
+			<p><a href="http://dragonbox.com/products/algebra-12" target="blank">dragonbox.com</a></p>
+			<ol id="vignettes"
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette starlette"></div></li
+				><li><div class="boulette"></div></li
+			></ol>
+		</div>
+
+		<div class="bouton precedent"></div>
+		<div class="bouton suivant"></div>
+
+	</div>
+
+

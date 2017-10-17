@@ -1,85 +1,125 @@
-
-
-
 $(document).ready(function(){
-	
-
-	/* accroche une data ‘current' valant 1 
-	au diaporama (une lettre, pas un chiffre) */
-	$("#Diaporama").data('current', 1);
-
-	var diapos = $("#Diaporama").find('.diapo');
-	// nombre de diapos
-	var max = diapos.length;
-	// cacher les diapos sauf la première
-	diapos.css("display","none");
-	diapos.first().css("display","initial");
-
-	// écriture du compteur
-	$("#Diaporama").find('.compteur').text('1 / ' + max);
 
 
-	// quand on clique sur un bouton d'un diaporama
-	$('#Diaporama').on('click', '.bouton', function(event){ 
+	// ---------------------------------------------
+	// global variables
 
-		// si c'est un bouton suivant, aller à l'image suivante
-		if ($(this).hasClass('suivant')) {
-			changerDiapo(1)
+	/* need
+
+		#Diaporama
+			.diapo
+			.diapo
+			#vignettes
+				li
+				li
+			<p class="compteur"><span class="current"></span> / <span class="total"></span></p>
+	*/
+
+	var vignettes   = $("#vignettes").find('li')
+	var diapos      = $("#Diaporama").find('.diapo')
+	var globalIndex = 0
+
+
+
+	// ---------------------------------------------
+	// intial
+
+	// select first vignette
+	vignettes.removeClass("selected")
+	vignettes.first().addClass("selected")
+
+	// show only first diapo
+	diapos.css("display","none")
+	diapos.first().css("display","initial")
+
+	// update page number
+	$(".compteur .current").text(globalIndex+1)
+	$(".compteur .total"  ).text(diapos.length)
+
+
+	// ---------------------------------------------
+	// if one vignette is clicked
+
+	$('#vignettes').on('click', 'li', function(event){
+		// and not already selected
+		if (!$(this).hasClass('selected')) {
+			var li = $(this)
+			globalIndex = vignettes.index(li)
+
+			fadeToDiapo(globalIndex)
 		}
-		// si c'est un bouton precedent, aller à l'image précédente
-		else if ($(this).hasClass('precedent')) {
-			changerDiapo(-1)
+	})
+
+
+
+	// ---------------------------------------------
+	// if one next/previous button is clicked
+
+	$('#Diaporama').on('click', '.bouton', function(event){
+
+		// add or remove 1 to index
+		if ($(this).hasClass('suivant'))   globalIndex += 1
+		if ($(this).hasClass('precedent')) globalIndex -= 1
+
+		// cap it between 0 and max
+		var indexMax = diapos.length-1
+		if (globalIndex > indexMax) globalIndex = 0
+		if (globalIndex < 0       ) globalIndex = indexMax
+
+		fadeToDiapo(globalIndex)
+	})
+
+
+
+	// ---------------------------------------------
+	// if a keyboard left/right arrow is used
+
+	var down = {} // to prevent keydown event repetition, we'll register all active keys
+	$(document).keydown(function( event ) {
+		// if leftArrow is keydown AND not registered
+		if ( event.which == 37 && down['37'] == null) {
+			// register it
+			down['37'] = true
+			// do as if clicked on previous button
+			$('.bouton.precedent').trigger("click");
 		}
-	});
-
-	function changerDiapo(val) {
-
-		// pointeur vers les diapos
-		var diapos = $("#Diaporama").find('.diapo');
-		// Récupère compteur de l'instance courante
-		var current = parseInt($("#Diaporama").data('current'), 10);
-		// nombre de diapos du diaporama
-		var max = diapos.length;
-
-		current+= val // val est soit 1 soit -1
-
-		// si on fait suivant à partir de la dernière image, on revient au début
-		if (current > max) {
-			current = 1;
+		// if rightArrow AND not registered
+		if ( event.which == 39 && down['39'] == null) {
+			// register it
+			down['39'] = true
+			// do as if clicked on next button
+			$('.bouton.suivant').trigger("click");
 		}
-		// si on fait précédent à partir de la première image, on va à la fin
-		if (current < 1) {
-			current = max
-		}
-
-		// Transition transparente des diapos
-		diapos.fadeOut(200);
-		diapos.eq(current-1).fadeIn(200).css("display","block");
-		
-		// mise à jour du compteur
-		$("#Diaporama").find('.compteur').text(current+' / '+max);
-		// Met à jour le compteur de l'instance courante
-		$("#Diaporama").data('current', current);
-	}
-
-	function listen() {document.addEventListener("keydown", k)}
-	function forget() {document.removeEventListener("keydown", k)}
-	listen()
-	document.addEventListener("keyup", listen)
-
-	function k(event) {
-		// si c'est une fleche de direction
-		if (event.keyCode >= 37 && event.keyCode <= 40) {
+		// if it's an arrow
+		if (event.which == 37 || event.which == 38 || event.which == 39 || event.which == 40) {
+			// prevent pan (because there may be overflow content on purpose)
 			event.preventDefault()
-			// sinon les fleches permettent de pan les grandes images
-			// mais ca ne marche pas très bien (Parce qu'on forget())
 		}
-		if (event.key === "ArrowLeft") {
-			changerDiapo(-1)
-		}
-		if (event.key === "ArrowRight") {
-			changerDiapo(1)
-		}
-		forget()
+	})
+
+	// unregister each released key
+	$(document).keyup(function(event) {
+		down[event.which] = null
+	})
+
+
+
+
+	function fadeToDiapo(index) {
+		var diapo    = diapos.eq(index)
+		var vignette = vignettes.eq(index)
+
+		// change selected class to this li
+		vignettes.removeClass("selected")
+		vignette.addClass("selected")
+
+		// display corresponding diapo
+		diapos.fadeOut(200)
+		diapo.fadeIn(200)
+
+		// update page number
+		$(".compteur .current").text(index+1)
 	}
-});
+
+
+})

@@ -1,0 +1,121 @@
+
+
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Charles Boury | Gourmandiz</title>
+
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/legende.css"/>
+<link rel="stylesheet" href="../../css/fleches.css"/>
+
+<script src="../../scripts/scaleToFit.js"></script>
+<script src="../../scripts/jquery.js"></script>
+<script src="../../scripts/diaporama.js"></script>
+
+
+
+<style type="text/css">
+
+	#Legende h1 {
+		color: #d88d34;
+	}
+	#Legende p {
+		color: #7b674d;
+	}
+
+	.bouton {
+		width: 60px;
+		height: 90px;
+		top: 50%;
+		background-image: url("Images/Fleche.png");
+
+	}
+
+	.suivant {
+		right: 120px;
+	}
+
+</style>
+
+
+
+
+<!-- ontouchstart : les onclick deviennent des ontouch sur mobile -->
+<body onload="scaleToFit()" onresize="scaleToFit()" ontouchstart>
+
+	<div id="Diaporama">
+
+		<div class="diapo">
+			<img src="Images/FaceAFace.png" style="
+				top:-30px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/GrosDecors.png" style="
+				top:-10px;
+				left:45px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Persos1.png" style="
+				top:430px;
+				left:-30px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Persos2.png" style="
+				top:370px;
+				left:-20px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Assets.png" style="
+				top:160px;
+				left:-20px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Cartes.png" style="
+				top:230px;
+				left:-40px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Win.jpg" style="
+				top:-260px;
+				left:-285px;">
+		</div>
+
+		<div class="diapo">
+			<img src="Images/Ecran.png" style="
+				top:140px;
+				left:-35px;">
+		</div>
+
+
+
+
+		<div id="Legende">
+			<h1>Gourmandiz</h1>
+			<p>An endless fight with whipped cream,<br>
+			chocolate and strawberries.<br>
+			No download, no configuration. Plug &amp; Play !</p>
+			<ol id="vignettes"
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+				><li><div class="boulette"></div></li
+			></ol>
+		</div>
+
+		<div class="bouton precedent"></div>
+		<div class="bouton suivant"></div>
+
+	</div>
+
+
