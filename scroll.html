@@ -1,0 +1,235 @@
+
+
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Charles Boury</title>
+<meta name="description" content="Graphism & Interactivity, the portfolio of Charles Boury">
+<link rel="shortcut icon" href="Images/favicon.png"/>
+<meta name="author" content="Charles Boury">
+<meta name="viewport" content="initial-scale=1.0">
+
+
+
+<link rel="stylesheet" href="css/scrollBase.css"/>
+<style type="text/css">
+
+
+	/* ------------------------------------------ */
+
+	header {
+		margin-top:  2.5em;
+		margin-bottom: 2em;
+	}
+	main {
+		margin-top:    2em;
+		margin-bottom: 2em;
+	}
+	footer {
+		margin-top:    3em;
+		margin-bottom: 4em;
+	}
+
+	/* ------------------------------------------ */
+
+	header h1 {
+		margin: 1em 0;
+	}
+
+	/* ------------------------------------------ */
+
+	/* placement de l'avatar */
+
+	/* au dessus */
+	#Avatar {
+		display: block;
+		width: 2em;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 0.33em;
+	}
+
+	/* à gauche */
+	@media screen and (min-width: 35em) {
+		#Avatar {
+			display: inline-block;
+			margin: 0 0.3em;
+			vertical-align: -50%;
+		}
+	}
+
+	/* quand l'avatar change de place, il y a un
+	saut dans le layout (le titre prend moins de
+	hauteur).
+	Avec une petite transition c'est mieux.
+	Malheureusement il faut lui dire explicitement 
+	les height pour que la transition marche */
+
+	header h1 {
+		transition: height 0.4s ease-out;
+		height: 3.5em;
+	}
+	@media screen and (min-width: 35em) {
+		header h1 {
+			height: 2em;
+		}
+	}
+	/* pour les ecrans ≤ 250px (!) */
+	@media screen and (max-width: 15.625em) {
+
+		header h1 {
+			/* text wraps, so more height */
+			height: 4.5em;
+		}
+	}
+
+	/* ------------------------------------------ */
+
+	#About {
+		line-height: 1.33em;
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		-ms-hyphens: auto;
+		hyphens: auto;
+	}
+
+		#About .tag {
+			color: #e24934;
+			font-weight: bold;
+		}
+
+		#About .br2 {
+			display: none;
+		}
+		@media screen and (min-width: 30em) {
+			#About .br1 {
+				display: none;
+			}
+			#About .br2 {
+				display: inline;
+			}
+		}
+
+	/* ------------------------------------------ */
+
+	#Resume a,
+	#Mail a {
+		padding: 0.6em;
+	}
+
+	/* ------------------------------------------ */
+
+	#ProjectList {
+		/* gutter = 1em */
+		width: calc(100% + 1em);
+		margin: -0.5em;
+	}
+
+		#ProjectList > a {
+			display: inline-block;
+			vertical-align: bottom;
+			width: 100%;
+			padding: 0.5em;
+			position: relative;
+		}
+
+		/* ca fait un min de (30 - 2em de marge) /2 = 14em de large */
+		@media screen and (min-width: 30em) { #ProjectList > a { width: 50%; } }
+		@media screen and (min-width: 55em) { #ProjectList > a { width: 33%; } }
+		@media screen and (min-width: 70em) { #ProjectList > a { width: 25%; } }
+
+			#ProjectList > a img,
+			#ProjectList > a .infos {
+				width: 100%;
+				position: relative;
+			}
+
+			#ProjectList > a img {
+				transition: top 0.5s cubic-bezier(0, 1, 0.5, 1);
+				top: 0;
+			}
+
+			#ProjectList > a:hover img {
+				top: 0.4em;
+			}
+
+			#ProjectList > a .infos {
+				margin: 0;
+				padding: 0.5em 0;
+				background-color: white;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+	/* ------------------------------------------ */
+
+
+	#ContactMe {
+		font-size: 0.85em;
+		opacity: 0.5;
+		transform: rotateZ(-3deg);
+	}
+
+	#SocialLinks a {
+		display: inline-block;
+	}
+
+	#Mail img {
+		width: 2em;
+		position: relative;
+		top: 0.21em;
+	}
+
+	#Mail img,
+	#SocialLinks img {
+		transition: filter 0.1s ease-out;
+	}
+	#Mail a:hover img,
+	#SocialLinks a:hover img {
+		filter: saturate(400%);
+	}
+
+</style>
+
+
+
+<!--=====================================================================================-->
+
+<body>
+
+<header>
+	<h1><img id="Avatar" src="Images/avatar.jpg">Charles Boury</h1>
+
+	<p id="About">I'm a 2D Game Artist living in Paris.<span class="br1"><br></span> I see <a href="" class="tag">videogames</a> as <span class="br2"><br></span>a nice way for children and adults to explore complex systems. <span class="br2"><br></span>Sometimes I dive into programming and make <a href="" class="tag">toys</a>. Or <span class="br2"><br></span>I just make <a href="" class="tag">illustrations</a>. Also, I like mathematics.</p>
+
+	<p id="Resume"><a href="">See my resume</a></p>
+</header>
+
+
+<main>
+	<section id="ProjectList"
+		><a href="projets/gabrielle.html" ><img src="Images/vignettes/gabrielle.jpg" ><p class="infos"><b>Gabrielle</b> &#x25CF; solo project</p></a
+		><a href="projets/tina.html"      ><img src="Images/vignettes/tina.png"      ><p class="infos"><b>Tina</b> &#x25CF; 64px tamagochi</p></a
+		><a href="projets/dragonbox.html" ><img src="Images/vignettes/dragonbox.jpg" ><p class="infos"><b>DragonBox</b> &#x25CF; cute maths</p></a
+		><a href="projets/jenaibesoindepersonne.html"><img src="Images/vignettes/jenaibesoindepersonne.jpg"><p class="infos"><b>Je n'ai besoin de personne</b> &#x25CF; screensaver ++</p></a
+		><a href="projets/myriad.html"    ><img src="Images/vignettes/myriad.jpg"    ><p class="infos"><b>Myriad</b> &#x25CF; fun with particles</p></a
+		><a href="projets/bactattack.html"><img src="Images/vignettes/bactattack.jpg"><p class="infos"><b>Bact Attack</b> &#x25CF; bacteria fighting</p></a
+		><a href="projets/pinups.html"    ><img src="Images/vignettes/pinups.jpg"    ><p class="infos"><b>Pinups</b> &#x25CF; girls and bikes (NSFW)</p></a
+		><a href="projets/gourmandiz.html"><img src="Images/vignettes/gourmandiz.jpg"><p class="infos"><b>Gourmandiz</b> &#x25CF; web deathmatch</p></a
+		><a href="projets/environments.html"><img src="Images/vignettes/environments2.jpg"><p class="infos"><b>Environments</b> &#x25CF; concept arts</p></a
+		><a href="projets/pokemons.html"  ><img src="Images/vignettes/pokemons.jpg"><p class="infos"><b>Pokemons</b> &#x25CF; unofficial monsters</p></a
+	></section>
+</main>
+
+
+<footer>
+	<p id="ContactMe">Contact me !</p>
+	<p id="Mail"><a href="mailto:boury.charles@gmail.com">boury.charles <img src="Images/ContactMail.png"> gmail.com</a></p>
+	<div id="SocialLinks"
+		><a href="https://twitter.com/CharlesBoury"       ><img src="Images/ContactTwitter.png"></a
+		><a href="https://github.com/CharlesBoury"        ><img src="Images/ContactGithub.png"></a
+		><a href="https://www.instagram.com/charlesboury/"><img src="Images/ContactInstagram.png"></a
+	></div>
+</footer>
+

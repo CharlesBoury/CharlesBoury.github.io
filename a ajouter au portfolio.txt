@@ -2,10 +2,7 @@ TODO
 	english everything
 	Add "Roles" to every project
 	MediapartJam
-	presets myriad (toy program)
 
-	Zelda (anims personnages)
-	Tina (Pixel art anims persos)
 	Mathematic toys
 	microblog
 	UI/VFX ?

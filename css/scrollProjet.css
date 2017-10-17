@@ -1,0 +1,135 @@
+@media screen and (min-width: 35em) {
+
+	body {
+		/* marge de 30%, mais smooth depuis 1em */
+		margin-left:  30%; /* falLback */
+		margin-right: 30%; /* falLback */
+		margin-left:  calc(30% - 35em * 0.30 + 1em);
+		margin-right: calc(30% - 35em * 0.30 + 1em);
+	}
+}
+
+header::after,
+footer::before {
+	content: "";
+	display: block;
+	width: 5em;
+	height: 0.125em;
+	margin: auto;
+	background-color: #c3b09e;
+	opacity: 0.3;
+}
+
+/* ------------------------------------------ */
+
+
+.back {
+	display: inline-block; /* pour avoir une zone de clic precise */
+	padding: 1em;
+	padding-top: 1.8em;
+}
+.back img {
+	box-sizing: content-box;
+	display: inline-block;
+	width: 2.2em;
+	padding: 0 0.2em;
+	vertical-align: -56%;
+}
+.back::before {
+	content: "〈";
+	font-weight: bold;
+	display: inline-block;
+	transition: width 0.3s ease-out;
+	width: 0;
+}
+.back:hover::before {
+	width: 1em;
+}
+
+/* ------------------------------------------ */
+
+h1 {
+	text-align: center;
+}
+
+h1 .description {
+	display: block;
+	font-size: 0.8em;
+	color: #c3b09e;
+}
+
+
+@media screen and (min-width: 35em) {
+
+	h1 .description {
+		display: inline-block;
+	}
+	h1 .description::before {
+		content: "●";
+		padding: 0 0.27em;
+	}
+	h1 {
+		/* compenser la perte de retour a la ligne (qui fait 0.8em + de la merde) */
+		padding-top: 0.3em;
+		padding-bottom: 0.6em;
+	}
+}
+
+/* ------------------------------------------ */
+
+p {
+	color: black;
+	max-width: 36em;
+}
+
+p a {
+	border-bottom: 0.1em solid;
+}
+
+main > section > * {
+	margin: calc(8vw + 1em) auto;
+}
+main > section > *:first-child {
+	margin: calc(5vw + 1em) auto;
+}
+@media screen and (min-width: 35em) {
+	main > section > * {
+		margin: calc(8vw + 1em) auto;
+	}
+}
+
+figure img {
+	width: 100%;
+}
+figure .half {
+	width: calc(50% - 0.15em);
+	display: inline-block;
+	vertical-align: bottom;
+}
+figure .half:nth-child(odd) {
+	margin-right: 0.3em;
+}
+
+figure *:not(:first-child) {
+	margin-top: 0.3em;
+}
+
+figcaption {
+	margin: 0.3em 0;
+	min-height: 1em;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+/* ------------------------------------------ */
+
+footer {
+	margin-top: 2em;
+	margin-bottom: 4em;
+}
+
+#Legal p {
+	margin: 0.3em auto;
+	font-size: 0.8em;
+	color: inherit;
+}
