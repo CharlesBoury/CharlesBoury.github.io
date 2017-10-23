@@ -1,11 +1,11 @@
 @media screen and (min-width: 35em) {
 
 	body {
-		/* marge de 30%, mais smooth depuis 1em */
-		margin-left:  30%; /* falLback */
-		margin-right: 30%; /* falLback */
-		margin-left:  calc(30% - 35em * 0.30 + 1em);
-		margin-right: calc(30% - 35em * 0.30 + 1em);
+		/* marge de 20%, mais smooth depuis 1em */
+		margin-left:  20%; /* falLback */
+		margin-right: 20%; /* falLback */
+		margin-left:  calc(20% - 35em * 0.20 + 1em);
+		margin-right: calc(20% - 35em * 0.20 + 1em);
 	}
 }
 
@@ -100,7 +100,8 @@ main > section > *:first-child {
 	}
 }
 
-figure img {
+figure img,
+figure video {
 	width: 100%;
 }
 figure .half {

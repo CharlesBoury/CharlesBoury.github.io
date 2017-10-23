@@ -1,11 +1,14 @@
 TODO
-	english everything
-	Add "Roles" to every project
-	MediapartJam
+	tags interactifs sur l'ecran d'accueil
+	ajouter watermark su toutes les images
+	super projets
+		montrer l'envergure
+		montrer process ?
+		ajouter les "rôles" (anim/logo/concept...)
+		mettre des videos, gifs, et trucs interactifs
+		plus d'UI/VFX ?
 
-	Mathematic toys
-	microblog
-	UI/VFX ?
+	journal
 
 BON
 faut FINIR les projets.

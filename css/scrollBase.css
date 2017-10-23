@@ -13,9 +13,6 @@
 
 img, video {
 	max-width: 100%;
-}
-
-img {
 	display: block;
 	vertical-align: bottom;
 	margin: auto;
