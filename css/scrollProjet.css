@@ -7,6 +7,13 @@
 		margin-left:  calc(20% - 35em * 0.20 + 1em);
 		margin-right: calc(20% - 35em * 0.20 + 1em);
 	}
+	body.narrow {
+		/* marge de 30%, mais smooth depuis 1em */
+		margin-left:  30%; /* falLback */
+		margin-right: 30%; /* falLback */
+		margin-left:  calc(30% - 35em * 0.30 + 1em);
+		margin-right: calc(30% - 35em * 0.30 + 1em);
+	}
 }
 
 header::after,
