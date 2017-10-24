@@ -16,6 +16,52 @@
 	body {
 		background-color: #F3F3EF;
 	}
+	#Logo {
+		width: 75%;
+		position: relative;
+		z-index: -1;
+		transform-origin: center 80%;
+		animation:
+			reveal 0.75s cubic-bezier(1, 0, 0.9, 0.4),
+			tomb   0.8s cubic-bezier(0.65, 0, 1, 0.9),
+			stretch 0.6s 0.75s ease-in-out;
+	}
+
+	@keyframes reveal {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	@keyframes tomb {
+		from {
+			top: -20em;
+		}
+		to {
+			top: 0;
+		}
+	}
+	@keyframes stretch {
+		0% {
+			transform: scale(1, 1);
+		}
+		20% {
+			transform: scale(1.05, 0.95);
+		}
+		40% {
+			transform: scale(0.95, 1.05);
+		}
+		70% {
+			transform: scale(1.01, 0.99);
+		}
+		100% {
+			transform: scale(1, 1);
+		}
+	}
+}
+
 </style>
 
 
@@ -31,25 +77,34 @@
 <main>
 	<h1>DragonBox<span class="description">cute maths</span></h1>
 	<section>
-		<figure>
-			<img style="margin-bottom: 4em;" src="dragonbox/logo.jpg">
+		<figure style="margin-top: 2em;">
+			<img id="Logo" src="dragonbox/logo.png">
 		</figure>
-		<p>I worked on a mobile game teaching maths equations to 8 year olds, without them knowing it. I did interactive mockups and game animations (see the gifs) as well as backgrounds, interfaces, logo, and web trailers.</p>
+		<p>I worked at <a href="http://wewanttoknow.com"><abbr title="WeWantToKnow">WWTK</abbr></a> on a mobile game teaching maths equations to 8 year olds, without them knowing it. I did interactive mockups and game animations as well as backgrounds, interfaces, logo, and web trailers.</p>
 		<figure>
-			<img src="dragonbox/screen1.jpg">
-			<figcaption>the game looks like this at first</figcaption>
-		</figure>
-		<figure>
-			<img src="dragonbox/screen2.jpg">
-			<figcaption>then it gradually changes to classic mathematical notations</figcaption>
+			<img class="half" src="dragonbox/screen1.jpg"
+			><img class="half" src="dragonbox/screen2.jpg">
+			<figcaption>the game gradually changes to classic mathematical notations</figcaption>
 		</figure>
 		<figure>
-			<img src="dragonbox/developMult.gif">
+		</figure>
+		<p>I put a lot of care in animations, to convey on the clearest and most memorable way the mathematical sense of actions.</p>
+		<figure>
+			<video src="dragonbox/developMult.mp4" autoplay loop muted></video>
 			<figcaption>how to develop, the dragonBox way. 3(a+b) = (3a + 3b)</figcaption>
 		</figure>
 		<figure>
-			<img src="dragonbox/factoDiv.gif">
+			<video src="dragonbox/factoDiv.mp4" autoplay loop muted></video>
 			<figcaption>how to factorize ! (a/5 + b/5) = (a + b)/5</figcaption>
+		</figure>
+		<p>The game graphics had to be appealling for children under 10 years old.</p>
+		<figure>
+			<img class="half" src="dragonbox/lvls.jpg"
+			><img class="half" src="dragonbox/victory.jpg">
+			<figcaption>Some of the UI and menus I made</figcaption>
+		</figure>
+		<figure>
+			<img style="width: 10em;" src="dragonbox/icone.png">
 		</figure>
 	</section>
 </main>
@@ -59,7 +114,7 @@
 	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
 	<section id="Legal">
 		<p>Artworks by Charles Boury, 2012-2013.</p>
-		<p>DragonBox is made by WeWantToKnow AS.</p>
+		<p>DragonBox is made by <a href="http://wewanttoknow.com">WeWantToKnow AS</a>.</p>
 		<p>Please <a href="mailto:boury.charles@gmail.com">contact me</a> before using any of my work.</p>
 	</section>
 </footer>
