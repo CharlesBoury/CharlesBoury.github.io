@@ -110,24 +110,27 @@ main > section > *:first-child {
 
 figure img,
 figure video {
-	width: 100%;
-}
-figure .half {
-	width: calc(50% - 0.15em);
 	display: inline-block;
-	vertical-align: bottom;
-}
-figure .half:nth-child(odd) {
-	margin-right: 0.3em;
+	width: 100%;
+	padding: 0.15em;
 }
 
-figure *:not(:first-child) {
-	margin-top: 0.3em;
+.half {
+	width: 50%;
+}
+
+.third {
+	width: 33.33%;
+}
+
+.minicentered {
+	padding: 0;
+	display: block;
+	max-width: 36em;
 }
 
 figcaption {
 	margin: 0.3em 0;
-	min-height: 1em;
 	font-size: 0.8em;
 	text-align: center;
 }
