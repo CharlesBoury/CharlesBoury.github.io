@@ -1,54 +1,88 @@
 
 
+/* ------------------------------------------ */
+/* pour tout le monde */
 
-html, body {
-	background-color: #F3F3EF;
-	height: 100%;
-	margin: 0;
-	overflow: hidden; /* ne marche que pour desktop */
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
 }
 
-#Diaporama {
-	/* taille absolue du diaporama */
-	width: 1350px;
-	height: 900px;
+/* ------------------------------------------ */
+/* img considéré comme block */
 
-	/* Positionnement au centre du viewport.
-	Un script le redimensionne ensuite,
-	avec comme pivot le centre de l'écran */
-	position: absolute;
-	left: 50%;
-	top:  50%;
-	margin-left: -675px;
-	margin-top:  -450px;
-	transform-origin: center;
-}
-
-
-
-.diapo {
-	/* chaque diapo fait 100% du diaporama */
-	width: 100%;
-	height: 100%;
-
-	/* position absolue pour overlap pendant
-	la transition entre deux diapos */
-	position: absolute;
-
-	/* Rappel :
-	au début toutes les diapos sont cachées
-	sauf la première. */
-}
-
-
-
-
-.diapo > * {
-	/* les enfants directs sont
-	centrés horizontalement
-	les un sous les autres */
+img, video {
+	max-width: 100%;
 	display: block;
+	vertical-align: bottom;
 	margin: auto;
-	/* Et sont deplacables avec top & left */
-	position: relative;
+}
+
+p img,
+h1 img, h2 img, h3 img,
+h4 img, h5 img, h6 img {
+	display: inline-block;
+}
+
+/* ------------------------------------------ */
+
+html {
+	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+	color: #c3b09e;
+}
+
+
+header, footer {
+	text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6, b {
+	font-weight: bold;
+	color: #634b3f;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	transition: color 0.1s ease-out;
+}
+
+a:hover {
+	color: #ff7d0a;
+}
+
+/* ------------------------------------------ */
+
+body {
+	margin: 0 1em;
+}
+
+@media screen and (min-width: 35em) {
+
+	body {
+		/* marge de 15%, mais smooth depuis 1em */
+		margin-left:  15%; /* falLback */
+		margin-right: 15%; /* falLback */
+		margin-left:  calc(15% - 35em * 0.15 + 1em);
+		margin-right: calc(15% - 35em * 0.15 + 1em);
+	}
+}
+
+@media screen and (min-width: 70em) {
+
+	body {
+		font-size: 1.2em; /* fallback */
+		/* on ajoute un pourcentage (0.25) de vw (1.43vw = 1em quand 100vw = 70em) */
+		font-size: calc(0.75em + 1.43vw * 0.25);
+	}
+}
+
+/* ------------------------------------------ */
+/* compatibilité avec les anciens navigateurs */
+
+article, header, footer, nav, aside, section, 
+figure, figcaption, details {
+	display: block;
 }
