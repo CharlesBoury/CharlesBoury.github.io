@@ -73,9 +73,7 @@ body {
 @media screen and (min-width: 70em) {
 
 	body {
-		font-size: 1.2em; /* fallback */
-		/* on ajoute un pourcentage (0.25) de vw (1.43vw = 1em quand 100vw = 70em) */
-		font-size: calc(0.75em + 1.43vw * 0.25);
+		font-size: 1.2em;
 	}
 }
 
