@@ -102,11 +102,6 @@ main > section > * {
 main > section > *:first-child {
 	margin: calc(5vw + 1em) auto;
 }
-@media screen and (min-width: 35em) {
-	main > section > * {
-		margin: calc(8vw + 1em) auto;
-	}
-}
 
 figure img,
 figure video {
