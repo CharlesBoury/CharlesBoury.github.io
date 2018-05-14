@@ -114,19 +114,25 @@ figure img,
 figure video {
 	display: inline-block;
 	width: 100%;
-	padding: 0.15em;
+	margin-bottom: 0.3em;
 }
 
-.half {
-	width: 50%;
+.gridOfTwo * {
+	width: calc(50% - 0.15em);
+}
+.gridOfTwo *:nth-of-type(odd) {
+	margin-right: 0.3em;
 }
 
-.third {
-	width: 33.33%;
+.gridOfThree * {
+	width: calc(33.33% - 0.2em);
+	margin-right: 0.3em;
+}
+.gridOfThree *:nth-of-type(3n) {
+	margin-right: 0em;
 }
 
 .minicentered {
-	padding: 0;
 	display: block;
 	max-width: 36em;
 }
