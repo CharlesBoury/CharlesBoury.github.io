@@ -4,13 +4,13 @@
 ### must
 * redo CV (less classic but stay serious, and in english)
 * improve projects
-	* more UI/VFX work (in bactattack)
-	* show process (show font in tina project, link proto of jnbdp, etc)
-	* put videos, gifs, et interactive toys
-	* links to play  (stores / itch.io / download)
+    * more UI/VFX work (in bactattack)
+    * show process (show font in tina project, etc)
+    * put videos, gifs, & interactive toys
+    * links to play  (stores / itch.io / download)
 * add hologram project
 * opengraph image
-	
+
 ### nice if
 * myriad with only one picture (window + video combined)
 * add blog link on homepage
@@ -45,9 +45,9 @@ to test on localhost (or mothership.local from other machines):
 in terminal: `git ftp push`
 
 options:
-	`git config git-ftp.url "ftp://ftp.charlesboury.fr:21/www"`
-	`git config git-ftp.user "charlesbq"`
-	`git config git-ftp.password "password"`
-	(or in gitup: Repository > Edit git config)
+    `git config git-ftp.url "ftp://ftp.charlesboury.fr:21/www"`
+    `git config git-ftp.user "charlesbq"`
+    `git config git-ftp.password "password"`
+    (or in gitup: Repository > Edit git config)
 
 (infos from https://github.com/git-ftp/git-ftp)
