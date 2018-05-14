@@ -104,10 +104,10 @@ p a {
 }
 
 main > section > * {
-	margin: calc(8vw + 1em) auto;
+	margin: calc(6vw + 1em) auto;
 }
 main > section > *:first-child {
-	margin: calc(5vw + 1em) auto;
+	margin: calc(3vw + 1em) auto;
 }
 
 figure img,
