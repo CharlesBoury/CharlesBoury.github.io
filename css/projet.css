@@ -131,6 +131,11 @@ figure video {
 	max-width: 36em;
 }
 
+.notTooBigCentered {
+	display: block;
+	max-width: 50em;
+}
+
 figcaption {
 	margin: 0.3em 0;
 	font-size: 0.8em;
