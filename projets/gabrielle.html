@@ -47,11 +47,17 @@
 			<figcaption>the walk animation</figcaption>
 		</figure>
 		<figure>
-			<video src="gabrielle/2017-07-19.mp4" autoplay loop muted playsinline></video>
+			<video autoplay loop muted playsinline>
+				<source src="gabrielle/2017-07-19.mp4" type="video/mp4">
+				<source src="gabrielle/2017-07-19.webm" type="video/webm">
+			</video>
 			<figcaption>The current state of the game. Still WIP !</figcaption>
 		</figure>
 		<figure>
-			<video class="minicentered" src="gabrielle/fern.mp4" autoplay loop muted playsinline></video>
+			<video class="minicentered" autoplay loop muted playsinline>
+				<source src="gabrielle/fern.mp4" type="video/mp4">
+				<source src="gabrielle/fern.webm" type="video/webm">
+			</video>
 			<figcaption>I'm currently working on the <i>foliage engine™</i>.</figcaption>
 		</figure>
 		<p>You can follow the development on <a href="https://twitter.com/CharlesBoury">twitter</a>.</p>
@@ -68,3 +74,4 @@
 	</section>
 </footer>
 
+<script src="../scripts/handleAutoplay.js"></script>

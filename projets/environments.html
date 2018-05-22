@@ -52,10 +52,22 @@
 			><img src="environments/edenjour.jpg"
 			><img src="environments/edennuit.jpg"
 			><div class="gridOfTwo"
-				><video src="environments/edenjourparallax.mp4" autoplay loop muted playsinline></video
-				><video src="environments/edennuitparallax.mp4" autoplay loop muted playsinline></video
-				><video src="environments/ice.mp4" autoplay loop muted playsinline></video
-				><video src="environments/moss.mp4" autoplay loop muted playsinline></video
+				><video autoplay loop muted playsinline>
+					<source src="environments/edenjourparallax.mp4" type="video/mp4">
+					<source src="environments/edenjourparallax.webm" type="video/webm">
+  				</video
+				><video autoplay loop muted playsinline>
+					<source src="environments/edennuitparallax.mp4" type="video/mp4">
+					<source src="environments/edennuitparallax.webm" type="video/webm">
+  				</video
+				><video autoplay loop muted playsinline>
+					<source src="environments/ice.mp4" type="video/mp4">
+					<source src="environments/ice.webm" type="video/webm">
+  				</video
+				><video autoplay loop muted playsinline>
+					<source src="environments/moss.mp4" type="video/mp4">
+					<source src="environments/moss.webm" type="video/webm">
+  				</video
 			></div
 			><figcaption>Various landscapes with parallax, different weather effects and day/night cycle.<br>Also did the integration in Unity.</figcaption>
 		</figure>
@@ -75,3 +87,4 @@
 	</section>
 </footer>
 
+<script src="../scripts/handleAutoplay.js"></script>
