@@ -95,7 +95,6 @@ h1 .description {
 p {
 	color: #634b3f;
 	max-width: 36em;
-	line-height: 1.4em;
 	margin: 1em auto;
 }
 
@@ -158,6 +157,6 @@ footer {
 #Legal p {
 	margin: 0.3em auto;
 	font-size: 0.8em;
-	line-height: initial;
+	line-height: 1.1em;
 	color: inherit;
 }

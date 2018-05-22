@@ -33,6 +33,10 @@ html {
 	color: #c3b09e;
 }
 
+p {
+	line-height: 1.33em;
+}
+
 
 header, footer {
 	text-align: center;
