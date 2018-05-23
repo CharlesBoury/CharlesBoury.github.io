@@ -29,6 +29,7 @@ h4 img, h5 img, h6 img {
 
 html {
 	font-family: Helvetica, sans-serif;
+	font-weight: 200;
 	font-size: 16px;
 	color: #c3b09e;
 }
