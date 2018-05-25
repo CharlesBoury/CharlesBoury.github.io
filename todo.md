@@ -12,7 +12,6 @@
 * add Frankenstein project
 
 ### nice if
-* myriad with only one picture (window + video combined)
 * blog link on homepage
 * interactive tags on homepage
 * "zoom" on each picture

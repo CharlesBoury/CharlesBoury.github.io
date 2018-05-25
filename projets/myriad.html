@@ -28,12 +28,9 @@
 		<section>
 			<p>A little toy I made to get a better grasp at particles.<br>No dependency, just pure html / css / javascript.<br>You can <a href="http://charlesboury.fr/myriad/index.html">play with it with your mouse</a>, change variables or chose a preset.</p>
 		</section>
-		<figure>
-			<img style="width: 104%; max-width: none; margin-left: -2%;" src="myriad/interface.jpg">
-		</figure>
-		<figure>
-			<figcaption>Video:</figcaption>
-			<video controls muted poster="myriad/poster.jpg">
+		<figure class="window">
+			<img src="myriad/titlebar.png" style="margin: 0">
+			<video autoplay loop muted playsinline>
 				<source src="myriad/myriad.mp4" type="video/mp4">
 				<source src="myriad/myriad.webm" type="video/webm">
 			</video>
@@ -49,3 +46,5 @@
 		<p>Please <a href="mailto:boury.charles@gmail.com">contact me</a> before using any of my work.</p>
 	</section>
 </footer>
+
+<script src="../scripts/handleAutoplay.js"></script>
