@@ -72,7 +72,7 @@ main > section > * {
 	margin: calc(6vw + 1em) auto;
 }
 main > section > *:first-child {
-	margin: calc(3vw + 1em) auto;
+	margin-top: calc(3vw + 1em);
 }
 
 p {
