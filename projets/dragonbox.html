@@ -18,7 +18,12 @@
 	}
 	#Logo {
 		display: block;
-		width: 75%;
+		max-width: 40em;
+	}
+	#Logo.waitingLoad {
+		opacity: 0;
+	}
+	#Logo.animOnLoad {
 		position: relative;
 		z-index: -1;
 		transform-origin: center 80%;
@@ -68,7 +73,7 @@
 	<h1>DragonBox<span class="description">cute maths</span></h1>
 	<section>
 		<figure style="margin-top: 2em;">
-			<img id="Logo" src="dragonbox/logo.png">
+			<img id="Logo" class="animOnLoad" src="dragonbox/logo.png">
 		</figure>
 		<p>I worked at <a href="http://wewanttoknow.com"><abbr title="WeWantToKnow">WWTK</abbr></a> on a mobile game teaching maths equations to 8 year olds, without them knowing it. I did interactive mockups and game animations as well as backgrounds, interfaces, logo, and web trailers.</p>
 		<figure
@@ -121,5 +126,6 @@
 	</section>
 </footer>
 
+<script src="../scripts/animOnLoad.js"></script>
 <script src="../scripts/handleAutoplay.js"></script>
 
