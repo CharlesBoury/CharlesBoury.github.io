@@ -2,7 +2,6 @@
 # TODO
 
 ### must
-* redo CV (less classic but stay serious, and in english)
 * improve projects
     * more UI/VFX work (in bactattack)
     * show process (show font in tina project, etc)
@@ -17,6 +16,7 @@
 * "zoom" on each picture
 * responsive images (better resolution of pictures on large screen, quicker on small)
 * dark theme
+* animations ! But only on scroll, not on page load
 * everything like `><span>New line...</span` to be consistent
 
 ### bugs
