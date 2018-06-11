@@ -20,7 +20,6 @@
 * everything like `><span>New line...</span` to be consistent
 
 ### bugs
-* myriad doesn't work on firefox 20, nor on touch devices
 
 # Tests
 to test on localhost (or mothership.local from other machines):
