@@ -1,5 +1,7 @@
+
+// if slow network, wait until elem is loaded to play its css anim
+
 (function(){
-    // if slow network, wait untill elem is loaded to play its css anim
     var elems = document.querySelectorAll(".animOnLoad")
 
     for(var i = elems.length; i--;) {
