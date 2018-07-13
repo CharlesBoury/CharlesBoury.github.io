@@ -27,7 +27,7 @@ h4 img, h5 img, h6 img {
 
 /* ------------------------------------------ */
 
-html {
+body {
 	font-family: Helvetica, sans-serif;
 	font-weight: 200;
 	font-size: 16px;
@@ -62,7 +62,12 @@ a:hover {
 /* ------------------------------------------ */
 
 body {
-	margin: 0 1rem;
+	margin: 0;
+}
+
+h1, p, figcaption {
+	padding-left:  1rem;
+	padding-right: 1rem;
 }
 
 @media screen and (min-width: 35rem) {
@@ -74,6 +79,11 @@ body {
 		margin-left:  calc(1rem + 15% - 0.15 * 35rem);
 		margin-right: calc(1rem + 15% - 0.15 * 35rem);
 		/* 15% auxquels on soustrait ce que vaut 15% quand width = 35rem */
+	}
+
+	h1, p, figcaption {
+		padding-left:  0;
+		padding-right: 0;
 	}
 }
 

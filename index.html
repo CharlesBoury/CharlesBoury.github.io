@@ -114,48 +114,58 @@
 
 	/* ------------------------------------------ */
 
+	/* padding of 0.5em for project tiles */
 	#ProjectList {
-		/* gutter = 1em */
 		width: calc(100% + 1em);
 		margin: -0.5em;
 	}
+	#ProjectList > a {
+		display: inline-block;
+		vertical-align: bottom;
+		width: 100%;
+		padding: 0.5em;
+	}
+	/* but prevent x scrolling if there's no margin (body margins start at 35em, see base.css line 74) */
+	main {overflow: hidden;}
+	@media screen and (min-width: 35rem) {main {overflow: visible;}}
 
-		#ProjectList > a {
-			display: inline-block;
-			vertical-align: bottom;
-			width: 100%;
-			padding: 0.5em;
+
+	/* Grille des projets */
+	/* ca fait un min de (30 - 1em de marge) /2 = 14.5em de large pour chaque projet */
+	@media screen and (min-width: 30em) { #ProjectList > a {width: 50%;} }
+	@media screen and (min-width: 55em) { #ProjectList > a {width: 33%;} }
+	@media screen and (min-width: 80em) { #ProjectList > a {width: 25%;} }
+
+	#ProjectList > a img,
+	#ProjectList > a .infos {
+		width: 100%;
+	}
+
+	#ProjectList > a img {
+		position: relative;
+		z-index: -1; /* passe derriere .infos (qui est après img) */
+		transition: top 0.5s cubic-bezier(0, 1, 0.5, 1);
+		top: 0;
+	}
+
+	#ProjectList > a:hover img {
+		top: 0.4em;
+	}
+
+	#ProjectList > a .infos {
+		margin: 0;
+		padding: 0.5em 0.2em;
+		background-color: white;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	/* remove left padding of text when body has margins */
+	@media screen and (min-width: 35rem) {
+		#ProjectList > a .infos {
+			padding: 0.5em 0;
 		}
-
-		/* ca fait un min de (30 - 3em de marge) /2 = 13.5em de large */
-		@media screen and (min-width: 30em) { #ProjectList > a {width: 50%;} }
-		@media screen and (min-width: 55em) { #ProjectList > a {width: 33%;} }
-		@media screen and (min-width: 80em) { #ProjectList > a {width: 25%;} }
-
-			#ProjectList > a img,
-			#ProjectList > a .infos {
-				width: 100%;
-			}
-
-			#ProjectList > a img {
-				position: relative;
-				z-index: -1; /* passe derriere .infos (qui est après img) */
-				transition: top 0.5s cubic-bezier(0, 1, 0.5, 1);
-				top: 0;
-			}
-
-			#ProjectList > a:hover img {
-				top: 0.4em;
-			}
-
-			#ProjectList > a .infos {
-				margin: 0;
-				padding: 0.5em 0;
-				background-color: white;
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
-			}
+	}
 
 	/* ------------------------------------------ */
 
