@@ -9,11 +9,11 @@
     * videos, gifs, & interactive toys
 * add Schmilblick project
 * add Frankenstein project
+* better pictures in CV
 
 ### nice if
 * blog link on homepage
 * interactive tags on homepage
-* "zoom" on each picture
 * responsive images (better resolution of pictures on large screen, quicker on small)
 * dark theme
 * animations ! But only on scroll, not on page load
