@@ -93,14 +93,12 @@
 			font-weight: bold;
 		}
 
+		#About .br0,
 		#About .br {
 			display: none;
 		}
-		@media screen and (min-width: 31em) {
-			#About .br {
-				display: inline;
-			}
-		}
+		@media screen and (min-width: 15em) {#About .br0 {display: inline;}}
+		@media screen and (min-width: 23em) {#About .br  {display: inline;}}
 
 	/* ------------------------------------------ */
 
@@ -185,11 +183,10 @@
 <!--=====================================================================================-->
 
 <body>
-
 <header>
 	<h1><img id="Avatar" src="Images/avatar.png">Charles Boury</h1>
 
-	<p id="About">I'm a 2D Game Artist living in Paris. I see <span class="tag">videogames</span> as <span class="br"><br></span>a nice way for children and adults to explore complex systems. <span class="br"><br></span>Sometimes I dive into programming and make <span class="tag">toys</span>. Or <span class="br"><br></span>I just make <span class="tag">illustrations</span>. Also, I like mathematics.</p>
+	<p id="About">Hello! I'm a <span class="tag">2D Game Artist</span>. <span class="br0"><br></span>I make <span class="tag">illustrations</span> for stories and systems. <span class="br"><br></span>Sometimes I dive into <span class="tag">programming</span>. <span class="br"><br></span>Also I like mathematics.</p>
 
 	<p id="Resume"><a href="cv/index.html">See my resume</a></p>
 </header>
