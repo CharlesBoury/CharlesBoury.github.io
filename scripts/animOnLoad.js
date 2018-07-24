@@ -5,8 +5,10 @@
     var elems = document.querySelectorAll(".animOnLoad")
 
     for(var i = elems.length; i--;) {
-        elems[i].className = "waitingLoad"
-        elems[i].onload = function(e) {e.target.className = "animOnLoad"}
+        if (!elems[i].complete) {
+            elems[i].className = "waitingLoad"
+            elems[i].onload = function(e) {e.target.className = "animOnLoad"}
+        }
     }
 
 })()
