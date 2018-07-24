@@ -73,12 +73,12 @@ h1, p, figcaption {
 @media screen and (min-width: 35rem) {
 
 	body {
-		/* marge de 15%, mais smooth depuis 1rem */
-		margin-left:  15%; /* falLback */
-		margin-right: 15%; /* falLback */
-		margin-left:  calc(1rem + 15% - 0.15 * 35rem);
-		margin-right: calc(1rem + 15% - 0.15 * 35rem);
-		/* 15% auxquels on soustrait ce que vaut 15% quand width = 35rem */
+		/* marge de 10%, mais smooth depuis 1rem */
+		margin-left:  10%; /* falLback */
+		margin-right: 10%; /* falLback */
+		margin-left:  calc(1rem + 10% - 0.10 * 35rem);
+		margin-right: calc(1rem + 10% - 0.10 * 35rem);
+		/* 10% auxquels on soustrait ce que vaut 10% quand width = 35rem */
 	}
 
 	h1, p, figcaption {
@@ -91,6 +91,16 @@ h1, p, figcaption {
 
 	body {
 		font-size: 18px;
+	}
+}
+@media screen and (min-width: 120rem) {
+	body {
+		/* 120 - both margins
+		=  120 - 2 * (1rem + 10% * 120rem - 0.10 * 35rem)
+		=  101rem */
+		width: 101rem;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
