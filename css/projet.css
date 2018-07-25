@@ -91,6 +91,16 @@ figure video {
 	margin-bottom: 0.3em;
 }
 
+@supports (object-fit: contain) {
+	@media (max-aspect-ratio: 21/9) {
+		figure img,
+		figure video {
+			max-height: 95vh;
+			object-fit: contain;
+		}
+	}
+}
+
 figcaption {
 	margin: 0.3em 0;
 	font-size: 0.8em;
