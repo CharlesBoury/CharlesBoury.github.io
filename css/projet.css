@@ -98,6 +98,11 @@ figure video {
 			max-height: 95vh;
 			object-fit: contain;
 		}
+		figure img.scrollable,
+		figure video.scrollable {
+			max-height: 130vh;
+			object-fit: contain;
+		}
 	}
 }
 
