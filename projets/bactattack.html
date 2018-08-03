@@ -12,8 +12,11 @@
 <link rel="stylesheet" href="../css/base.css"/>
 <link rel="stylesheet" href="../css/projet.css"/>
 <style type="text/css">
-	figure img {
-		border: 0.125em solid #8e6b69;
+	figure img.bordered,
+	figure video.bordered {
+		border: 0.125em solid #f2c6a8;
+		max-height: none;
+		object-fit: fill;
 	}
 </style>
 
@@ -35,34 +38,47 @@
 			<p>It’s an endless Tetris-like arcade mobile game about bacterias. Fight them with antibiotics but don’t use the wrong one ! Otherwise they’ll end up stronger.</p>
 			<p>Roles:<br>
 			Artistic Direction, 2D assets production, Animations &amp; Unity integration.</p>
+			<p><a href="http://www.bactattack.com">Play the game.</a></p>
 		</section>
 		<figure>
-			<img src="bactattack/00Start.jpg">
-			<figcaption>Title screen</figcaption>
+			<video autoplay loop muted playsinline class="bordered">
+				<source src="bactattack/titlescreen.mp4" type="video/mp4">
+				<source src="bactattack/titlescreen.webm" type="video/webm">
+			</video>
+			<figcaption>title screen</figcaption>
 		</figure>
 		<figure>
-			<img src="bactattack/01Labo.jpg">
-			<figcaption>Main Menu</figcaption>
+			<video autoplay loop muted playsinline class="bordered">
+				<source src="bactattack/labo.mp4" type="video/mp4">
+				<source src="bactattack/labo.webm" type="video/webm">
+			</video>
+			<figcaption>upgrade shop animations</figcaption>
 		</figure>
 		<figure>
-			<img src="bactattack/02SousLabo.jpg">
-			<figcaption>Shop panel</figcaption>
+			<video autoplay loop muted playsinline>
+				<source src="bactattack/ingame.mp4" type="video/mp4">
+				<source src="bactattack/ingame.webm" type="video/webm">
+			</video>
+			<figcaption>in-game actions</figcaption>
+		</figure>
+		<figure class="notBig">
+			<video autoplay loop muted playsinline>
+				<source src="bactattack/infection.mp4" type="video/mp4">
+				<source src="bactattack/infection.webm" type="video/webm">
+			</video>
+			<figcaption>The little dude you have to protect. His animations show the current life points of the player, 5 total + game over</figcaption>
 		</figure>
 		<figure>
-			<img src="bactattack/03Dialogue.jpg">
-			<figcaption>Tutorial</figcaption>
+			<img src="bactattack/endgame.jpg">
+			<figcaption>end-game</figcaption>
 		</figure>
 		<figure>
-			<img src="bactattack/06JeuFin.jpg">
-			<figcaption>InGame screen</figcaption>
+			<img src="bactattack/gameover.jpg">
+			<figcaption>game over screen</figcaption>
 		</figure>
 		<figure>
-			<img src="bactattack/07Recap.jpg">
-			<figcaption>endGame screen</figcaption>
-		</figure>
-		<figure>
-			<img src="bactattack/12Confirmation.jpg">
-			<figcaption>Menu</figcaption>
+			<img src="bactattack/popup.jpg">
+			<figcaption>popup</figcaption>
 		</figure>
 	</section>
 </main>
@@ -76,3 +92,4 @@
 	</section>
 </footer>
 
+<script src="../scripts/handleAutoplay.js"></script>
