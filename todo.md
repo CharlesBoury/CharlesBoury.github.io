@@ -6,10 +6,12 @@
     * more UI/VFX work (in bactattack)
     * show process (show font in tina project, etc)
     * videos, gifs, & interactive toys
-* add Schmilblick project
+    * add collaborators
 * add bird_outline project
 * better pictures in CV
 * add Education to CV
+* project of mockups ?
+* add "tout ce dont un homme peut rever"
 
 ### nice if
 * blog link on homepage
@@ -20,7 +22,7 @@
 * everything like `><span>New line...</span` to be consistent
 
 ### bugs
-* bug: project imgs/videos with border: left & right blank space between borders and img/video when affected by 'object-fit: contain'.
+* project imgs/videos with border: left & right blank space between borders and img/video when affected by 'object-fit: contain'.
 
 # Tests
 to test on localhost (or mothership.local from other machines):
