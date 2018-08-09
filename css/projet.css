@@ -91,6 +91,11 @@ figure video {
 	margin-bottom: 0.3em;
 }
 
+figure img.noScaleUp,
+figure video.noScaleUp {
+	width: auto;
+}
+
 @supports (object-fit: contain) {
 	@media (max-aspect-ratio: 21/9) {
 		figure img,
