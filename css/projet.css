@@ -100,7 +100,7 @@ figure video {
 		}
 		figure img.scrollable,
 		figure video.scrollable {
-			max-height: 130vh;
+			max-height: 140vh;
 			object-fit: contain;
 		}
 		.window img,
