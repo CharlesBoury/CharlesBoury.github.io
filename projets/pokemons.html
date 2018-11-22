@@ -10,7 +10,8 @@
 <meta name="viewport" content="initial-scale=1.0">
 
 <link rel="stylesheet" href="../css/base.css"/>
-<link rel="stylesheet" href="../css/projet.css"/>
+<link rel="stylesheet" href="../css/article.css"/>
+<link rel="stylesheet" href="../css/navigation.css"/>
 
 
 <!--=====================================================================================-->
@@ -18,25 +19,38 @@
 <body>
 
 
-<header>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+<header id="MainNav" class="project">
+    <a href="../index.html" id="Id">
+        <img src="../Images/avatar.png">
+        <div>
+            <h1>Charles Boury</h1>
+            <h2>2D game artist</h2>
+        </div>
+    </div></a>
+    <nav id="Menu">
+        <h2><a class="active" href="../index.html">Projects</a></h2>
+        <h2><a href="../about.html">About</a></h2>
+    </nav>
 </header>
 
-<main>
-	<h1>Pokemons<span class="description">unofficial monsters</span></h1>
-	<section>
+<article>
+	<header>
+		<h1>Pokemons</h1>
+		<p>unofficial monsters</p>
+	</header>
+	<main>
 		<section>
-		<p>A bestiary of fierce and cute creatures.</p>
-		<p>I was asked to design a series of 35 unique monsters, each beign a combination of 2 elements.</p>
+			<p>A bestiary of fierce and cute creatures.</p>
+			<p>I was asked to design a series of 35 unique monsters, each being a combination of 2 elements.</p>
 		</section
 		><figure 
 			><img class="noScaleUp" style="padding: 0 2em;" src="pokemons/elements.png"
 		></figure
-		><figure class="notTooBig" 
+		><figure
 			><img src="pokemons/regroupement.jpg"
 		></figure
 		><p>Here are my favorites:</p
-		><figure class="notTooBig gridOfTwo"
+		><figure class="big grid ofTwo"
 			><img src="pokemons/poke63.png"
 			><img src="pokemons/poke12.png"
 			><img src="pokemons/poke28.png"
@@ -45,19 +59,21 @@
 			><img src="pokemons/poke25.png"
 		></figure
 		><p>I also did a pixelated version of them:</p
-		><figure class="notBig gridOfTwo"
+		><figure class="grid ofTwo"
 			><img src="pokemons/pixel9.png"
 			><img src="pokemons/pixel18.png"
 			><img src="pokemons/pixel25.png"
 			><img src="pokemons/pixel28.png"
 		></figure
-	></section>
-</main>
+	></main>
+</article>
 
 
 <footer>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
-	<section id="Legal">
+	<div class="navToIndex">
+        <a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+    </div>
+	<section class="legal">
 		<p>Artworks by Charles Boury, 2013.</p>
 		<p>Please <a href="mailto:boury.charles@gmail.com">contact me</a> before using any of my work.</p>
 	</section>

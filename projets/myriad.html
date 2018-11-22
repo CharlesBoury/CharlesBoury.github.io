@@ -10,7 +10,8 @@
 <meta name="viewport" content="initial-scale=1.0">
 
 <link rel="stylesheet" href="../css/base.css"/>
-<link rel="stylesheet" href="../css/projet.css"/>
+<link rel="stylesheet" href="../css/article.css"/>
+<link rel="stylesheet" href="../css/navigation.css"/>
 
 
 <!--=====================================================================================-->
@@ -18,33 +19,48 @@
 <body>
 
 
-<header>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+<header id="MainNav" class="project">
+    <a href="../index.html" id="Id">
+        <img src="../Images/avatar.png">
+        <div>
+            <h1>Charles Boury</h1>
+            <h2>2D game artist</h2>
+        </div>
+    </div></a>
+    <nav id="Menu">
+        <h2><a class="active" href="../index.html">Projects</a></h2>
+        <h2><a href="../about.html">About</a></h2>
+    </nav>
 </header>
 
-<main>
-	<h1>Myriad<span class="description">fun with particles</span></h1>
-	<section>
-		<section>
-			<p>A little toy I made to get a better grasp at particles. No dependency, just pure html / css / javascript.</p><p>You can <a href="http://charlesboury.fr/myriad/index.html">play with it with your mouse or finger</a>, change variables or chose a preset.</p>
-		</section>
-		<figure class="window">
-			<img src="myriad/titlebar.png" style="margin: 0">
-			<video autoplay loop muted playsinline>
-				<source src="myriad/myriad.mp4" type="video/mp4">
-				<source src="myriad/myriad.webm" type="video/webm">
-			</video>
-		</figure>
-	</section>
-</main>
+<article>
+    <header>
+        <h1>Myriad</h1>
+        <p>fun with particles</p>
+    </header>
+    <main>
+        <section>
+            <p>A little toy I made to get a better grasp at particles. No dependency, just pure html / css / javascript.</p><p>You can <a href="http://charlesboury.fr/myriad/index.html">play with it with your mouse or finger</a>, change variables or chose a preset.</p>
+        </section>
+        <figure class="nice">
+            <img src="myriad/titlebar.png" class="noFit" style="margin: 0">
+            <video autoplay loop muted playsinline class="noFit">
+                <source src="myriad/myriad.mp4" type="video/mp4">
+                <source src="myriad/myriad.webm" type="video/webm">
+            </video>
+        </figure>
+    </main>
+</article>
 
 
 <footer>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
-	<section id="Legal">
-		<p>Artworks by Charles Boury, 2015-2017.</p>
-		<p>Please <a href="mailto:boury.charles@gmail.com">contact me</a> before using any of my work.</p>
-	</section>
+    <div class="navToIndex">
+        <a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+    </div>
+    <section class="legal">
+        <p>Artworks by Charles Boury, 2015-2017.</p>
+        <p>Please <a href="mailto:boury.charles@gmail.com">contact me</a> before using any of my work.</p>
+    </section>
 </footer>
 
 <script src="../scripts/handleAutoplay.js"></script>

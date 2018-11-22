@@ -10,7 +10,8 @@
 <meta name="viewport" content="initial-scale=1.0">
 
 <link rel="stylesheet" href="../css/base.css"/>
-<link rel="stylesheet" href="../css/projet.css"/>
+<link rel="stylesheet" href="../css/article.css"/>
+<link rel="stylesheet" href="../css/navigation.css"/>
 
 
 <!--=====================================================================================-->
@@ -18,37 +19,52 @@
 <body>
 
 
-<header>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+<header id="MainNav" class="project">
+    <a href="../index.html" id="Id">
+        <img src="../Images/avatar.png">
+        <div>
+            <h1>Charles Boury</h1>
+            <h2>2D game artist</h2>
+        </div>
+    </div></a>
+    <nav id="Menu">
+        <h2><a class="active" href="../index.html">Projects</a></h2>
+        <h2><a href="../about.html">About</a></h2>
+    </nav>
 </header>
 
-<main>
-	<h1>Je n'ai besoin de personne<span class="description">screensaver++</span></h1>
-	<section>
+<article>
+	<header>
+		<h1>Je n'ai besoin de personne</h1>
+		<p>screensaver++</p>
+	</header>
+	<main>
 		<section>
 			<p>WIP of an interactive screensaver.</p>
 			<p>Traditional animation not finished, but I found the mathematical curves for the road (and I'm super proud). You can play with an <a href="https://www.desmos.com/calculator/yj9yiouuhl">interactive version here</a>.</p>
 		</section>
-		<figure>
+		<figure class="big">
 			<img src="jenaibesoindepersonne/style.gif">
 			<figcaption>One day it will look like this</figcaption>
 		</figure>
-		<figure>
+		<figure class="big">
 			<img src="jenaibesoindepersonne/desmos.gif">
 			<figcaption>But for now it's more like this</figcaption>
 		</figure>
 		<p>I've also made a prototype of an interactive version: <a href="jenaibesoindepersonne/JNABDP-macosx.zip">macosx</a> / <a href="jenaibesoindepersonne/JNABDP-windows.zip">windows</a> / <a href="jenaibesoindepersonne/JNABDP-linux.zip">linux</a></p>
-		<figure>
+		<figure class="big">
 			<img src="jenaibesoindepersonne/proto.png" style="width: 35%">
 			<figcaption>a prototype to test some gameplay</figcaption>
 		</figure>
-	</section>
-</main>
+	</main>
+</article>
 
 
 <footer>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
-	<section id="Legal">
+	<div class="navToIndex">
+        <a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+    </div>
+	<section class="legal">
 		<p>Artworks by Charles Boury, 2015.</p>
 		<p>Please <a href="mailto:boury.charles@gmail.com">contact me</a> before using any of my work.</p>
 	</section>

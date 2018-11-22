@@ -3,26 +3,30 @@
 
 ### must
 * improve projects
-    * more UI/VFX work (in bactattack)
     * show process (show font in tina project, etc)
-    * videos, gifs, & interactive toys
     * add collaborators
+    * add date and play button
+* add project "VFX" and extract good particles/parallax from various projects
 * add bird_outline project
 * better pictures in CV
 * add Education to CV
 * project of mockups ?
 * add "tout ce dont un homme peut rever"
+* [myriad] add gallery of screens/gifs
 
 ### nice if
+* width de la page comme sur REVOL
+* make about page illustrated (like introduction post)
+* react to mouse over CharlesBoury (logo anim ?)
+* rework logo
 * blog link on homepage
-* interactive tags on homepage
 * responsive images (better resolution of pictures on large screen, quicker on small)
 * dark theme
 * animations ! But only on scroll, not on page load
 * everything like `><span>New line...</span` to be consistent
+* [gabrielle] sound on video
 
 ### bugs
-* project imgs/videos with border: left & right blank space between borders and img/video when affected by 'object-fit: contain'.
 
 # Tests
 to test on localhost (or mothership.local from other machines):

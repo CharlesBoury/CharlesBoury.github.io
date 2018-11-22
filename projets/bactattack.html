@@ -10,7 +10,8 @@
 <meta name="viewport" content="initial-scale=1.0">
 
 <link rel="stylesheet" href="../css/base.css"/>
-<link rel="stylesheet" href="../css/projet.css"/>
+<link rel="stylesheet" href="../css/article.css"/>
+<link rel="stylesheet" href="../css/navigation.css"/>
 <style type="text/css">
 	figure img.bordered,
 	figure video.bordered {
@@ -26,13 +27,26 @@
 <body>
 
 
-<header>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+<header id="MainNav" class="project">
+    <a href="../index.html" id="Id">
+        <img src="../Images/avatar.png">
+        <div>
+            <h1>Charles Boury</h1>
+            <h2>2D game artist</h2>
+        </div>
+    </div></a>
+    <nav id="Menu">
+        <h2><a class="active" href="../index.html">Projects</a></h2>
+        <h2><a href="../about.html">About</a></h2>
+    </nav>
 </header>
 
-<main>
-	<h1>Bact Attack<span class="description">cute immunology</span></h1>
-	<section>
+<article>
+	<header>
+		<h1>Bact Attack</h1>
+		<p>cute immunology</p>
+	</header>
+	<main>
 		<section>
 			<p>I made the graphics for a game commissioned to raise awareness about Antibiotic Resistance.</p>
 			<p>It’s an endless Tetris-like arcade mobile game about bacterias. Fight them with antibiotics but don’t use the wrong one ! Otherwise they’ll end up stronger.</p>
@@ -40,53 +54,55 @@
 			Artistic Direction, 2D assets production, Animations &amp; Unity integration.</p>
 			<p><a href="http://www.bactattack.com">Play the game.</a></p>
 		</section>
-		<figure>
+		<figure class="big">
 			<video autoplay loop muted playsinline class="bordered">
 				<source src="bactattack/titlescreen.mp4" type="video/mp4">
 				<source src="bactattack/titlescreen.webm" type="video/webm">
 			</video>
 			<figcaption>title screen</figcaption>
 		</figure>
-		<figure>
+		<figure class="big">
 			<video autoplay loop muted playsinline class="bordered">
 				<source src="bactattack/labo.mp4" type="video/mp4">
 				<source src="bactattack/labo.webm" type="video/webm">
 			</video>
 			<figcaption>upgrade shop animations</figcaption>
 		</figure>
-		<figure>
+		<figure class="big">
 			<video autoplay loop muted playsinline>
 				<source src="bactattack/ingame.mp4" type="video/mp4">
 				<source src="bactattack/ingame.webm" type="video/webm">
 			</video>
 			<figcaption>in-game actions</figcaption>
 		</figure>
-		<figure class="notBig">
+		<figure>
 			<video autoplay loop muted playsinline>
 				<source src="bactattack/infection.mp4" type="video/mp4">
 				<source src="bactattack/infection.webm" type="video/webm">
 			</video>
 			<figcaption>The little dude you have to protect. His animations show the current life points of the player, 5 total + game over</figcaption>
 		</figure>
-		<figure>
+		<figure class="big">
 			<img src="bactattack/endgame.jpg">
 			<figcaption>end-game</figcaption>
 		</figure>
-		<figure>
+		<figure class="big">
 			<img src="bactattack/gameover.jpg">
 			<figcaption>game over screen</figcaption>
 		</figure>
-		<figure>
+		<figure class="big">
 			<img src="bactattack/popup.jpg">
 			<figcaption>popup</figcaption>
 		</figure>
-	</section>
-</main>
+	</main>
+</article>
 
 
 <footer>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
-	<section id="Legal">
+	<div class="navToIndex">
+        <a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+    </div>
+	<section class="legal">
 		<p>Artworks by Charles Boury, 2017.</p>
 		<p>Please <a href="mailto:boury.charles@gmail.com">contact me</a> before using any of my work.</p>
 	</section>

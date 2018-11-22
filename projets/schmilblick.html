@@ -10,7 +10,8 @@
 <meta name="viewport" content="initial-scale=1.0">
 
 <link rel="stylesheet" href="../css/base.css"/>
-<link rel="stylesheet" href="../css/projet.css"/>
+<link rel="stylesheet" href="../css/article.css"/>
+<link rel="stylesheet" href="../css/navigation.css"/>
 
 
 <!--=====================================================================================-->
@@ -18,26 +19,39 @@
 <body>
 
 
-<header>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+<header id="MainNav" class="project">
+    <a href="../index.html" id="Id">
+        <img src="../Images/avatar.png">
+        <div>
+            <h1>Charles Boury</h1>
+            <h2>2D game artist</h2>
+        </div>
+    </div></a>
+    <nav id="Menu">
+        <h2><a class="active" href="../index.html">Projects</a></h2>
+        <h2><a href="../about.html">About</a></h2>
+    </nav>
 </header>
 
-<main>
-	<h1>Schmilblick<span class="description">care game</span></h1>
-	<section>
+<article>
+	<header>
+		<h1>Schmilblick</h1>
+		<p>care game</p>
+	</header>
+	<main>
+		<p>I designed the User Interface of a mobile quizz app.</p>
+		<figure class="grid ofTwo"
+				><img src="schmilblick/landing-screen.jpg"
+				><img src="schmilblick/play-session-text.jpg"
+				><figcaption>landing screen &amp; main playing screen</figcaption
+		></figure>
 		<section>
-			<p>I designed the User Interface of a mobile quizz app.</p>
 			<p><i>Le Schmilblick</i> offers a new perspective on serious games: 
 			players help associations of public interest get donations by playing for them. I'm always enthousiast about what games can do to help society, so I joined the project.</p>
 			<p>The app had to charm a very large age group. I tried to give a light and joyful User Interface, inviting to generosity and usefulness in daily acts.</p>
 			<p><a href="https://www.leschmilblick.fr">Play the game</a>!</p>
 		</section>
-		<figure class="gridOfTwo notTooBig"
-				><img src="schmilblick/landing-screen.jpg"
-				><img src="schmilblick/play-session-text.jpg"
-				><figcaption>landing screen &amp; main playing screen</figcaption
-		></figure>
-		<figure class="gridOfThree notTooBig"
+		<figure class="grid ofThree"
 				><img src="schmilblick/play-session-picture.jpg"
 				><img src="schmilblick/theme.jpg"
 				><img src="schmilblick/profile.jpg"
@@ -46,13 +60,15 @@
 				><img src="schmilblick/victory.jpg"
 				><figcaption>all of the screens are responsive (from 1:1 to 1:2)</figcaption
 		></figure>
-	</section>
-</main>
+	</main>
+</article>
 
 
 <footer>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
-	<section id="Legal">
+	<div class="navToIndex">
+        <a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+    </div>
+	<section class="legal">
 		<p>Artworks by Charles Boury, 2017.</p>
 		<p>Please <a href="mailto:boury.charles@gmail.com">contact me</a> before using any of my work.</p>
 	</section>

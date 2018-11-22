@@ -10,7 +10,8 @@
 <meta name="viewport" content="initial-scale=1.0">
 
 <link rel="stylesheet" href="../css/base.css"/>
-<link rel="stylesheet" href="../css/projet.css"/>
+<link rel="stylesheet" href="../css/article.css"/>
+<link rel="stylesheet" href="../css/navigation.css"/>
 
 <style type="text/css">
 	body {
@@ -29,7 +30,7 @@
 			stretch 0.6s 0.75s ease-in-out;
 	}
 	#Icon {
-		max-width: 20%;
+		max-width: 30%;
 		transition: transform 0.05s linear;
 	}
 	#Icon:hover {
@@ -61,35 +62,44 @@
 <body>
 
 
-<header>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+<header id="MainNav" class="project">
+    <a href="../index.html" id="Id">
+        <img src="../Images/avatar.png">
+        <div>
+            <h1>Charles Boury</h1>
+            <h2>2D game artist</h2>
+        </div>
+    </div></a>
+    <nav id="Menu">
+        <h2><a class="active" href="../index.html">Projects</a></h2>
+        <h2><a href="../about.html">About</a></h2>
+    </nav>
 </header>
 
-<main>
-	<h1>DragonBox<span class="description">cute maths</span></h1>
-	<section>
-		<figure class="notTooBig" style="margin-top: 2em;">
+<article>
+	<header>
+		<h1>DragonBox</h1>
+		<p>cute maths</p>
+	</header>
+	<main>
+		<figure class="nice breath" style="margin-top: 2em;">
 			<img id="Logo" class="animOnLoad" src="dragonbox/logo.png">
 		</figure>
 		<p>I worked at <a href="http://wewanttoknow.com"><abbr title="WeWantToKnow">WWTK</abbr></a> on a mobile game teaching maths equations to 8 year olds, without them knowing it. I did interactive mockups and game animations as well as backgrounds, interfaces, logo, and web trailers.</p>
-		<figure
-			><div class="gridOfTwo"
-				><img src="dragonbox/screen1.jpg"
-				><img src="dragonbox/screen2.jpg"
-			></div
+		<figure class="big grid ofTwo"
+			><img src="dragonbox/screen1.jpg"
+			><img src="dragonbox/screen2.jpg"
 			><figcaption>the game gradually changes to classic mathematical notations</figcaption>
 		</figure>
-		<figure>
-		</figure>
 		<p>I put a lot of care in animations, to convey on the clearest and most memorable way the mathematical sense of actions.</p>
-		<figure class="notTooBig">
+		<figure class="nice breath">
 			<video autoplay loop muted playsinline>
 				<source src="dragonbox/developMult.mp4" type="video/mp4">
 				<source src="dragonbox/developMult.webm" type="video/webm">
   			</video>
 			<figcaption>how to develop, the dragonBox way. 3(a+b) = (3a + 3b)</figcaption>
 		</figure>
-		<figure class="notTooBig">
+		<figure class="nice breath">
 			<video autoplay loop muted playsinline>
 				<source src="dragonbox/factoDiv.mp4" type="video/mp4">
 				<source src="dragonbox/factoDiv.webm" type="video/webm">
@@ -97,25 +107,25 @@
 			<figcaption>how to factorize ! (a/5 + b/5) = (a + b)/5</figcaption>
 		</figure>
 		<p>The game graphics had to be appealling for children under 10 years old.</p>
-		<figure
-			><div class="gridOfTwo"
-				><img src="dragonbox/lvls.jpg"
-				><img src="dragonbox/victory.jpg"
-			></div
+		<figure class="big grid ofTwo" 
+			><img src="dragonbox/lvls.jpg"
+			><img src="dragonbox/victory.jpg"
 			><figcaption>Some of the UI and menus I made</figcaption>
 		</figure>
-		<figure>
+		<figure class="breath">
 			<img id="Icon" src="dragonbox/icone.png">
 			<figcaption>Game Icon</figcaption>
 		</figure>
 		<p style="text-align: center;"><a href="http://dragonbox.com/products/algebra-12" target="_blank">Play the game</a></p>
-	</section>
-</main>
+	</main>
+</article>
 
 
 <footer>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
-	<section id="Legal">
+	<div class="navToIndex">
+        <a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+    </div>
+	<section class="legal">
 		<p>Artworks by Charles Boury, 2012-2013.</p>
 		<p>DragonBox is made by <a href="http://wewanttoknow.com">WeWantToKnow AS</a>.</p>
 		<p>Please <a href="mailto:boury.charles@gmail.com">contact me</a> before using any of my work.</p>

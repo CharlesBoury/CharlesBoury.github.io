@@ -10,42 +10,56 @@
 <meta name="viewport" content="initial-scale=1.0">
 
 <link rel="stylesheet" href="../css/base.css"/>
-<link rel="stylesheet" href="../css/projet.css"/>
+<link rel="stylesheet" href="../css/article.css"/>
+<link rel="stylesheet" href="../css/navigation.css"/>
 
 
 <!--=====================================================================================-->
 
 <body>
 
-
-<header>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+<header id="MainNav" class="project">
+    <a href="../index.html" id="Id">
+        <img src="../Images/avatar.png">
+        <div>
+            <h1>Charles Boury</h1>
+            <h2>2D game artist</h2>
+        </div>
+    </div></a>
+    <nav id="Menu">
+        <h2><a class="active" href="../index.html">Projects</a></h2>
+        <h2><a href="../about.html">About</a></h2>
+    </nav>
 </header>
 
-<main>
-	<h1>Frankenstein<span class="description">environment art</span></h1>
-	<section>
-		<p>I'm making backgrounds for a game that lets you explore the romantic and sensible story of the classic novel Frankenstein. Produced by Arte &amp; LaBelle Games, currently in development.</p>
-		<figure><img class="scrollable" src="frankenstein/montagne.jpg"></figure>
-		<figure><img src="frankenstein/village.jpg"></figure>
-		<figure><img src="frankenstein/eglise.jpg"></figure>
+<article>
+    <header>
+        <h1>Frankenstein</h1>
+        <p>backgrounds</p>
+    </header>
+	<main>
+		<p>I'm making art backgrounds for a game that lets you explore the romantic and sensible story of the classic novel Frankenstein. Produced by Arte &amp; LaBelle Games, currently in development.</p>
+		<figure class="big"><img class="scrollable" src="frankenstein/montagne.jpg"></figure>
+		<figure class="big"><img src="frankenstein/village.jpg"></figure>
+		<figure class="big"><img src="frankenstein/eglise.jpg"></figure>
 		<section>
 			<p>With an always distant camera, both the character and the player travel large sceneries to discover how they came to be and how to handle the repudiation of others.</p>
 			<p>The scenery had to be romantic and sublime. I was inspired by painters like Friedrich, Corot, Robert, Deshayes, and videogames like Below and Totem Teller.</p>
 		</section>
-		<figure><img src="frankenstein/cimetiere.jpg"></figure>
-		<figure><img src="frankenstein/laboratoire.jpg"><figcaption>an interior, closer to the character</figcaption></figure>
-		<figure><img src="frankenstein/lac.jpg"><figcaption>the climax</figcaption></figure>
+		<figure class="big"><img src="frankenstein/cimetiere.jpg"></figure>
+		<figure class="big"><img src="frankenstein/laboratoire.jpg"><figcaption>an interior, closer to the character</figcaption></figure>
+		<figure class="big"><img src="frankenstein/lac.jpg"><figcaption>the climax</figcaption></figure>
 		<p>Everything you see here is WIP and not guaranted to be in the game. It is selected to present my work. If you want to get an official presskit, please don't use these images and contact Arte or LaBelle Games instead.</p>
-	</section>
-</main>
+	</main>
+</article>
 
 
 <footer>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
-	<section id="Legal">
+	<div class="navToIndex">
+		<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+	</div>
+	<section class="legal">
 		<p>Artworks by Charles Boury, 2018.</p>
 		<p>Please <a href="mailto:boury.charles@gmail.com">contact me</a> before using any of my work.</p>
 	</section>
 </footer>
-

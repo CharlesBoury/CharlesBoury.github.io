@@ -10,7 +10,8 @@
 <meta name="viewport" content="initial-scale=1.0">
 
 <link rel="stylesheet" href="../css/base.css"/>
-<link rel="stylesheet" href="../css/projet.css"/>
+<link rel="stylesheet" href="../css/article.css"/>
+<link rel="stylesheet" href="../css/navigation.css"/>
 
 
 <!--=====================================================================================-->
@@ -18,27 +19,42 @@
 <body>
 
 
-<header>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+<header id="MainNav" class="project">
+    <a href="../index.html" id="Id">
+        <img src="../Images/avatar.png">
+        <div>
+            <h1>Charles Boury</h1>
+            <h2>2D game artist</h2>
+        </div>
+    </div></a>
+    <nav id="Menu">
+        <h2><a class="active" href="../index.html">Projects</a></h2>
+        <h2><a href="../about.html">About</a></h2>
+    </nav>
 </header>
 
-<main>
-	<h1>Gifs<span class="description">NSFW animations</span></h1>
-	<section>
-		<figure><img src="NSFWgifs/buffet.gif"></figure>
-		<figure><img src="NSFWgifs/vahine.gif"></figure>
-		<figure><img src="NSFWgifs/nuque.gif"></figure>
-		<figure><img src="NSFWgifs/soleildautomne.gif"></figure>
-		<figure><img src="NSFWgifs/gifjam.gif"></figure>
-		<figure><img src="NSFWgifs/danse.gif"></figure>
+<article>
+	<header>
+		<h1>Gifs</h1>
+		<p>NSFW animations</p>
+	</header>
+	<main>
+		<figure class="big"><img src="NSFWgifs/buffet.gif"></figure>
+		<figure class="big"><img src="NSFWgifs/vahine.gif"></figure>
+		<figure class="big"><img src="NSFWgifs/nuque.gif"></figure>
+		<figure class="big"><img src="NSFWgifs/soleildautomne.gif"></figure>
+		<figure class="big"><img src="NSFWgifs/gifjam.gif"></figure>
+		<figure class="big"><img src="NSFWgifs/danse.gif"></figure>
 		<p>If you want more, I have this <a href="jenaibesoindepersonne.html">project of a screensaver of a girl riding a bike</a>.</p>
-	</section>
-</main>
+	</main>
+</article>
 
 
 <footer>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
-	<section id="Legal">
+	<div class="navToIndex">
+        <a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+    </div>
+	<section class="legal">
 		<p>Artworks by Charles Boury, 2014-2017.</p>
 		<p>Please <a href="mailto:boury.charles@gmail.com">contact me</a> before using any of my work.</p>
 	</section>

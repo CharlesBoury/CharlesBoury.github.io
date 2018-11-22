@@ -10,7 +10,8 @@
 <meta name="viewport" content="initial-scale=1.0">
 
 <link rel="stylesheet" href="../css/base.css"/>
-<link rel="stylesheet" href="../css/projet.css"/>
+<link rel="stylesheet" href="../css/article.css"/>
+<link rel="stylesheet" href="../css/navigation.css"/>
 
 
 <!--=====================================================================================-->
@@ -18,15 +19,27 @@
 <body>
 
 
-<header>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+<header id="MainNav" class="project">
+    <a href="../index.html" id="Id">
+        <img src="../Images/avatar.png">
+        <div>
+            <h1>Charles Boury</h1>
+            <h2>2D game artist</h2>
+        </div>
+    </div></a>
+    <nav id="Menu">
+        <h2><a class="active" href="../index.html">Projects</a></h2>
+        <h2><a href="../about.html">About</a></h2>
+    </nav>
 </header>
 
-<main>
-	<h1>Travel sketchbook</h1>
-	<p>I made a not so fictional comics while in Costa Rica, inspired by what happened to me there. Watercolor and ink.</p>
-	<section>
-		<figure>
+<article>
+	<header>
+		<h1>Travel sketchbook</h1>
+	</header>
+	<main>
+		<p>I made a not so fictional comics while in Costa Rica, inspired by what happened to me there. Watercolor and ink.</p>
+		<figure class="big">
 			<img src="travelsketchbook/travelsketchbook1.jpg">
 			<img src="travelsketchbook/travelsketchbook2.jpg">
 			<img src="travelsketchbook/travelsketchbook3.jpg">
@@ -34,13 +47,15 @@
 			<img src="travelsketchbook/travelsketchbook4.jpg">
 			<img src="travelsketchbook/travelsketchbook5.jpg">
 		</figure>
-	</section>
-</main>
+	</main>
+</article>
 
 
 <footer>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
-	<section id="Legal">
+	<div class="navToIndex">
+        <a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+    </div>
+	<section class="legal">
 		<p>Artworks by Charles Boury, 2015-2016.</p>
 		<p>Please <a href="mailto:boury.charles@gmail.com">contact me</a> before using any of my work.</p>
 	</section>

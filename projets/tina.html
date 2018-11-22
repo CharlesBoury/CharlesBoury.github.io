@@ -10,7 +10,8 @@
 <meta name="viewport" content="initial-scale=1.0">
 
 <link rel="stylesheet" href="../css/base.css"/>
-<link rel="stylesheet" href="../css/projet.css"/>
+<link rel="stylesheet" href="../css/article.css"/>
+<link rel="stylesheet" href="../css/navigation.css"/>
 
 
 <!--=====================================================================================-->
@@ -18,36 +19,48 @@
 <body>
 
 
-<header>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+<header id="MainNav" class="project">
+    <a href="../index.html" id="Id">
+        <img src="../Images/avatar.png">
+        <div>
+            <h1>Charles Boury</h1>
+            <h2>2D game artist</h2>
+        </div>
+    </div></a>
+    <nav id="Menu">
+        <h2><a class="active" href="../index.html">Projects</a></h2>
+        <h2><a href="../about.html">About</a></h2>
+    </nav>
 </header>
 
-<main>
-	<h1>Tina<span class="description">tamagochi</span></h1>
-	<section>
-
+<article>
+	<header>
+		<h1>Tina</h1>
+		<p>tamagochi</p>
+	</header>
+	<main>
 		<p>I made mockups of a tamagochi game, in 64px, for #lowrezjam.</p>
-		<figure class="notBig window">
-			<img src="tina/titlebar.png" style="margin: 0">
-			<img src="tina/timelapse.gif">
+		<figure>
+			<img src="tina/titlebar.png" class="noFit" style="margin: 0">
+			<img src="tina/timelapse.gif" class="noFit">
 		</figure>
 		<section>
 			<p>The game is about listening to the story of Tina, a girl who needs company. As your relationship grows, you may understand her and connect together.</p>
 			<p>I never played with pixel art before. I really liked it.</p>
 		</section>
-		<figure
-			><div class="gridOfTwo"
-				><img src="tina/hello.gif"
-				><img src="tina/arbre.gif"
-			></div
+		<figure class="big grid ofTwo" 
+			><img src="tina/hello.gif"
+			><img src="tina/arbre.gif">
 		</figure>
-	</section>
-</main>
+	</main>
+</article>
 
 
 <footer>
-	<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
-	<section id="Legal">
+	<div class="navToIndex">
+        <a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+    </div>
+	<section class="legal">
 		<p>Artworks by Charles Boury, 2016-2017.</p>
 		<p>Please <a href="mailto:boury.charles@gmail.com">contact me</a> before using any of my work.</p>
 	</section>

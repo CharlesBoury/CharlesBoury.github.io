@@ -12,173 +12,66 @@
 
 
 <link rel="stylesheet" href="css/base.css"/>
+<link rel="stylesheet" href="css/navigation.css"/>
+<link rel="stylesheet" href="css/contact.css"/>
 <style type="text/css">
 
+	 /* ------------------------------------------ */
+	 /* ProjectList  */
 
-	/* ------------------------------------------ */
+    @media screen and (min-width: 38rem) {
+        #ProjectList {
+            min-width:   38rem;
+            width:         75%;
+            max-width:   90rem;
+            margin-left:  auto;
+            margin-right: auto;
+        }
+    }
 
-	header, main {
-		margin-top:    2em;
-		margin-bottom: 2em;
-	}
-	footer {
-		margin-top:    5em;
-		margin-bottom: 4em;
-	}
+    #ProjectList > a {
+        display: inline-block;
+        vertical-align: bottom;
+        border: none;
+        padding: 0.5em 0;
+        width:  100%;
+    }
+    #ProjectList > a img,
+    #ProjectList > a .infos {
+        width: 100%;
+    }
+    #ProjectList > a .infos {
+    	margin: 0;
+		padding: 0.6rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-variant-caps: all-small-caps;
+    }
 
-	/* ------------------------------------------ */
+    /* ca fait un min de (25 - 0.2em*2 de marge) /2 = 12.3em de large pour chaque projet */
+    @media screen and (min-width: 25em) { #ProjectList > a {width:   50%} }
+    @media screen and (min-width: 60em) { #ProjectList > a {width:33.33%} }
+    @media screen and (min-width: 80em) { #ProjectList > a {width:   25%} }
 
-	header h1 {
-		margin: 1em 0;
-	}
-
-	/* ------------------------------------------ */
-
-	/* placement de l'avatar */
-
-	/* au dessus */
-	#Avatar {
-		display: block;
-		width: 2em;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 0.33em;
-	}
-
-	/* à gauche */
-	@media screen and (min-width: 35em) {
-		#Avatar {
-			display: inline-block;
-			margin: 0 0.3em;
-			vertical-align: -50%;
-		}
-	}
-
-	/* quand l'avatar change de place, il y a un
-	saut dans le layout (le titre prend moins de
-	hauteur).
-	Avec une petite transition c'est mieux.
-	Malheureusement il faut lui dire explicitement 
-	les height pour que la transition marche */
-
-	header h1 {
-		transition: height 0.4s ease-out;
-		height: 3.5em;
-	}
-	@media screen and (min-width: 35em) {
-		header h1 {
-			height: 2em;
-		}
-	}
-	/* pour les ecrans ≤ 250px (!) */
-	@media screen and (max-width: 15.625em) {
-
-		header h1 {
-			/* text wraps, so more height */
-			height: 4.5em;
-		}
-	}
-
-	/* ------------------------------------------ */
-
-	#About {
-		-webkit-hyphens: auto;
-		-moz-hyphens: auto;
-		-ms-hyphens: auto;
-		hyphens: auto;
-	}
-
-		#About .tag {
-			color: #e24934;
-			font-weight: bold;
-		}
-
-		#About .br0,
-		#About .br {
-			display: none;
-		}
-		@media screen and (min-width: 15em) {#About .br0 {display: inline;}}
-		@media screen and (min-width: 23em) {#About .br  {display: inline;}}
-
-	/* ------------------------------------------ */
-
-	#Resume a,
-	#Mail a {
-		padding: 0.6em;
-	}
-
-	/* ------------------------------------------ */
-
-	/* padding of 0.5em for project tiles */
-	#ProjectList {
-		width: calc(100% + 1em);
-		margin: -0.5em;
-	}
-	#ProjectList > a {
-		display: inline-block;
-		vertical-align: bottom;
-		width: 100%;
-		padding: 0.5em;
-	}
-	/* but prevent x scrolling if there's no margin (body margins start at 35em, see base.css line 74) */
-	main {overflow: hidden;}
-	@media screen and (min-width: 35rem) {main {overflow: visible;}}
-
-
-	/* Grille des projets */
-	/* ca fait un min de (30 - 1em de marge) /2 = 14.5em de large pour chaque projet */
-	@media screen and (min-width: 30em) { #ProjectList > a {width: 50%;} }
-	@media screen and (min-width: 55em) { #ProjectList > a {width: 33%;} }
-	@media screen and (min-width: 80em) { #ProjectList > a {width: 25%;} }
-
-	#ProjectList > a img,
-	#ProjectList > a .infos {
-		width: 100%;
-	}
-
-	#ProjectList > a img {
-		position: relative;
-		z-index: -1; /* passe derriere .infos (qui est après img) */
-		transition: top 0.5s cubic-bezier(0, 1, 0.5, 1);
-		top: 0;
-		border-radius: 3px;
-	}
-
-	#ProjectList > a:hover img {
-		top: -0.4em;
-	}
-
-	#ProjectList > a .infos {
-		margin: 0;
-		padding: 0.5em 0.2em;
-		background-color: white;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-	.infos span::before {
-		content: " ● ";
-	}
-	/* remove left padding of text when body has margins */
-	@media screen and (min-width: 35rem) {
-		#ProjectList > a .infos {
-			padding: 0.5em 0;
-		}
-	}
-
-	/* ------------------------------------------ */
-
-	#SocialLinks a {
-		display: inline-block;
-	}
-
-	#SocialLinks img {
-		transition: filter 0.1s ease-out;
-	}
-
-	#SocialLinks a:hover img {
-		filter: saturate(400%);
-	}
+    @media screen and (min-width: 25em) { 
+    	#ProjectList > a {
+    		padding: 0.5em;
+    	}
+    	#ProjectList > a .infos {
+    		padding-left: 0;
+    		padding-right: 0;
+    	}
+		#ProjectList > a img {
+    		border-radius: 3px;
+    		position: relative;
+    		top: 0;
+        	transition: top 0.5s cubic-bezier(0, 1, 0.5, 1);
+    	}
+	    #ProjectList > a:hover img {
+	        top: -0.4em;
+	    }
+    }
 
 </style>
 
@@ -187,20 +80,25 @@
 <!--=====================================================================================-->
 
 <body>
-<header>
-	<h1><img id="Avatar" src="Images/avatar.png">Charles Boury</h1>
-
-	<p id="About">Hello! I'm a <span class="tag">2D Game Artist</span>. <span class="br0"><br></span>I make <span class="tag">illustrations</span> for stories and systems. <span class="br"><br></span>Sometimes I dive into <span class="tag">programming</span>. <span class="br"><br></span>Also I like mathematics.</p>
-
-	<p id="Resume"><a href="cv/index.html">See my resume</a></p>
+<header id="MainNav">
+	<a href="index.html" id="Id">
+		<img src="Images/avatar.png">
+		<div>
+			<h1>Charles Boury</h1>
+			<h2>2D game artist</h2>
+		</div>
+	</div>
+	<nav id="Menu">
+		<h2><a class="active" href="index.html">Projects</a></h2>
+		<h2><a href="about.html">About</a></h2>
+	</nav>
 </header>
-
 
 <main>
 	<section id="ProjectList"
 		><a href="projets/frankenstein.html"
 			><img src="Images/vignettes/frankenstein.jpg"
-			><p class="infos"><b>Frankenstein</b> <span>environment art</span></p></a
+			><p class="infos"><b>Frankenstein</b> <span>backgrounds</span></p></a
 		><a href="projets/gabrielle.html"
 			><img src="Images/vignettes/gabrielle.jpg"
 			><p class="infos"><b>Gabrielle</b> <span>solo project</span></p></a
@@ -236,10 +134,9 @@
 
 
 <footer>
-	<p id="Mail"><a href="mailto:boury.charles@gmail.com">boury.charles@gmail.com</a></p>
-	<div id="SocialLinks"
-		><a href="https://twitter.com/CharlesBoury"><img src="Images/ContactTwitter.png"></a
-		><a href="https://github.com/CharlesBoury" ><img src="Images/ContactGithub.png" ></a
-	></div>
+	<section id="Contact">
+        <p><a href="mailto:boury.charles@gmail.com">boury.charles@gmail.com</a></p>
+		<a href="https://twitter.com/charlesboury"><img src="Images/LogoTwitter.png"></a>
+	</section>
 </footer>
 
