@@ -27,6 +27,7 @@
 * [gabrielle] sound on video
 
 ### bugs
+* [dragonbox] logo anim is slow on iOS and safari
 
 # Tests
 to test on localhost (or mothership.local from other machines):
