@@ -45,6 +45,8 @@
 #Id h1, #Id h2 {
     text-align: center;
     margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 #Id h2 {
     text-transform: lowercase;
