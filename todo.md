@@ -1,18 +1,20 @@
-
-# TODO
-
 ### must
+* better bio
+* add 
+    * arbres
+    * "tout ce dont un homme peut rever"
+    * contes bleus
+    * [myriad] add gallery of screens/gifs
+* CATCHY website
+    * anims de frankenstein INTERACTIVES
+    * les arbres GENERATIFS avec sliders
 * improve projects
     * show process (show font in tina project, etc)
+    * VFXs: extract good particles/parallax from various projects
     * add collaborators
     * add date and play button
-* add project "VFX" and extract good particles/parallax from various projects
 * add bird_outline project
 * better pictures in CV
-* add Education to CV
-* project of mockups ?
-* add "tout ce dont un homme peut rever"
-* [myriad] add gallery of screens/gifs
 
 ### nice if
 * width de la page comme sur REVOL
@@ -25,29 +27,3 @@
 * animations ! But only on scroll, not on page load
 * everything like `><span>New line...</span` to be consistent
 * [gabrielle] sound on video
-
-### bugs
-* [dragonbox] logo anim is slow on iOS and safari
-
-# Rules
-all videos are in mp4 & webm, to be playable on every device.
-* webm converter: https://video.online-convert.com/fr/convertir-en-webm
-
-# Tests
-to test on localhost (or mothership.local from other machines):
-
-1. check that the directory served by apache is the project directory (change "DocumentRoot" in /private/etc/apache2/httpd.conf)
-2. in terminal: `sudo apachectl start` (or restart)
-    (infos from https://coolestguidesontheplanet.com/get-apache-mysql-php-and-phpmyadmin-working-on-osx-10-11-el-capitan/)
-
-# Deploy
-in terminal: `git ftp push`
-options:
-
-    git config git-ftp.url "ftp://ftp.charlesboury.fr:21/www"
-    git config git-ftp.user "charlesbq"
-    git config git-ftp.password "password"
-    
-(or in gitup: Repository > Edit git config)
-
-(infos from https://github.com/git-ftp/git-ftp)
