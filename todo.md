@@ -29,6 +29,10 @@
 ### bugs
 * [dragonbox] logo anim is slow on iOS and safari
 
+# Rules
+all videos are in mp4 & webm, to be playable on every device.
+* webm converter: https://video.online-convert.com/fr/convertir-en-webm
+
 # Tests
 to test on localhost (or mothership.local from other machines):
 
