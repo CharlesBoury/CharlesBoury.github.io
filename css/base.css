@@ -28,7 +28,7 @@ body {
     -webkit-text-size-adjust: 100%;
     margin: 0;
 }
-h1, h2, h3, h4, h5, h6, p, figure, figcaption, ul {
+h1, h2, h3, h4, h5, h6, p, figure, figcaption, ul, blockquote {
     max-width:    38rem;
     margin-left:   auto;
     margin-right:  auto;
@@ -48,6 +48,11 @@ p {
     line-height:   1.4em;
     margin-top:    1em;
     margin-bottom: 2em;
+}
+blockquote > p {
+    padding-left:  2.5rem;
+    padding-right: 1rem;
+    font-style: italic;
 }
 
 /* ------------------------------------------ */
@@ -71,7 +76,7 @@ a:hover {
     body {
         font-size: 17px;
     }
-    h1, h2, h3, h4, h5, h6, p, figure, figcaption {
+    h1, h2, h3, h4, h5, h6, p, figure, figcaption, blockquote {
         /* 38rem * 18/16 = 42.75rem  */
         /* 38rem * 17/16 = 40.375rem */
         max-width: 40.375rem;
