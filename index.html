@@ -36,12 +36,17 @@
         padding: 0.5em 0;
         width:  100%;
     }
-    #ProjectList > a img,
-    #ProjectList > a .infos {
-        width: 100%;
-    }
-    #ProjectList > a .infos {
-    	margin: 0;
+
+	#ProjectList > a.dominant {
+		width:  100%
+	}
+
+	#ProjectList > a img,
+	#ProjectList > a .infos {
+		width: 100%;
+	}
+	#ProjectList > a .infos {
+		margin: 0;
 		padding: 0.6rem;
         white-space: nowrap;
         overflow: hidden;
@@ -96,7 +101,7 @@
 
 <main>
 	<section id="ProjectList"
-		><a href="projets/frankenstein.html"
+		><a href="projets/frankenstein.html" class="dominant" 
 			><img src="Images/vignettes/frankenstein.jpg"
 			><p class="infos"><b>Frankenstein</b> <span>backgrounds</span></p></a
 		><a href="projets/gabrielle.html"
