@@ -56,30 +56,28 @@
     }
 
     /* ca fait un min de (25 - 0.2em*2 de marge) /2 = 12.3em de large pour chaque projet */
-    @media screen and (min-width: 25em) { #ProjectList > a {width:   50%} }
+    @media screen and (min-width: 15em) { #ProjectList > a {width:   50%} }
     @media screen and (min-width: 60em) { #ProjectList > a {width:33.33%} }
     @media screen and (min-width: 80em) { #ProjectList > a {width:   25%} }
 
-    @media screen and (min-width: 25em) { 
-    	#ProjectList > a {
-    		padding: 0.5em;
-    	}
-    	#ProjectList > a .infos {
-    		padding-left: 0;
-    		padding-right: 0;
-    	}
+	#ProjectList > a {
+		padding: 0.5em;
+	}
+	#ProjectList > a .infos {
+		padding-left: 0;
+		padding-right: 0;
+	}
 	#ProjectList > a .infos span {
 		opacity: 0.8;
 	}
-		#ProjectList > a img {
-    		border-radius: 3px;
-    		position: relative;
-    		top: 0;
-        	transition: top 0.5s cubic-bezier(0, 1, 0.5, 1);
-    	}
-	    #ProjectList > a:hover img {
-	        top: -0.4em;
-	    }
+	#ProjectList > a img {
+		border-radius: 3px;
+		position: relative;
+		top: 0;
+    	transition: top 0.5s cubic-bezier(0, 1, 0.5, 1);
+	}
+    #ProjectList > a:hover img {
+        top: -0.4em;
     }
 
 </style>
