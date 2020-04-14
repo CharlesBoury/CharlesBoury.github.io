@@ -147,11 +147,6 @@ figure video.noScaleUp {
             max-height: 95vh;
             object-fit: contain;
         }
-        figure img.scrollable,
-        figure video.scrollable {
-            max-height: 140vh;
-            object-fit: contain;
-        }
         figure img.noFit,
         figure video.noFit {
             max-height: none;
