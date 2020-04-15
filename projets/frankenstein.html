@@ -12,6 +12,22 @@
 <link rel="stylesheet" href="../css/base.css"/>
 <link rel="stylesheet" href="../css/article.css"/>
 <link rel="stylesheet" href="../css/navigation.css"/>
+<style type="text/css">
+	.overlay {
+		position: relative;
+		cursor: pointer;
+	}
+	.overlay .appear {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: opacity 0.7s cubic-bezier(0, 1, 0.5, 1);
+		opacity: 0;
+	}
+	.overlay:hover .appear {
+		opacity: 1;
+	}
+</style>
 
 
 <!--=====================================================================================-->
@@ -19,52 +35,62 @@
 <body>
 
 <header id="MainNav" class="project">
-    <a href="../index.html" id="Id">
-        <img src="../Images/avatar.png">
-        <div>
-            <h1>Charles Boury</h1>
-            <h2>Visual & Interactive Artist</h2>
-        </div>
-    </div></a>
-    <nav id="Menu">
-        <h2><a class="active" href="../index.html">Projects</a></h2>
-        <h2><a href="../about.html">About</a></h2>
-    </nav>
+	<a href="../index.html" id="Id">
+		<img src="../Images/avatar.png">
+		<div>
+			<h1>Charles Boury</h1>
+			<h2>Visual & Interactive Artist</h2>
+		</div>
+	</div></a>
+	<nav id="Menu">
+		<h2><a class="active" href="../index.html">Projects</a></h2>
+		<h2><a href="../about.html">About</a></h2>
+	</nav>
 </header>
 
 <article>
-    <header>
-        <h1>The Wanderer</h1>
-        <p>Art direction</p>
-    </header>
 	<main>
-		<p>I led art &amp; created all the rich environments for a game that lets you explore the romantic and sensible story of the classic novel Frankenstein. Produced by Arte &amp; LaBelle Games, it's <a href="https://frankenstein.arte.tv/fr/">available</a> on desktop & mobile computers.</p>
-        <figure class="big">
-            <video autoplay loop muted playsinline>
-                <source src="frankenstein/mountain.mp4" type="video/mp4">
-                <source src="frankenstein/mountain.webm" type="video/webm">
-            </video>
-        </figure>
+		<figure class="big">
+			<video autoplay loop muted playsinline>
+				<source src="frankenstein/mountain.mp4" type="video/mp4">
+				<source src="frankenstein/mountain.webm" type="video/webm">
+			</video>
+		</figure>
+
+		<section>
+			<p><b>I led art &amp; created rich environments</b> for a game that lets you explore the romantic and sensible story of the classic novel Frankenstein. The Wanderer is produced by Arte &amp; LaBelle Games, with support from CNC.</p>
+			<p>The game has received numerous nominations and an average score of 8/10.</p>
+			<figure><img src="frankenstein/prizes.png"></figure>
+			<p>It's available on desktop & mobile computers:<br><a href="https://frankenstein.arte.tv/">frankenstein.arte.tv</a></p>
+		</section>
+
+		<figure class="big">
+			<div class="overlay">
+			   <img src="frankenstein/church.jpg">
+			   <img class="appear" src="frankenstein/church-sad.jpg">
+			</div>
+		</figure>
+
+		<figure class="big"><img src="frankenstein/voyage1.jpg"></figure>
 		<figure class="big"><img src="frankenstein/village.jpg"></figure>
-		<figure class="big"><img src="frankenstein/church.jpg"></figure>
+
+		<figure class="big">
+			<video autoplay loop muted playsinline>
+				<source src="frankenstein/voyage2.mp4" type="video/mp4">
+				<source src="frankenstein/voyage2.webm" type="video/webm">
+			</video>
+		</figure>
+
 		<section>
 			<p>With an always distant camera, both the character and the player travel large sceneries to discover how they came to be and how to handle the repudiation of others.</p>
 			<p>The scenery had to be romantic and sublime. I was inspired by painters like Friedrich, Corot, Robert, Deshayes, and videogames like Below and Totem Teller.</p>
 		</section>
-        <figure class="big"><img src="frankenstein/cemetary.jpg"></figure>
-        <figure class="big"><img src="frankenstein/voyage1.jpg"></figure>
-        <figure class="big"><img src="frankenstein/boat.jpg"></figure>
-        <figure class="big">
-            <video autoplay loop muted playsinline>
-                <source src="frankenstein/voyage2.mp4" type="video/mp4">
-                <source src="frankenstein/voyage2.webm" type="video/webm">
-            </video>
-            <figcaption>a cinematic sequence </figcaption>
-        </figure>
-        <figure class="big"><img src="frankenstein/carnaval.jpg"></figure>
-        <figure class="big"><img src="frankenstein/cliff.jpg"></figure>
-		<figure class="big"><img src="frankenstein/laboratory.jpg"><figcaption>an interior, closer to the character</figcaption></figure>
-		<figure class="big"><img src="frankenstein/lake.jpg"><figcaption>the climax</figcaption></figure>
+
+		<figure class="big"><img src="frankenstein/laboratory.jpg"></figure>
+		<figure class="big"><img src="frankenstein/lake.jpg"></figure>
+		<figure class="big"><img src="frankenstein/boat.jpg"></figure>
+		<figure class="big"><img src="frankenstein/carnaval.jpg"></figure>
+		<figure class="big"><img src="frankenstein/cliff.jpg"></figure>
 		<p>Everything you see here is selected to present my work. Please use <a href="https://frankenstein.arte.tv/presskit/sheet.php?p=frankenstein">the official presskit</a> to get offical artworks for the game.</p>
 	</main>
 </article>
