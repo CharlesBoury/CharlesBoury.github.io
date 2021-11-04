@@ -3,7 +3,7 @@
 /* #MainNav */
 
 #MainNav {
-    margin-top:  1.2rem;
+    margin-top:  2rem;
     margin-bottom: 2.5rem;
 }
 @media screen and (min-height: 20em) and (min-width: 25em) {
@@ -50,10 +50,10 @@
     text-transform: lowercase;
     font-variant: small-caps;
     font-variant-caps: all-small-caps;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: normal;
     letter-spacing: 0.05em;
-    color: #ffa81f;
+    color: #d37d0e;
 }
 
 #MainNav.project #Id div {

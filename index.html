@@ -36,41 +36,47 @@
         padding: 0.5em 0;
         width:  100%;
     }
-    #ProjectList > a img,
-    #ProjectList > a .infos {
-        width: 100%;
-    }
-    #ProjectList > a .infos {
-    	margin: 0;
+
+	#ProjectList > a.dominant {
+		width:  100%
+	}
+
+	#ProjectList > a img,
+	#ProjectList > a .infos {
+		width: 100%;
+	}
+	#ProjectList > a .infos {
+		margin: 0;
 		padding: 0.6rem;
+		padding-top: 0.2rem;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        font-variant-caps: all-small-caps;
     }
 
     /* ca fait un min de (25 - 0.2em*2 de marge) /2 = 12.3em de large pour chaque projet */
-    @media screen and (min-width: 25em) { #ProjectList > a {width:   50%} }
+    @media screen and (min-width: 15em) { #ProjectList > a {width:   50%} }
     @media screen and (min-width: 60em) { #ProjectList > a {width:33.33%} }
     @media screen and (min-width: 80em) { #ProjectList > a {width:   25%} }
 
-    @media screen and (min-width: 25em) { 
-    	#ProjectList > a {
-    		padding: 0.5em;
-    	}
-    	#ProjectList > a .infos {
-    		padding-left: 0;
-    		padding-right: 0;
-    	}
-		#ProjectList > a img {
-    		border-radius: 3px;
-    		position: relative;
-    		top: 0;
-        	transition: top 0.5s cubic-bezier(0, 1, 0.5, 1);
-    	}
-	    #ProjectList > a:hover img {
-	        top: -0.4em;
-	    }
+	#ProjectList > a {
+		padding: 0.5em;
+	}
+	#ProjectList > a .infos {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	#ProjectList > a .infos span {
+		color: darkgray;
+	}
+	#ProjectList > a img {
+		border-radius: 3px;
+		position: relative;
+		top: 0;
+    	transition: top 0.5s cubic-bezier(0, 1, 0.5, 1);
+	}
+    #ProjectList > a:hover img {
+        top: -0.4em;
     }
 
 </style>
@@ -85,7 +91,7 @@
 		<img src="Images/avatar.png">
 		<div>
 			<h1>Charles Boury</h1>
-			<h2>2D game artist</h2>
+			<h2>Interactive Artist</h2>
 		</div>
 	</div>
 	<nav id="Menu">
@@ -96,39 +102,48 @@
 
 <main>
 	<section id="ProjectList"
-		><a href="projets/frankenstein.html"
+		><a href="projets/road96.html" class="dominant" 
+			><img src="Images/vignettes/road96.jpg"
+			><p class="infos"><b>ROAD 96</b> <span>Art direction</span></p></a
+		><a href="projets/frankenstein.html" class="dominant" 
 			><img src="Images/vignettes/frankenstein.jpg"
-			><p class="infos"><b>Frankenstein</b> <span>backgrounds</span></p></a
+			><p class="infos"><b>The Wanderer</b> <span>Art direction</span></p></a
 		><a href="projets/gabrielle.html"
 			><img src="Images/vignettes/gabrielle.jpg"
-			><p class="infos"><b>Gabrielle</b> <span>solo project</span></p></a
+			><p class="infos"><b>Gabrielle</b> <span>Creative direction</span></p></a
+		><a href="projets/orange.html"
+			><img src="Images/vignettes/orange.jpg"
+			><p class="infos"><b>Théâtre d'Orange</b> <span>Art direction</span></p></a
 		><a href="projets/NSFWgifs.html"
 			><img src="Images/vignettes/NSFWgifs.jpg"
-			><p class="infos"><b>Gifs</b> <span>NSFW animations</span></p></a
+			><p class="infos"><b>Erotic Gifs</b> <span>Hand-drawn animations</span></p></a
 		><a href="projets/dragonbox.html"
 			><img src="Images/vignettes/dragonbox.jpg"
-			><p class="infos"><b>DragonBox</b> <span>cute maths</span></p></a
+			><p class="infos"><b>DragonBox</b> <span>Educational games</span></p></a
 		><a href="projets/contesbleus.html"
 			><img src="Images/vignettes/contebleu.jpg"
-			><p class="infos"><b>Contes bleus</b> <span>fairytale</span></p></a
+			><p class="infos"><b>Contes bleus</b> <span>Illustrations</span></p></a
 		><a href="projets/bactattack.html"
 			><img src="Images/vignettes/bactattack.jpg"
-			><p class="infos"><b>Bact Attack</b> <span>cute immunology</span></p></a
-		><a href="projets/tina.html"
-			><img src="Images/vignettes/tina.png"
-			><p class="infos"><b>Tina</b> <span>tamagochi</span></p></a
+			><p class="infos"><b>Bact Attack</b> <span>Art direction</span></p></a
+		><a href="projets/arbres.html"
+			><img src="Images/vignettes/arbres.png"
+			><p class="infos"><b>Arbres</b> <span>Generative art</span></p></a
 		><a href="projets/myriad.html"
-			><img src="Images/vignettes/myriad.jpg"
-			><p class="infos"><b>Myriad</b> <span>fun with particles</span></p></a
+			><img src="Images/vignettes/myriad.png"
+			><p class="infos"><b>Myriad</b> <span>Creative code</span></p></a
 		><a href="projets/tout-ce-dont-un-homme-peut-rever.html"
 			><img src="Images/vignettes/moto.jpg"
-			><p class="infos"><b>Tout ce dont un homme peut rêver</b> <span>graphic novel</span></p></a
+			><p class="infos"><b>graphic novel</b> <span>Visual storytelling</span></p></a
+		><a href="projets/stranger-fields.html"
+			><img src="Images/vignettes/stranger-fields.jpg"
+			><p class="infos"><b>stranger fields</b> <span>Art direction</span></p></a
 		><a href="projets/schmilblick.html"
 			><img src="Images/vignettes/schmilblick.jpg"
-			><p class="infos"><b>Schmilblick</b> <span>care game</span></p></a
+			><p class="infos"><b>Schmilblick</b> <span>Art direction</span></p></a
 		><a href="projets/travelsketchbook.html"
 			><img src="Images/vignettes/travelsketchbook.jpg"
-			><p class="infos"><b>Travel sketchbook</b></p></a
+			><p class="infos"><b>Travel sketchbook</b> <span>Watercolor</span></p></a
 	></section>
 </main>
 
