@@ -2,6 +2,8 @@
 all videos are both in mp4 & webm, to be playable on every device.
 Here is a webm converter: https://video.online-convert.com/fr/convertir-en-webm
 
+The general layout is declared according to 4 page widths : >0em, >21em, >38em, >90em. If an element layout change is making other elements to jump, do it on these general width steps.
+
 # Tests
 to test on localhost (or mothership.local from other machines):
 
