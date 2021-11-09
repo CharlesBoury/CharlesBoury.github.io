@@ -1,66 +1,71 @@
-
-
-
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>Charles Boury &#65515; Myriad</title>
-<meta name="description" content="An interactive toy to play with particles, by Charles Boury.">
+<title>Charles Boury &#65515; Myriad</title>
+<meta name="description" content="An interactive toy to play with particles, by Charles Boury.">
 <link rel="shortcut icon" href="../Images/favicon.png"/>
-<meta name="author" content="Charles Boury">
+<meta name="author" content="Charles Boury">
 <meta name="viewport" content="initial-scale=1.0">
 
 <link rel="stylesheet" href="../css/base.css"/>
-<link rel="stylesheet" href="../css/article.css"/>
 <link rel="stylesheet" href="../css/navigation.css"/>
 
 
 <!--=====================================================================================-->
 
 <body>
+	<header id="page-header" class="project">
+		<a href="../index.html" class="Id">
+			<img class="Id-Avatar" src="../Images/avatar.png">
+			<div class="Id-Text">
+				<h1 class="Id-Text-Name">Charles Boury</h1>
+				<h2 class="Id-Text-Subtitle">Art Director</h2>
+			</div>
+		</a>
+		<nav class="Menu">
+			<h2><a class="active" href="../index.html">Projects</a></h2>
+			<h2><a href="../articles.html">Articles</a></h2>
+			<h2><a href="../about.html">About</a></h2>
+		</nav>
+	</header>
 
+	<main id="page-content">
+		<article>
+			<header>
+				<h1>Myriad</h1>
+				<p>creative code</p>
+			</header>
+			<section>
+				<p>A little toy I made to get a better grasp at particles. No dependency, just pure html / css / javascript.</p><p>You can <a href="http://charlesboury.fr/myriad/index.html">play with it with your mouse or finger</a>, change variables or chose a preset.</p>
+			</section>
+			<figure class="overflow">
+				<img src="myriad/titlebar.png" class="noFit" style="margin: 0">
+				<video autoplay loop muted playsinline class="noFit">
+					<source src="myriad/myriad.mp4" type="video/mp4">
+					<source src="myriad/myriad.webm" type="video/webm">
+				</video>
+			</figure>
+		</article>
+		<footer class="footer-article">
+			<hr>
+			<div class="line content no-underlay-on-links">
+				<p class="left"><a href="../index.html">&#129032; Projects</a></p>
+				<p class="right">Artworks by Charles Boury — 2015-2017</p>
+			</div>
+		</footer>
+	</main>
 
-<header id="MainNav" class="project">
-    <a href="../index.html" id="Id">
-        <img src="../Images/avatar.png">
-        <div>
-            <h1>Charles Boury</h1>
-            <h2>Interactive Artist</h2>
-        </div>
-    </div></a>
-    <nav id="Menu">
-        <h2><a class="active" href="../index.html">Projects</a></h2>
-        <h2><a href="../about.html">About</a></h2>
-    </nav>
-</header>
-
-<article>
-    <header>
-        <h1>Myriad</h1>
-        <p>creative code</p>
-    </header>
-    <main>
-        <section>
-            <p>A little toy I made to get a better grasp at particles. No dependency, just pure html / css / javascript.</p><p>You can <a href="http://charlesboury.fr/myriad/index.html">play with it with your mouse or finger</a>, change variables or chose a preset.</p>
-        </section>
-        <figure class="nice">
-            <img src="myriad/titlebar.png" class="noFit" style="margin: 0">
-            <video autoplay loop muted playsinline class="noFit">
-                <source src="myriad/myriad.mp4" type="video/mp4">
-                <source src="myriad/myriad.webm" type="video/webm">
-            </video>
-        </figure>
-    </main>
-</article>
-
-
-<footer>
-    <div class="navToIndex">
-        <a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
-    </div>
-    <section class="legal">
-        <p>Artworks by Charles Boury, 2015-2017.</p>
-        <p>Please <a href="mailto:boury.charles@gmail.com">contact me</a> before using any of my work.</p>
-    </section>
-</footer>
+	<footer id="page-footer">
+		<div class="navToIndex">
+			<a class="back" href="../index.html"><img src="../Images/avatar.png"></a>
+		</div>
+		<section id="Contact">
+			<p><a href="mailto:boury.charles@gmail.com">boury.charles@gmail.com</a></p>
+			<a href="https://twitter.com/CharlesBoury" target="_blank"><img src="../Images/LogoTwitter.png"></a
+			><a href="https://www.instagram.com/charlesboury/" target="_blank"><img src="../Images/LogoInstagram.png"></a
+			><a href="https://github.com/CharlesBoury" target="_blank"><img src="../Images/LogoGithub.png"></a
+			><a href="https://www.artstation.com/charlesboury" target="_blank"><img src="../Images/LogoArtstation.png"></a>
+		</section>
+	</footer>
+</body>
 
 <script src="../scripts/handleAutoplay.js"></script>
