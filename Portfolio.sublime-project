@@ -3,6 +3,7 @@
 	[
 		{
 			"path": ".",
+			"file_exclude_patterns": ["sheret.log"],
 		},
 	],
 }
