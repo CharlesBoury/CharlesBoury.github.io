@@ -1,27 +1,27 @@
 
 #Contact {
-    background-color: rgb(250,250,250);
-    margin-top:     6rem;
-    padding-bottom: 6rem;
-    padding-top: 1rem;
-    text-align: center;
+	background-color: rgb(250,250,250);
+	margin-top:     6rem;
+	padding-bottom: 6rem;
+	padding-top: 1rem;
+	text-align: center;
 }
 #Contact p {
-    margin-top: 1em;
-    margin-bottom: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 #Contact a {
-    display: inline-block;
-    border: none;
+	display: inline-block;
+	border: none;
 }
 #Contact img {
-    display: inline-block;
-    width: 3.25rem;
-    padding: 1rem;
+	display: inline-block;
+	width: 3.25rem;
+	padding: 1rem;
 }
 #Contact a img {
-    transition: filter 0.2s ease-out;
+	transition: filter 0.2s ease-out;
 }
 #Contact a:hover img {
-    filter: saturate(500%) brightness(2);
+	filter: saturate(500%) brightness(2);
 }

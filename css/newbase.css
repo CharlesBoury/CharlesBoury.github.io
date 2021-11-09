@@ -2,18 +2,18 @@
 /* fonts */
 
 @font-face {
-    font-family: Alte-Haas-Grotesk;
-    src: url(../fonts/AlteHaasGroteskBold.ttf);
-    font-weight:400;
+	font-family: Alte-Haas-Grotesk;
+	src: url(../fonts/AlteHaasGroteskBold.ttf);
+	font-weight:400;
 }
 
 /* ------------------------------------------ */
 /* for everything */
 
 * {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
 }
 
 /* ------------------------------------------ */
@@ -21,142 +21,142 @@
 
 article, header, footer, main, nav, aside, section, 
 figure, figcaption, details {
-    display: block;
+	display: block;
 }
 
 /* ------------------------------------------ */
 /* basic html elements */
 
 body {
-    font-family: Helvetica, sans-serif;
-    font-weight: 200;
-    font-size: 16px;
-    color: #634b3f;
-    word-wrap: break-word;
-    -webkit-text-size-adjust: 100%;
-    margin: 0;
+	font-family: Helvetica, sans-serif;
+	font-weight: 200;
+	font-size: 16px;
+	color: #634b3f;
+	word-wrap: break-word;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
 }
 h1, h2, h3, h4, h5, h6, p, figure, figcaption, ul {
-    max-width: 32rem;
-    margin: 0 auto;
-    line-height: 1.33em;
-    padding: 0.75em 1rem;
+	max-width: 32rem;
+	margin: 0 auto;
+	line-height: 1.33em;
+	padding: 0.75em 1rem;
 }
 
 /* ------------------------------------------ */
 /* links */
 
 a {
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 0.1em solid;
-    transition: color 0.08s ease-out;
-    cursor: pointer;
+	color: inherit;
+	text-decoration: none;
+	border-bottom: 0.1em solid;
+	transition: color 0.08s ease-out;
+	cursor: pointer;
 }
 a:hover {
-    color: #ff7d0a;
+	color: #ff7d0a;
 }
 
 /* ------------------------------------------ */
 /* figures */
 
 figure {
-    max-width: 60rem;
-    padding: 2em 0;
+	max-width: 60rem;
+	padding: 2em 0;
 }
 
 figcaption {
-    font-size: 0.8em;
-    color: #b98769;
-    text-align: center;
+	font-size: 0.8em;
+	color: #b98769;
+	text-align: center;
 }
 
 /* ------------------------------------------ */
 /* imgs, videos, figures */
 
 img, video {
-    max-width: 100%;
-    display: block;
-    margin: auto;
+	max-width: 100%;
+	display: block;
+	margin: auto;
 }
 
 p img,
 h1 img, h2 img, h3 img,
 h4 img, h5 img, h6 img {
-    display: inline-block;
+	display: inline-block;
 }
 
 figure img,
 figure video {
-    width: 100%;
+	width: 100%;
 }
 
 figure img.noScaleUp,
 figure video.noScaleUp {
-    width: auto;
+	width: auto;
 }
 
 @supports (object-fit: contain) {
-    @media (max-aspect-ratio: 21/9) {
-        figure img.fit,
-        figure video.fit {
-            max-height: 95vh;
-            object-fit: contain;
-        }
-    }
+	@media (max-aspect-ratio: 21/9) {
+		figure img.fit,
+		figure video.fit {
+			max-height: 95vh;
+			object-fit: contain;
+		}
+	}
 }
 
 /* ------------------------------------------ */
 /* classes */
 
 .articleTitle {
-    font-size: 2.5em;
-    text-align: center;
-    font-weight: 400;
-    font-family: Alte-Haas-Grotesk;
-    max-width: 33rem;
+	font-size: 2.5em;
+	text-align: center;
+	font-weight: 400;
+	font-family: Alte-Haas-Grotesk;
+	max-width: 33rem;
 }
 
 .footerPost {
-    max-width: 45rem;
-    margin: 0 auto;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    opacity: 0.6;
-    font-size: 0.8em;
+	max-width: 45rem;
+	margin: 0 auto;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	opacity: 0.6;
+	font-size: 0.8em;
 }
 .footerPost-hr {
-    margin: 0 1rem;
-    border: none;
-    border-top: 1px solid;
-    opacity: 0.5;
+	margin: 0 1rem;
+	border: none;
+	border-top: 1px solid;
+	opacity: 0.5;
 }
 
 .footerPost .date {
-    font-style: italic;
+	font-style: italic;
 }
 
 .footerPost .flex {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
 }
 .footerPost .flex * {
-    margin: 0;
+	margin: 0;
 }
 .footerPost .flex .date {
-    flex-shrink: 0;
+	flex-shrink: 0;
 }
 .footerPost .flex .tags {
-    text-align: right;
+	text-align: right;
 }
 
 a.tag {
-    text-decoration: none;
-    display: inline-block;
-    padding: 0 0.2em;
-    border-radius: 3px;
-    font-style: normal;
-    font-family: helvetica;
-    border: 0.5px solid;
+	text-decoration: none;
+	display: inline-block;
+	padding: 0 0.2em;
+	border-radius: 3px;
+	font-style: normal;
+	font-family: helvetica;
+	border: 0.5px solid;
 }

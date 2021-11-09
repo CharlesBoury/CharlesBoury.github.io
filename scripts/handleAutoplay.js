@@ -4,14 +4,14 @@
 
 (function(){
 
-    var videos = document.querySelectorAll('video[autoplay][muted]')
-    var promises = []
+	var videos = document.querySelectorAll('video[autoplay][muted]')
+	var promises = []
 
-    for(var i = videos.length; i--;) {
-        promises[i] = videos[i].play()
-        if (promises[i] !== undefined) {
-            promises[i].catch(function(error){})
-            // handle promise rejection otherwise error is thrown
-        }
-    }
+	for(var i = videos.length; i--;) {
+		promises[i] = videos[i].play()
+		if (promises[i] !== undefined) {
+			promises[i].catch(function(error){})
+			// handle promise rejection otherwise error is thrown
+		}
+	}
 })()
