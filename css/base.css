@@ -35,12 +35,22 @@ body {
 	flex-shrink: 0;
 }
 
+
+/* ------------------------------------------ */
+/* No margin on first visual element in page-content */
+
+#page-content > *:first-child {
+	margin-top: 0;
+}
+#page-content > article > *:first-child {
+	margin-top: 0;
+}
+
 /* ------------------------------------------ */
 /* basic html elements */
 
 body {
 	font-family: Helvetica, sans-serif;
-	font-weight: 200;
 	font-size: 16px;
 	color: #201f1e;
 	background-color: white;
@@ -353,7 +363,7 @@ time {
 /* Contact */
 
 #Contact {
-	background-color: #f0f0ec;
+	background-color: #f3eeea;
 	padding-bottom:  4rem;
 	padding-top:     2rem;
 	text-align:    center;
@@ -372,8 +382,8 @@ time {
 	padding:       0.2rem;
 }
 #Contact a img {
-	transition: filter 0.2s ease-out;
+	transition: filter 0.08s ease-out;
 }
 #Contact a:hover img {
-	filter: saturate(500%) brightness(2);
+	filter: saturate(500%) brightness(1.8);
 }

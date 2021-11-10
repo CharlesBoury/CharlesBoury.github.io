@@ -10,7 +10,7 @@
 
 	#page-header {
 		min-width:    38rem;
-		width:          75%;
+		width:          90%;
 		max-width:    90rem;
 		margin-left:   auto;
 		margin-right:  auto;
@@ -24,11 +24,10 @@
 	display: block;
 	border: none;
 	color: inherit;
+	padding-bottom: 2rem;
 }
 
-/* avatar au dessus */
 .Id-Avatar {
-	margin-bottom: 0.33rem;
 	width: 4em;
 }
 
@@ -62,7 +61,8 @@
 	}
 	.Id {
 		text-align: center;
-		padding: 0 0.5rem;
+		padding-left:  0.5rem;
+		padding-right: 0.5rem;
 	}
 	.Id-Avatar {
 		display: inline-block;
@@ -109,10 +109,13 @@
 	border: none;
 }
 
-@media screen and (min-width: 38em) {
+/* Avatar & menu on the same line */
+@media screen and (min-width: 50em) {
 	#page-header {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
+		padding-top: 5rem;
+		padding-bottom: 7rem;
 	}
 }
