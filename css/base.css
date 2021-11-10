@@ -96,6 +96,9 @@ a {
 	border-bottom: 0.1rem solid;
 	transition: color 0.08s ease-out;
 	cursor: pointer;
+
+	/* prevent 300ms delay on touch devices (they wait for double-tap) */
+	touch-action: manipulation;
 }
 a:hover {
 	color: #d37d0e;
